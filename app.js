@@ -51,14 +51,14 @@ async function start() {
         return app.listen(PORT, () => console.log(`Dev-App has been started on port ${PORT}`))
     }
 
-    // const privateKey = fs.readFileSync('/etc/letsencrypt/live/domain.com/privkey.pem', 'utf8')
-    // const certificate = fs.readFileSync('/etc/letsencrypt/live/domain.com/cert.pem', 'utf8')
-    // const ca = fs.readFileSync('/etc/letsencrypt/live/domain.com/chain.pem', 'utf8')
+    const privateKey = fs.readFileSync('/etc/letsencrypt/live/zulassungsstelle.app/privkey.pem', 'utf8')
+    const certificate = fs.readFileSync('/etc/letsencrypt/live/zulassungsstelle.app/cert.pem', 'utf8')
+    const ca = fs.readFileSync('/etc/letsencrypt/live/zulassungsstelle.app/chain.pem', 'utf8')
 
     const credentials = { key: privateKey, cert: certificate, ca: ca }
 
-    app.use('/', express.static(path.join(__dirname, 'client', 'build')))
-    app.get('*', (req, res) => { res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')) })
+    app.use('/', express.static(path.join(__dirname, 'client', 'dist')))
+    app.get('*', (req, res) => { res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html')) })
 
     const httpServer = http.createServer(app)
     const httpsServer = https.createServer(credentials, app)
