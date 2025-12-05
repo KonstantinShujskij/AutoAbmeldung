@@ -64,25 +64,25 @@ router.post('/ZBI', file.single('file'), async (req, res) => {
 })
 
 router.post('/front', file.single('file'), async (req, res) => {
-    // const data = await GPT.extractFront(req.file?.filename)
-    // console.log(data)
+    const data = await GPT.extractFront(req.file?.filename)
+    console.log(data)
 
-    // res.status(201).json(data)
+    res.status(201).json(data)
 
-    res.status(200).json({
-        "code": "3Ed",
-    })
+    // res.status(200).json({
+    //     "code": "3Ed",
+    // })
 })
 
 router.post('/back', file.single('file'), async (req, res) => {
-    // const data = await GPT.extractBack(req.file?.filename)
-    // console.log(data)
+    const data = await GPT.extractBack(req.file?.filename)
+    console.log(data)
 
-    // res.status(201).json(data)
+    res.status(201).json(data)
 
-    res.status(200).json({
-        "code": "Bv5",
-    })
+    // res.status(200).json({
+    //     "code": "Bv5",
+    // })
 })
 
 module.exports = router

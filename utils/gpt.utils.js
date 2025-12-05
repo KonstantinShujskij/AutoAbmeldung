@@ -60,33 +60,34 @@ const extractFunctionZBI = {
 const extractFunctionFront = {
     type: "function",
     function: {
-        name: "",
-        description: "",
+        name: "parse_front",
+        description: "Считать трёхбуквенный код с круглой наклейки на изображении. Код должен быть прочитан визуально. Если код нечитаем, функция не вызывается.",
         parameters: {
             type: "object",
-            required: [
-                "invoice_image",
-            ],
             properties: {
-                code: { type: "number", description: "Сума переказу або сума операції або сума" },
+                code: {
+                    type: "string",
+                    description: "Трёхбуквенный код, визуально считанный с изображения."
+                }
             },
             additionalProperties: false,
         },
     },
-} 
+}
+
 
 const extractFunctionBack = {
     type: "function",
     function: {
-        name: "",
-        description: "",
+        name: "parse_back",
+        description: "Считать трёхбуквенный код с круглой наклейки на изображении. Код должен быть прочитан визуально. Если код нечитаем, функция не вызывается.",
         parameters: {
             type: "object",
-            required: [
-                "invoice_image",
-            ],
             properties: {
-                code: { type: "number", description: "Сума переказу або сума операції або сума" },
+                code: {
+                    type: "string",
+                    description: "Трёхбуквенный код, визуально считанный с изображения."
+                }       
             },
             additionalProperties: false,
         },
