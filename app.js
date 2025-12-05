@@ -57,8 +57,11 @@ async function start() {
 
     const credentials = { key: privateKey, cert: certificate, ca: ca }
 
-    app.use('/', express.static(path.join(__dirname, 'client', 'dist')))
-    app.get('*', (req, res) => { res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html')) })
+    // app.use('/', express.static(path.join(__dirname, 'client', 'dist')))
+    // app.get('*', (req, res) => { res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html')) })
+
+    app.use(express.static(path.join(__dirname, "client", "dist")))
+    app.get(/.*/, (req, res) => {res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"))})
 
     const httpServer = http.createServer(app)
     const httpsServer = https.createServer(credentials, app)

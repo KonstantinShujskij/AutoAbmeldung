@@ -2,6 +2,7 @@ import { Card, Text, Button, Flex, TextField, Heading, Separator } from "@radix-
 import { useState } from "react"
 import PhotoLoader from "./Photo"
 import zb2 from '../assets/ZBII.webp'
+import { parseZBII } from '../api/invoice.api'
 
 
 function ZBII({ onComplite }) {
@@ -18,20 +19,15 @@ function ZBII({ onComplite }) {
 
 
     const parseData = async (file) => {
-        console.log("parsing ZBII", file)
+        const res = await parseZBII(file)
+        if(!res.ok) { console.log("error") }
 
-        const formData = new FormData()
-        formData.append("file", file)
+        const data = res.data
 
-        const res = await fetch("http://127.0.0.1:5555/api/invoice/ZBII", { method: "POST", body: formData })
-
-        if (!res.ok) { console.log("error") }
-        const data = await res.json()
-
-        if (data.fullName) { setOwnerName(data.fullName) }
-        if (data.address) { setOwnerAddress(data.address) }
-        if (data.VIN) { setVIN(data.VIN) }
-        if (data.number) { setNumber(data.number) }
+        if(data.fullName) { setOwnerName(data.fullName) }
+        if(data.address) { setOwnerAddress(data.address) }
+        if(data.VIN) { setVIN(data.VIN) }
+        if(data.number) { setNumber(data.number) }
 
         setUpload(true)
     }
@@ -55,7 +51,6 @@ function ZBII({ onComplite }) {
                                 Es ist erforderlich, ein Foto des großen Fahrzeugscheins (Zulassungsbescheinigung Teil II – ZB II) hochzuladen,
                                 sodass alle Daten sichtbar sind, insbesondere die letzte Spalte sowie die Fahrzeug-Identifizierungsnummer (FIN/VIN), wie im Beispiel.
                             </Text>
-
                         </Flex>
                     </Card>
                 )}
@@ -66,10 +61,10 @@ function ZBII({ onComplite }) {
 
             <Separator orientation="horizontal" mt="2" mb="2" style={{ width: "100%" }} />
 
-            <TextField.Root placeholder="vollständiger Name des Eigentümers" name="ownerName" value={ownerName} onChange={(e) => setOwnerName(e.target.value)} />
-            <TextField.Root placeholder="Adresse" name="ownerAddress" value={ownerAddress} onChange={(e) => setOwnerAddress(e.target.value)} />
-            <TextField.Root placeholder="VIN-Nummer" name="zb2Vin" value={VIN} onChange={(e) => setVIN(e.target.value)} />
-            <TextField.Root placeholder="Kfz-Kennzeichen" name="zb1Plate" value={Number} onChange={(e) => setNumber(e.target.value)} />
+            <TextField.Root disabled={hide} placeholder="vollständiger Name des Eigentümers" name="ownerName" value={ownerName} onChange={(e) => setOwnerName(e.target.value)} />
+            <TextField.Root disabled={hide} placeholder="Adresse" name="ownerAddress" value={ownerAddress} onChange={(e) => setOwnerAddress(e.target.value)} />
+            <TextField.Root disabled={hide} placeholder="VIN-Nummer" name="zb2Vin" value={VIN} onChange={(e) => setVIN(e.target.value)} />
+            <TextField.Root disabled={hide} placeholder="Kfz-Kennzeichen" name="zb1Plate" value={Number} onChange={(e) => setNumber(e.target.value)} />
 
             {(!hide && upload) && <Button size="6" mt="10" onClick={handleComplite}>Bestätigen</Button>}
         </Flex>

@@ -3,19 +3,19 @@ import { useState } from "react"
 
 
 function Email({ onComplite }) {
-    const [isEmail, setIsEmail] = useState(false)
+    const [hide, setHide] = useState(false)
     const [email, setEmail] = useState("")
 
     const handleEmailChange = () => {
-        setIsEmail(email.length > 0)
+        setHide(email.length > 0)
         onComplite(email)
     }
 
     return (
         <Flex direction="column" gap="3" mt="4">
             <Heading size="4">Ihre E-Mail-Adresse</Heading>
-            <TextField.Root value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" type="email" name="email" />
-            {!isEmail && <Button size="2" mt="2" onClick={handleEmailChange}>Weiter</Button>}
+            <TextField.Root disabled={hide} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" type="email" name="email" />
+            {!hide && <Button size="2" mt="2" onClick={handleEmailChange}>Weiter</Button>}
         </Flex>
     )
 }
