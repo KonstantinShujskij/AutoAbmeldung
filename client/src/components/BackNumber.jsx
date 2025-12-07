@@ -5,7 +5,7 @@ import back from '../assets/back.jpg'
 import { parseBack } from '../api/invoice.api'
 
 
-function BackNumber({ onComplite }) {
+function BackNumber({ onComplite, email }) {
     const [hide, setHide] = useState(false)
     const [upload, setUpload] = useState(false)
 
@@ -16,7 +16,7 @@ function BackNumber({ onComplite }) {
 
 
     const parseData = async (file) => {
-        const res = await parseBack(file)
+        const res = await parseBack(file, email)
         if(!res.ok) { console.log("error") }
 
         const data = res.data
@@ -28,7 +28,7 @@ function BackNumber({ onComplite }) {
     
     const handleComplite = () => {
         setHide(true)
-        onComplite(true)
+        onComplite({ code })
     }
 
 

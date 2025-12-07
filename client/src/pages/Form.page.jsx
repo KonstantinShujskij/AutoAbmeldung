@@ -5,6 +5,7 @@ import ZBI from "../components/ZBI"
 import ZBII from "../components/ZBII"
 import { useState } from "react"
 import Email from "../components/Email"
+import { create, make } from "../api/invoice.api"
 
 
 function FormPage() {
@@ -14,19 +15,29 @@ function FormPage() {
     const [back, setBack] = useState(null)
     const [front, setFront] = useState(null)
 
+    const handleComplite = async () => {
+        const res = await create(email, zbI, zbII, back, front)
+        console.log(res)
+    }
+
+    const handleEmail = async (email) => {
+        setEmail(email)
+        await make(email)
+    }
+
     return (
         <Flex direction="column" gap="5" style={{ maxWidth: 1024, margin: "40px auto", padding: 20 }}>
             <Heading size="6">Abmeldung Ihres Fahrzeugs</Heading>
 
             <Card>
                 <Flex direction="column" gap="3">
-                    <Email onComplite={setEmail} />
-                    {email && <ZBII onComplite={setZbII} />}
-                    {zbII && <ZBI onComplite={setZbI} /> }
-                    {zbI && <FrontNumber onComplite={setFront} />}
-                    {front && <BackNumber onComplite={setBack} />}
+                    <Email onComplite={handleEmail} />
+                    {email && <ZBII onComplite={setZbII} email={email} />}
+                    {zbII && <ZBI onComplite={setZbI} email={email} /> }
+                    {zbI && <FrontNumber onComplite={setFront} email={email} />}
+                    {front && <BackNumber onComplite={setBack} email={email} />}
 
-                    {back && <Button size="4" mt="4">Weiter</Button> }
+                    {back && <Button size="4" mt="4" onClick={() => handleComplite()}>Weiter</Button> }
                 </Flex>
             </Card>
         </Flex>

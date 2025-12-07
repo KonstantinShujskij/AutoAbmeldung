@@ -5,7 +5,7 @@ import { parseFront } from '../api/invoice.api'
 import front from '../assets/back.jpg'
 
 
-function FrontNumber({ onComplite }) {
+function FrontNumber({ onComplite, email }) {
     const [hide, setHide] = useState(false)
     const [upload, setUpload] = useState(false)
 
@@ -16,7 +16,7 @@ function FrontNumber({ onComplite }) {
 
 
     const parseData = async (file) => {
-        const res = await parseFront(file)
+        const res = await parseFront(file, email)
         if(!res.ok) { console.log("error") }
 
         const data = res.data
@@ -28,7 +28,7 @@ function FrontNumber({ onComplite }) {
     
     const handleComplite = () => {
         setHide(true)
-        onComplite(true)
+        onComplite({ code })
     }
 
     return (

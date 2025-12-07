@@ -24,7 +24,7 @@ app.use(express.json({ extended: true }))
 
 app.use('/api/invoice', require('./routes/invoice.routes'))
 
-// app.get('/kvits/:path', (req, res) => { res.sendFile(path.resolve(__dirname, 'static', 'kvits', `${req.params.path}`)) })
+app.get('/static/:path', (req, res) => { res.sendFile(path.resolve(__dirname, 'static', `${req.params.path}`)) })
 
 // process.on('uncaughtException', (error) => {
 //     console.error('❗️Необработанное исключение!')

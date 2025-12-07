@@ -5,7 +5,7 @@ import zb2 from '../assets/ZBII.webp'
 import { parseZBII } from '../api/invoice.api'
 
 
-function ZBII({ onComplite }) {
+function ZBII({ onComplite, email }) {
     const [hide, setHide] = useState(false)
     const [upload, setUpload] = useState(false)
 
@@ -19,7 +19,7 @@ function ZBII({ onComplite }) {
 
 
     const parseData = async (file) => {
-        const res = await parseZBII(file)
+        const res = await parseZBII(file, email)
         if(!res.ok) { console.log("error") }
 
         const data = res.data
@@ -34,7 +34,7 @@ function ZBII({ onComplite }) {
 
     const handleComplite = () => {
         setHide(true)
-        onComplite(true)
+        onComplite({ ownerName, ownerAddress, VIN, Number })
     }
 
 

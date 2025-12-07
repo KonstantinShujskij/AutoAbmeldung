@@ -5,7 +5,7 @@ import zb1 from '../assets/ZBI.png'
 import { parseZBI } from '../api/invoice.api'
 
 
-function ZBI({ onComplite }) {
+function ZBI({ onComplite, email }) {
     const [hide, setHide] = useState(false)
     const [upload, setUpload] = useState(false)
 
@@ -16,7 +16,7 @@ function ZBI({ onComplite }) {
     
     
     const parseData = async (file) => {
-        const res = await parseZBI(file)
+        const res = await parseZBI(file, email)
         if(!res.ok) { console.log("error") }
 
         const data = res.data
@@ -28,7 +28,7 @@ function ZBI({ onComplite }) {
 
     const handleComplite = () => {
         setHide(true)
-        onComplite(true)
+        onComplite({ code })
     }
 
 

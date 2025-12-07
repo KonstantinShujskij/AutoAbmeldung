@@ -21,6 +21,24 @@ body {
     background: linear-gradient(to bottom, #000000 33.33%, #d60000 33.33%, #d60000 66.66%, #f7c800 66.66%);
 }
 
+.stamp {
+    display: flex;
+    gap: 6px;
+}
+
+.stamp-flag div {
+    width: 4px;
+    height: 24px;
+}
+
+.stamp-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 10px;
+    gap: 4px;
+}
+
 .drop {
     padding: 16px;
     border: 2px dashed var(--gray-9);
@@ -59,6 +77,14 @@ body {
     .zb2-container {
         flex-direction: column;
     }
+}
+
+.logo {
+    width: 160px;
+}
+
+.logo svg .st1 {
+    fill: #1a9cd8;
 }
 
 
