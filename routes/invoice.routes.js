@@ -111,15 +111,13 @@ router.post('/back', file.single('file'), async (req, res) => {
 })
 
 
-router.post('/get', [], 
-    async (req, res) => {        
-        const { id } = req.body
+router.post('/get', async (req, res) => {        
+    const { id } = req.body
 
-        const invoice = await Invoice.findOne({ _id: id })
-        if(!invoice) { return res.status(400).json(false) }
-            
-        res.status(201).json(invoice)
-    }
-)
+    const invoice = await Invoice.findOne({ _id: id })
+    if(!invoice) { return res.status(400).json(false) }
+        
+    res.status(201).json(invoice)
+})
 
 module.exports = router
