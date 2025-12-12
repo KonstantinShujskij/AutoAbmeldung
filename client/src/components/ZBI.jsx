@@ -42,8 +42,8 @@ function ZBI({ onComplite, email }) {
                         <Flex direction="column" gap="2">
                             <img className="example-img" src={zb1} alt="preview" />
                             <Text size="1" style={{ marginTop: 6 }}>
-                                Es ist erforderlich, ein Foto des großen Fahrzeugscheins (Zulassungsbescheinigung Teil II – ZB II) hochzuladen,
-                                sodass alle Daten sichtbar sind, insbesondere die letzte Spalte sowie die Fahrzeug-Identifizierungsnummer (FIN/VIN), wie im Beispiel.
+                                Für die Zulassungsbescheinigung Teil I (ZB I) ist ein vollständiges und gut lesbares Foto erforderlich. 
+                                Die aufgeklebte Plakette muss zuvor abgezogen werden, sodass der darunterliegende Code klar sichtbar ist.
                             </Text>
                         </Flex>
                     </Card>

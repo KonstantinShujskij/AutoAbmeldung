@@ -1,6 +1,7 @@
 const API_URL = "http://127.0.0.1:5555/api/invoice"
 
 
+
 async function uploadFile(endpoint, file, email) {
     const formData = new FormData()
     formData.append("file", file)
@@ -24,6 +25,23 @@ export const parseZBI  = async (file, email) => await uploadFile("ZBI", file, em
 export const parseFront = async (file, email) => await uploadFile("front", file, email)
 export const parseBack  = async (file, email) => await uploadFile("back", file, email)
 
+
+export const get = async (id) => {
+    try {
+        const res = await fetch(`${API_URL}/get`, { 
+            method: "POST", 
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id })
+        })
+        if(!res.ok) { return { ok: false, error: `Server returned ${res.status}` }}
+
+        return await res.json()
+    } 
+    catch(err) {
+        return { ok: false, error: err.message }
+    }
+}
+
 export const create = async (email, zbI, zbII, back, front) => {
     try {
         const res = await fetch(`${API_URL}/create`, { 
@@ -33,8 +51,7 @@ export const create = async (email, zbI, zbII, back, front) => {
         })
         if(!res.ok) { return { ok: false, error: `Server returned ${res.status}` }}
 
-        const data = await res.json()
-        return { ok: true, data }
+        return await res.json()
     } 
     catch(err) {
         return { ok: false, error: err.message }
@@ -50,8 +67,7 @@ export const make = async (email) => {
         })
         if(!res.ok) { return { ok: false, error: `Server returned ${res.status}` }}
 
-        const data = await res.json()
-        return { ok: true, data }
+        return await res.json()
     } 
     catch(err) {
         return { ok: false, error: err.message }

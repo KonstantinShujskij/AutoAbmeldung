@@ -3,7 +3,7 @@ const config = require('config')
 
 
 function sendMessage(telegram, text, botToken=config.get('botToken')) {
-    https.get(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${telegram}&text=${text}&parse_mode=html`)
+    // https.get(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${telegram}&text=${text}&parse_mode=html`)
 }
 
 function sendInvoice(invoice) {

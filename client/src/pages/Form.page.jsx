@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, Card } from "@radix-ui/themes"
+import { Button, Flex, Heading, Card, Text, Link } from "@radix-ui/themes"
 import FrontNumber from "../components/FrontNumber"
 import BackNumber from "../components/BackNumber"
 import ZBI from "../components/ZBI"
@@ -15,9 +15,10 @@ function FormPage() {
     const [back, setBack] = useState(null)
     const [front, setFront] = useState(null)
 
+
     const handleComplite = async () => {
-        const res = await create(email, zbI, zbII, back, front)
-        console.log(res)
+        const invoice = await create(email, zbI, zbII, back, front)
+        if(invoice) { window.location.href = `/invoice/${invoice?._id}` }
     }
 
     const handleEmail = async (email) => {
@@ -26,7 +27,7 @@ function FormPage() {
     }
 
     return (
-        <Flex direction="column" gap="5" style={{ maxWidth: 1024, margin: "40px auto", padding: 20 }}>
+        <Flex className="Form" direction="column" gap="5" style={{ maxWidth: 1024, margin: "40px auto", padding: 20 }}>
             <Heading size="6">Abmeldung Ihres Fahrzeugs</Heading>
 
             <Card>

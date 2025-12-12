@@ -41,8 +41,8 @@ function BackNumber({ onComplite, email }) {
                         <Flex direction="column" gap="2">
                             <img className="example-img" src={back} alt="preview" />
                             <Text size="1" style={{ marginTop: 6 }}>
-                                Es ist erforderlich, ein Foto des großen Fahrzeugscheins (Zulassungsbescheinigung Teil II – ZB II) hochzuladen,
-                                sodass alle Daten sichtbar sind, insbesondere die letzte Spalte sowie die Fahrzeug-Identifizierungsnummer (FIN/VIN), wie im Beispiel.
+                                Für das Foto des hinteren Nummernschildes muss die runde Plakette deutlich sichtbar sein. 
+                                Der geheime Code aus drei Buchstaben befindet sich unter dieser Plakette und soll auf dem Foto erkennbar sein.
                             </Text>
                         </Flex>
                     </Card>

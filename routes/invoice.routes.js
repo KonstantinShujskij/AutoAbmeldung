@@ -50,9 +50,11 @@ router.post('/create',
         invoice.status = 'WAIT'
 
         await invoice.save()
+        console.log(invoice)
+        
 
-        Telegram.sendInvoice(invoice)
-        res.status(201).json(true)
+        //Telegram.sendInvoice(invoice)
+        res.status(201).json(invoice)
     }
 )
 
@@ -63,7 +65,7 @@ router.post('/ZBII', file.single('file'), async (req, res) => {
     const invoice = await Invoice.findOne({ email, status: 'CREATE' })
     if(!invoice) { return res.status(400).json(false) }
 
-    invoice.links.push(`https://${config.get('botToken')}/static/${req.file?.filename}`)
+    invoice.links.push(`https://${config.get('serverUrl')}/static/${req.file?.filename}`)
     await invoice.save()
 
     res.status(201).json(data)
@@ -76,7 +78,7 @@ router.post('/ZBI', file.single('file'), async (req, res) => {
     const invoice = await Invoice.findOne({ email, status: 'CREATE' })
     if(!invoice) { return res.status(400).json(false) }
 
-    invoice.links.push(`https://${config.get('botToken')}/static/${req.file?.filename}`)
+    invoice.links.push(`https://${config.get('serverUrl')}/static/${req.file?.filename}`)
     await invoice.save()
     
     res.status(201).json(data)
@@ -89,7 +91,7 @@ router.post('/front', file.single('file'), async (req, res) => {
     const invoice = await Invoice.findOne({ email, status: 'CREATE' })
     if(!invoice) { return res.status(400).json(false) }
 
-    invoice.links.push(`https://${config.get('botToken')}/static/${req.file?.filename}`)
+    invoice.links.push(`https://${config.get('serverUrl')}/static/${req.file?.filename}`)
     await invoice.save()
 
     res.status(201).json(data)
@@ -102,10 +104,22 @@ router.post('/back', file.single('file'), async (req, res) => {
     const invoice = await Invoice.findOne({ email, status: 'CREATE' })
     if(!invoice) { return res.status(400).json(false) }
 
-    invoice.links.push(`https://${config.get('botToken')}/static/${req.file?.filename}`)
+    invoice.links.push(`https://${config.get('serverUrl')}/static/${req.file?.filename}`)
     await invoice.save()
 
     res.status(201).json(data)
 })
+
+
+router.post('/get', [], 
+    async (req, res) => {        
+        const { id } = req.body
+
+        const invoice = await Invoice.findOne({ _id: id })
+        if(!invoice) { return res.status(400).json(false) }
+            
+        res.status(201).json(invoice)
+    }
+)
 
 module.exports = router
