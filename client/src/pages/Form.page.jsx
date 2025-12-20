@@ -18,7 +18,11 @@ function FormPage() {
 
     const handleComplite = async () => {
         const invoice = await create(email, zbI, zbII, back, front)
-        if(invoice) { window.location.href = `/invoice/${invoice?._id}` }
+        if(invoice) {
+            window.dataLayer = window.dataLayer || []
+            window.dataLayer.push({ event: 'payment_success' })
+            window.location.href = `/invoice/${invoice?._id}`
+        }
     }
 
     const handleEmail = async (email) => {
