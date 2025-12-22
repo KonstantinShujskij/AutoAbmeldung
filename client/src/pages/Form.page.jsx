@@ -32,7 +32,7 @@ function FormPage() {
 
     return (
         <Flex className="Form" direction="column" gap="5" style={{ maxWidth: 1024, margin: "40px auto", padding: 20 }}>
-            <Heading size="6">Abmeldung Ihres Fahrzeugs</Heading>
+            <Heading size="6">Ihre Auto muss weg</Heading>
 
             <Card>
                 <Flex direction="column" gap="3">

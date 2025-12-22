@@ -4,7 +4,7 @@ import Router from "./router"
 function App() {
     return (
         <div className="App" style={{ padding: "20px 40px" }}>
-            <div className="header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "40px", marginTop: "20px" }}>
+            {/* <div className="header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "40px", marginTop: "20px" }}>
                 <div className="logo">
                     <svg version="1.1" viewBox="0 0 202.9 58">
                         <path class="st0" d="M193.3,18.9h-5.9l-9.6,25h4.5c0.4,0,0.9-0.1,1.2-0.4c0.3-0.2,0.5-0.5,0.7-0.9l1.5-4.4h9.4l1.5,4.4c0.1,0.4,0.4,0.7,0.7,0.9c0.4,0.2,0.8,0.4,1.2,0.4h4.4L193.3,18.9z M187,34.3l2.3-6.8c0.2-0.4,0.3-1,0.5-1.6s0.4-1.2,0.6-1.9c0.2,0.7,0.4,1.3,0.6,1.9c0.2,0.6,0.4,1.1,0.5,1.5l2.3,6.9H187z"></path>
@@ -16,11 +16,11 @@ function App() {
                         <path class="st0" d="M22,43.9h-5.1c-0.3,0-0.6,0-0.8-0.1c-0.2,0-0.4-0.1-0.6-0.2c-0.2-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.2-0.3-0.4-0.4l-5.6-8.7c-0.2-0.3-0.5-0.5-0.8-0.7c-0.4-0.1-0.8-0.2-1.2-0.2H5.7v10.6H0V19h5.7v10h0.9c0.7,0.1,1.4-0.2,1.8-0.8l5.5-8.1c0.2-0.4,0.6-0.7,1-0.9c0.5-0.2,0.9-0.2,1.4-0.2h5l-7.2,10c-0.2,0.3-0.5,0.6-0.8,0.9c-0.3,0.2-0.5,0.4-0.9,0.6c0.4,0.2,0.8,0.4,1.2,0.7c0.4,0.3,0.7,0.7,1,1.1L22,43.9z"></path>
                     </svg>
                 </div>
-            </div>
+            </div> */}
             {/* <FormPage /> */}
             {/* <InvoicePage /> */}
             {Router}
-            <div className="header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "40px" }}>
+            {/* <div className="header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "40px" }}>
                 <div className="stamp">
                     <div className="stamp-icon">
                         <svg viewBox="0 0 37 33.5" class="bpa-icon bpa-icon-bpa-eagle" width="37" height="33.5" version="1.1" role="img" aria-hidden="true" aria-labelledby="aria-13-5c3qx7hzuqol04u0to0892on5" focusable="false">
@@ -37,7 +37,7 @@ function App() {
                         <div>Bundesspassamt</div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
