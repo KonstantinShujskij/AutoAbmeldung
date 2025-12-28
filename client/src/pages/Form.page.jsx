@@ -32,8 +32,11 @@ function FormPage() {
 
     return (
         <Flex className="Form" direction="column" gap="5" style={{ maxWidth: 1024, margin: "40px auto", padding: 20 }}>
-            <Heading size="6">Ihre Auto muss weg</Heading>
-
+            <Text style={{color: "#c3c3c3", fontSize: "12px" }}>
+                HINWEIS: Wir sind ein privater Dienstleister und keine Behörde. Unsere Dienstleistung ist kostenpflichtig. 
+                Die offizielle Abmeldung kann auch direkt über das i-Kfz Portal des Kraftfahrt-Bundesamtes vorgenommen werden.
+            </Text>
+            <Heading size="6">Abmeldung</Heading>
             <Card>
                 <Flex direction="column" gap="3">
                     <Email onComplite={handleEmail} />
@@ -45,6 +48,11 @@ function FormPage() {
                     {back && <Button size="4" mt="4" onClick={() => handleComplite()}>Weiter</Button> }
                 </Flex>
             </Card>
+
+            <Flex direction="column">
+                <Link href="./offerte" >Öffentliches Angebot</Link>
+                <Link href="./daten" >Datenschutzerklärung</Link>
+            </Flex>
         </Flex>
     )
 }
