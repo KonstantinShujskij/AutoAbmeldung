@@ -31,7 +31,8 @@ function FormPage() {
     }
 
     return (
-        <Flex className="Form" direction="column" gap="5" style={{ maxWidth: 1024, margin: "40px auto", padding: 20 }}>
+        <Flex className="Form" direction="column" gap="5" style={{ maxWidth: 1024, margin: "40px auto", padding: 20 }}>          
+            
             <Text style={{color: "#c3c3c3", fontSize: "12px" }}>
                 HINWEIS: Wir sind ein privater Dienstleister und keine Behörde. Unsere Dienstleistung ist kostenpflichtig. 
                 Die offizielle Abmeldung kann auch direkt über das i-Kfz Portal des Kraftfahrt-Bundesamtes vorgenommen werden.
