@@ -6,6 +6,7 @@ const file = require('../middleware/file.middleware')
 const GPT = require('../utils/gpt.utils')
 const Telegram = require('../utils/telegram.utils')
 const Invoice = require('../models/Invoice.model')
+const Form = require('../utils/playwrite.utils')
 
 const config = require('config')
 
@@ -36,8 +37,11 @@ router.post('/create',
     async (req, res) => {        
         const { email, zbI, zbII, back, front } = req.body
 
-        const invoice = await Invoice.findOne({ email, status: 'CREATE' })
-        if(!invoice) { return res.status(400).json(false) }
+        let invoice = await Invoice.findOne({ email, status: 'CREATE' })       
+        if(!invoice) { 
+            // invoice = new Invoice({ email })
+            return res.status(400).json(false) 
+        }
             
         invoice.email = email
         invoice.ownerName = zbII?.ownerName
@@ -48,12 +52,11 @@ router.post('/create',
         invoice.back = back?.code
         invoice.front = front?.code
         invoice.status = 'WAIT'
+        invoice.adNumber = await Form.fillForm(invoice)
 
         await invoice.save()
-        console.log(invoice)
-        
 
-        //Telegram.sendInvoice(invoice)
+        Telegram.sendInvoice(invoice)
         res.status(201).json(invoice)
     }
 )

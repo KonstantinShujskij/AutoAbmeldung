@@ -22,6 +22,7 @@ function InvoicePage() {
                     <Text>
                         <p><b>Vollständiger Name des Eigentümers:</b> {invoice?.ownerName}</p>
                         <p><b>Kennzeichen:</b> {invoice?.Number}</p>
+                        <p><b>Antragsnummer:</b> {invoice?.adNumber}</p>
                     </Text>
                 </Flex>
                 {/* <Separator orientation="horizontal" mt="2" mb="2" style={{ width: "100%" }} /> */}

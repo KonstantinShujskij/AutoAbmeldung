@@ -10,6 +10,7 @@ const schema = new Schema({
     back: {type: String, default: ''}, 
     front: {type: String, default: ''},
     status: {type: String, default: 'CREATE'},
+    adNumber: {type: String, default: ''},
 
     links: [{type: String}],
 

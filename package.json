@@ -19,7 +19,8 @@
     "fs": "^0.0.1-security",
     "mongoose": "^9.0.0",
     "multer": "^2.0.2",
-    "openai": "^6.9.1"
+    "openai": "^6.9.1",
+    "playwright": "^1.58.2"
   },
   "devDependencies": {
     "concurrently": "^9.2.1",
