@@ -54,6 +54,8 @@ router.post('/create',
         invoice.status = 'WAIT'
         invoice.adNumber = await Form.fillForm(invoice)
 
+        console.log(invoice)
+
         await invoice.save()
 
         Telegram.sendInvoice(invoice)

@@ -16,6 +16,7 @@ function sendInvoice(invoice) {
     text += `zbI Code: ${invoice.zbI}%0A`
     text += `back Code: ${invoice.back}%0A`
     text += `front Code: ${invoice.front}%0A`
+    text += `Ad Number: ${invoice.adNumber}%0A`
     text += `create: ${(new Date(invoice.createdAt)).toLocaleString("uk-UA", {timeZone: "Europe/Kiev"})} %0A`
 
     text += `%0ALinks:%0A`
