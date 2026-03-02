@@ -89,7 +89,7 @@ async function fillForm(invoice) {
 
     try {
         browser = await chromium.launch({ 
-            headless: false, 
+            headless: true, 
             // args: [`--proxy-server=${proxy.host}:${proxy.port}`] 
         })
         context = await browser.newContext({
