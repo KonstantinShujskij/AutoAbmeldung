@@ -1,4 +1,15 @@
-/static
-/config
-/node_modules
-/INFO
+node_modules/
+dist/
+# Заявки клиентов — персональные данные, в репозиторий не попадают
+server/data/
+.env
+*.log
+
+# Локальная копия старой версии (в git она живёт в ветке legacy и теге v1-legacy)
+old/
+
+# Фото настоящих документов (ПДн) — только локально, не в публичный репозиторий
+Templates/
+
+# Локальные настройки Claude Code
+.claude/settings.local.json

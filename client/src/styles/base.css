@@ -1,0 +1,169 @@
+:root {
+  /* Бумага и чернила — палитра «амтлих», но живая */
+  --paper: #f2eee3;
+  --paper-hi: #fbf9f3;
+  --paper-lo: #e6dfcc;
+  --ink: #142019;
+  --ink-2: #3d4b43;
+  --ink-3: #6c786f;
+  --line: rgba(20, 32, 25, 0.12);
+  --line-2: rgba(20, 32, 25, 0.24);
+
+  /* Зелень Zulassungsbescheinigung */
+  --green: #1d6a47;
+  --green-2: #2c8a5a;
+  --green-ink: #0f4a30;
+  --green-wash: #dfece2;
+  --green-deep: #0f2a1e;
+
+  /* Акценты с номеров и печатей */
+  --eu: #0b3d91;
+  --sticker: #f3d12f;
+  --seal: #b6412a;
+  --seal-wash: #f8e7df;
+
+  --f-display: 'Fraunces Variable', 'Fraunces', Georgia, serif;
+  --f-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  --f-plate: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+
+  --radius: 10px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --shadow-sheet:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 1px 2px rgba(20, 32, 25, 0.05),
+    0 18px 40px -26px rgba(20, 32, 25, 0.35);
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 16px/1.55 var(--f-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Гильош-муар в правом верхнем углу */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    repeating-radial-gradient(circle at 104% -6%, transparent 0 11px, rgba(29, 106, 71, 0.075) 11px 12px),
+    repeating-radial-gradient(circle at 92% -18%, transparent 0 11px, rgba(29, 106, 71, 0.06) 11px 12px);
+  -webkit-mask-image: radial-gradient(110% 70% at 100% 0%, #000 0%, transparent 62%);
+  mask-image: radial-gradient(110% 70% at 100% 0%, #000 0%, transparent 62%);
+}
+
+/* Бумажное зерно */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--green-wash);
+  color: var(--green-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.mono {
+  font-family: var(--f-mono);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes stamp-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.9) rotate(-34deg);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(0.92) rotate(-11deg);
+  }
+  75% {
+    transform: scale(1.03) rotate(-14deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-13deg);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.6) rotate(-20deg);
+  }
+  60% {
+    transform: scale(1.12) rotate(-6deg);
+  }
+  100% {
+    transform: scale(1) rotate(-8deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

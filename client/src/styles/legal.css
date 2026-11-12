@@ -1,0 +1,327 @@
+/* ───────── Юридические страницы: Datenschutz, Impressum ───────── */
+
+.hero--compact h1 {
+  font-size: clamp(38px, 3.8vw, 54px);
+}
+
+.backlink {
+  font: 500 11.5px/1 var(--f-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--green);
+}
+
+.backlink:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.mbar .backlink {
+  margin-left: auto;
+}
+
+.backlink--aside {
+  display: inline-block;
+  margin-top: 24px;
+}
+
+/* Оглавление */
+
+.toc ol {
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-2);
+}
+
+.toc a {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: baseline;
+  padding: 7px 2px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.toc a span {
+  font: 500 11px/1 var(--f-mono);
+  color: var(--ink-3);
+}
+
+.toc a:hover {
+  color: var(--green);
+}
+
+/* Документ */
+
+.draft-note {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border: 1px dashed var(--seal);
+  border-radius: 8px;
+  background: var(--seal-wash);
+  font-size: 14px;
+  color: #5b2517;
+}
+
+.doc {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-hi);
+  box-shadow: var(--shadow-sheet);
+  animation: rise 0.7s var(--ease) both;
+}
+
+.doc__head {
+  padding: 28px 34px 22px;
+  border-bottom: 1px dashed var(--line-2);
+  background:
+    repeating-radial-gradient(ellipse at 0% 140%, transparent 0 8px, rgba(29, 106, 71, 0.055) 8px 9px),
+    repeating-radial-gradient(ellipse at 100% 160%, transparent 0 8px, rgba(29, 106, 71, 0.045) 8px 9px);
+}
+
+.doc__head h2 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: clamp(30px, 3.4vw, 40px);
+  font-weight: 450;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.doc__head p {
+  margin: 8px 0 0;
+  font-size: 14.5px;
+  color: var(--ink-2);
+}
+
+.doc__lede {
+  max-width: 62ch;
+  margin: 0;
+  padding: 24px 34px 6px;
+  font-size: 17px;
+  color: var(--ink-2);
+}
+
+.doc__sec {
+  padding: 24px 34px;
+  border-bottom: 1px dashed var(--line);
+  scroll-margin-top: 20px;
+}
+
+.doc__sec:last-child {
+  border-bottom: 0;
+}
+
+.doc__sec h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0 0 12px;
+  font-family: var(--f-display);
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.doc__sec h3 span {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--green);
+}
+
+.doc__sec p,
+.doc__sec li {
+  max-width: 68ch;
+  color: var(--ink-2);
+}
+
+.doc__sec p {
+  margin: 0 0 12px;
+}
+
+.doc__sec p:last-child {
+  margin-bottom: 0;
+}
+
+.doc__sec strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.doc__list {
+  margin: 0 0 12px;
+  padding-left: 20px;
+}
+
+.doc__list li + li {
+  margin-top: 8px;
+}
+
+.doc__list li::marker {
+  color: var(--green-2);
+}
+
+.doc__address {
+  margin: 0 0 14px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--green);
+  border-radius: 0 6px 6px 0;
+  background: rgba(223, 236, 226, 0.5);
+  font-style: normal;
+  line-height: 1.8;
+}
+
+.doc__sec a {
+  color: var(--green);
+  text-underline-offset: 3px;
+}
+
+.doc__hint {
+  font-size: 13.5px;
+  color: var(--ink-3) !important;
+}
+
+/* Пары «подпись — значение» (контакты, реестры) */
+.doc__facts {
+  margin: 0;
+  border-top: 1px solid var(--line-2);
+}
+
+.doc__facts > div {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 16px;
+  align-items: baseline;
+  padding: 11px 0;
+  border-bottom: 1px dashed var(--line-2);
+}
+
+.doc__facts dt {
+  font: 500 11px/1.3 var(--f-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.doc__facts dd {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+/* Цель → правовое основание */
+
+.basis {
+  margin: 0 0 16px;
+  border-top: 1px solid var(--line-2);
+}
+
+.basis > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.basis dt {
+  color: var(--ink-2);
+}
+
+.basis dd {
+  align-self: start;
+  margin: 0;
+  padding: 7px 10px;
+  border-radius: 6px;
+  background: var(--green-wash);
+  font: 500 12.5px/1.45 var(--f-mono);
+  color: var(--green-ink);
+}
+
+.doc__notice {
+  padding: 13px 16px;
+  border: 1px solid rgba(29, 106, 71, 0.25);
+  border-radius: 8px;
+  background: rgba(223, 236, 226, 0.45);
+}
+
+/* Art. 21 требует выделять право на возражение отдельно от остального текста */
+.doc__objection {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.doc__objection h4 {
+  margin: 0 0 8px;
+  font: 600 12px/1.3 var(--f-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.doc__stand {
+  font: 500 12px/1.4 var(--f-mono);
+  color: var(--ink-3) !important;
+}
+
+/* Места, которые должен заполнить владелец */
+mark.todo {
+  padding: 0 5px;
+  border-radius: 3px;
+  background: var(--sticker);
+  color: #1d1a05;
+  font-size: 0.94em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Невысокий экран: оглавление важнее заголовка */
+@media (max-height: 800px) and (min-width: 1081px) {
+  .app--legal .hero {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .backlink--aside {
+    display: none;
+  }
+
+  .toc ol {
+    columns: 2;
+    column-gap: 24px;
+  }
+
+  .toc li {
+    break-inside: avoid;
+  }
+}
+
+@media (max-width: 640px) {
+  .toc ol {
+    columns: 1;
+  }
+
+  .doc__head,
+  .doc__lede,
+  .doc__sec {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .basis > div,
+  .doc__facts > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+  }
+}
