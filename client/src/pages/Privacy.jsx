@@ -159,6 +159,12 @@ export default function Privacy() {
             <Todo>Auftragsverarbeitungsvertrag (DPA) mit OpenAI abschließen</Todo>
           </li>
           <li>
+            <strong>Telegram</strong> (Telegram FZ-LLC, Dubai, VAE) – für die interne Benachrichtigung unseres
+            Bearbeitungsteams: Ihre Auftragsdaten und ggf. das Foto der Zulassungsbescheinigung werden an eine
+            geschlossene Gruppe unseres Teams übermittelt.{' '}
+            <Todo>rechtlich prüfen: Drittland ohne Angemessenheitsbeschluss – Alternative im EU-Raum erwägen</Todo>
+          </li>
+          <li>
             <strong>Behörden</strong>, soweit wir gesetzlich dazu verpflichtet sind, etwa Finanzbehörden.
           </li>
         </ul>
@@ -187,8 +193,9 @@ export default function Privacy() {
             ohnehin verbraucht.
           </li>
           <li>
-            <strong>Fotos der Zulassungsbescheinigung</strong> speichern wir nicht: Sie werden nur im Arbeitsspeicher
-            ausgelesen und danach verworfen. Bei OpenAI höchstens 30 Tage (siehe Empfänger).
+            <strong>Fotos der Zulassungsbescheinigung</strong> legen wir nicht in unserer Datenbank ab: Sie bleiben
+            höchstens zwei Stunden im Arbeitsspeicher, bis Sie den Auftrag absenden, und werden dann an unser
+            Bearbeitungsteam übermittelt (siehe Empfänger). Bei OpenAI höchstens 30 Tage.
           </li>
           <li>
             <strong>Halter-, Fahrzeug- und Vorgangsdaten</strong> speichern wir bis zum Abschluss des Vorgangs und
