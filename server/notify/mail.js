@@ -115,7 +115,7 @@ export function paymentMail(record) {
       `Bei Fragen antworten Sie einfach auf diese E-Mail und nennen Sie die Vorgangsnummer ${record.id}.`,
     ],
   });
-  return { subject: `Zahlung für Ihre Abmeldung – ${record.id}`, html, text };
+  return { subject: `Zahlung für Ihre AutoAbmeldung – ${record.id}`, html, text };
 }
 
 async function send(record, { subject, html, text }) {
