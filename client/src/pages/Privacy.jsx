@@ -70,7 +70,13 @@ export default function Privacy() {
           </li>
           <li>
             <strong>Sicherheitscodes:</strong> der Code der Zulassungsbescheinigung Teil I und die Codes der
-            Stempelplaketten auf beiden Kennzeichen.
+            Stempelplaketten auf beiden Kennzeichen; bei Verschrottung zusätzlich der Code der Zulassungsbescheinigung
+            Teil II.
+          </li>
+          <li>
+            <strong>Verbleib des Fahrzeugs:</strong> ob das Fahrzeug nur abgemeldet oder verschrottet wurde, ggf. Wunsch
+            nach Kennzeichenreservierung, bei Verschrottung Datum und Staat der Verwertung sowie die Betriebsnummer des
+            Demontagebetriebs.
           </li>
           <li>
             <strong>Foto der Zulassungsbescheinigung Teil II</strong> – nur wenn Sie die Fotofunktion nutzen. Daraus

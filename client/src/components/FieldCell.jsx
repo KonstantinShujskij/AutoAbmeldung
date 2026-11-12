@@ -2,7 +2,7 @@
  * Ячейка в стиле Zulassungsbescheinigung: слева код поля (как «C.3.1» на документе),
  * справа подпись и сам ввод. Ввод передаётся render-prop'ом, чтобы получить id/aria.
  */
-export function FieldCell({ id, code, label, hint, error, optional, className = '', children }) {
+export function FieldCell({ id, code, label, hint, hintTone, error, optional, className = '', children }) {
   const msgId = `${id}-msg`;
   const message = error || hint;
   return (
@@ -21,7 +21,7 @@ export function FieldCell({ id, code, label, hint, error, optional, className = 
           'aria-describedby': message ? msgId : undefined,
         })}
         {message && (
-          <p id={msgId} className={error ? 'zcell__error' : 'zcell__hint'}>
+          <p id={msgId} className={error ? 'zcell__error' : `zcell__hint${hintTone ? ` zcell__hint--${hintTone}` : ''}`}>
             {message}
           </p>
         )}

@@ -4,12 +4,14 @@ import {
   EMPTY_FORM,
   FIELDS,
   SECTIONS,
+  needsDisposal,
   normalize,
   validateApplication,
 } from '../../shared/validation.js';
 import { PRIVACY_PATH } from '../../shared/legal.js';
 import { Brand, Footer } from './components/Chrome.jsx';
 import { CodeCard } from './components/CodeCard.jsx';
+import { Verbleib } from './components/Verbleib.jsx';
 import { Confirmation } from './components/Confirmation.jsx';
 import { Arrow, Check, Rosette } from './components/Decor.jsx';
 import { FieldCell, VinRuler } from './components/FieldCell.jsx';
@@ -265,16 +267,16 @@ export default function App() {
                 </header>
                 <div className="sheet__body">
                   <div className="zgrid">
-                    <FieldCell id="f-lastName" code="C.3.1" label="Name oder Firmenname" error={errorFor('lastName')} hint={scanHint('lastName')} className="span-3">
+                    <FieldCell id="f-lastName" code="C.3.1" label="Name oder Firmenname" error={errorFor('lastName')} hint={scanHint('lastName')} hintTone={fromScan['lastName']} className="span-3">
                       {(a) => <input {...a} {...bind('lastName')} autoComplete="family-name" placeholder="Mustermann" className="zinput" />}
                     </FieldCell>
-                    <FieldCell id="f-firstName" code="C.3.2" label="Vorname(n)" error={errorFor('firstName')} hint={scanHint('firstName')} className="span-3">
+                    <FieldCell id="f-firstName" code="C.3.2" label="Vorname(n)" error={errorFor('firstName')} hint={scanHint('firstName')} hintTone={fromScan['firstName']} className="span-3">
                       {(a) => <input {...a} {...bind('firstName')} autoComplete="given-name" placeholder="Erika" className="zinput" />}
                     </FieldCell>
-                    <FieldCell id="f-street" code="C.3.3" label="Straße und Hausnummer" error={errorFor('street')} hint={scanHint('street')}>
+                    <FieldCell id="f-street" code="C.3.3" label="Straße und Hausnummer" error={errorFor('street')} hint={scanHint('street')} hintTone={fromScan['street']}>
                       {(a) => <input {...a} {...bind('street')} autoComplete="address-line1" placeholder="Musterstraße 12" className="zinput" />}
                     </FieldCell>
-                    <FieldCell id="f-zip" code="C.3.3" label="PLZ" error={errorFor('zip')} hint={scanHint('zip')} className="span-2">
+                    <FieldCell id="f-zip" code="C.3.3" label="PLZ" error={errorFor('zip')} hint={scanHint('zip')} hintTone={fromScan['zip']} className="span-2">
                       {(a) => (
                         <input
                           {...a}
@@ -287,7 +289,7 @@ export default function App() {
                         />
                       )}
                     </FieldCell>
-                    <FieldCell id="f-city" code="C.3.3" label="Ort" error={errorFor('city')} hint={scanHint('city')} className="span-4">
+                    <FieldCell id="f-city" code="C.3.3" label="Ort" error={errorFor('city')} hint={scanHint('city')} hintTone={fromScan['city']} className="span-4">
                       {(a) => <input {...a} {...bind('city')} autoComplete="address-level2" placeholder="Lünen" className="zinput" />}
                     </FieldCell>
                   </div>
@@ -311,7 +313,7 @@ export default function App() {
                       code="E"
                       label="Fahrzeug-Identifizierungsnummer (FIN)"
                       error={errorFor('vin')}
-                      hint={scanHint('vin')}
+                      hint={scanHint('vin')} hintTone={fromScan['vin']}
                     >
                       {(a) => (
                         <>
@@ -335,6 +337,7 @@ export default function App() {
                       code="A"
                       label="Amtliches Kennzeichen"
                       hint={scanHint('plateDistrict') ?? 'So wie auf dem Schild. Ein ganzes Kennzeichen lässt sich auch einfügen.'}
+                      hintTone={fromScan.plateDistrict}
                       error={plateErrorName ? errorFor(plateErrorName) : null}
                       className="zcell--plate"
                     >
@@ -352,6 +355,7 @@ export default function App() {
                       )}
                     </FieldCell>
                   </div>
+                  <Verbleib form={form} set={set} touch={touch} errorFor={errorFor} bind={bind} />
                 </div>
               </section>
 
@@ -385,6 +389,15 @@ export default function App() {
                       where: 'Rückseite, grünes Etikett unten rechts – vorsichtig freirubbeln.',
                       wide: true,
                     })}
+                    {needsDisposal(form.verbleib) &&
+                      code('codeZb2', {
+                        variant: 'zb',
+                        title: 'Fahrzeugbrief',
+                        doc: 'Zulassungsbescheinigung Teil II',
+                        where: 'Etikett auf der Vorderseite, links unter dem Halterfeld. Nur bei Verschrottung nötig.',
+                        wide: true,
+                        optional: false,
+                      })}
                     {code('codeFront', {
                       variant: 'plate',
                       title: 'Vorderes Kennzeichen',

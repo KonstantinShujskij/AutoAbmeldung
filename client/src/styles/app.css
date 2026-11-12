@@ -1741,3 +1741,113 @@
   .scan__thumb { width: 84px; }
   .scan__title { font-size: 21px; }
 }
+
+/* Подписи под полями, заполненными с фото: только цвет текста, без заливки */
+.zcell__hint--check,
+.zcell__hint--verified {
+  font-weight: 500;
+}
+.zcell__hint--check { color: var(--eu); }
+.zcell__hint--verified { color: var(--green); }
+.zcell__hint--check::before,
+.zcell__hint--verified::before {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 11px;
+}
+.zcell__hint--check::before { content: '●'; }
+.zcell__hint--verified::before { content: '✓'; font-weight: 700; }
+
+/* ─── Verbleib des Fahrzeugs ─────────────────────────────────────────────── */
+.verbleib {
+  min-width: 0;
+  margin: 22px 0 0;
+  padding: 18px 0 0;
+  border: 0;
+  border-top: 1px dashed var(--line-2);
+}
+.verbleib__legend {
+  float: left;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 0;
+  font-family: var(--f-display);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.verbleib__legend + * { clear: both; }
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+@container (max-width: 600px) {
+  .choices { grid-template-columns: 1fr; }
+}
+.choice {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 4px 10px;
+  align-content: start;
+  padding: 14px 14px 14px 12px;
+  border: 1px solid var(--line-2);
+  border-radius: 8px;
+  background: var(--paper-hi);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+.choice:hover { border-color: var(--green-2); }
+.choice.is-on {
+  border-color: var(--green);
+  background: var(--green-wash);
+  box-shadow: inset 0 0 0 1px var(--green);
+}
+.choice__input { position: absolute; opacity: 0; pointer-events: none; }
+.choice__dot {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  border: 1.5px solid var(--ink-3);
+  border-radius: 50%;
+  background: #fff;
+  transition: border 0.15s;
+}
+.choice.is-on .choice__dot { border: 5px solid var(--green); }
+.choice__input:focus-visible ~ .choice__dot { outline: 2px solid var(--sticker); outline-offset: 2px; }
+.choice__title { font-weight: 600; font-size: 15px; color: var(--ink); }
+.choice__text { grid-column: 2; font-size: 13px; line-height: 1.45; color: var(--ink-2); }
+
+.reserve {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+  padding: 14px 16px;
+  border: 1px dashed var(--line-2);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.reserve__input { position: absolute; top: 14px; left: 16px; width: 22px; height: 22px; margin: 0; opacity: 0; cursor: pointer; }
+.reserve__box {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid var(--ink-3);
+  border-radius: 5px;
+  background: #fff;
+  pointer-events: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+.reserve__check { width: 15px; height: 15px; color: #fff; opacity: 0; transform: scale(0.4) rotate(-20deg); transition: opacity 0.2s, transform 0.3s var(--ease); }
+.reserve__input:checked + .reserve__box { border-color: var(--green); background: var(--green); }
+.reserve__input:checked + .reserve__box .reserve__check { opacity: 1; transform: none; }
+.reserve__input:focus-visible + .reserve__box { outline: 2px solid var(--sticker); outline-offset: 2px; }
+.reserve__text { font-size: 13.5px; line-height: 1.5; color: var(--ink-2); }
+.reserve__text strong { display: block; margin-bottom: 2px; font-size: 15px; color: var(--ink); }
+
+.verbleib__grid { margin-top: 14px; }
