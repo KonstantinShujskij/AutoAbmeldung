@@ -25,7 +25,7 @@ export function makeSection(toc) {
 }
 
 /** Общий каркас юридических страниц: закреплённая колонка с оглавлением + «документ». */
-export function LegalLayout({ kicker, title, emphasis, toc, meta, docTitle, docSub, lede, children }) {
+export function LegalLayout({ kicker, title, emphasis, toc, meta, docTitle, docSub, lede, draft = true, children }) {
   return (
     <div className="app app--legal">
       <header className="mbar">
@@ -69,7 +69,7 @@ export function LegalLayout({ kicker, title, emphasis, toc, meta, docTitle, docS
         <div className="content">
           <p className="content__meta">{meta}</p>
 
-          {import.meta.env.DEV && (
+          {draft && import.meta.env.DEV && (
             <p className="draft-note">
               Черновик (видно только в режиме разработки): заполните жёлтые места и перед запуском дайте текст на
               проверку юристу.

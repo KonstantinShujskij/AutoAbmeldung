@@ -1,4 +1,4 @@
-import { IMPRESSUM_PATH, PRIVACY_PATH } from '../../../shared/legal.js';
+import { IMPRESSUM_PATH, PRIVACY_PATH, RATGEBER_PATH, KOSTEN_PATH, FAQ_PATH } from '../../../shared/legal.js';
 import { BrandMark } from './Decor.jsx';
 
 export function Brand({ className = '' }) {
@@ -18,14 +18,13 @@ export function Footer({ newTab = false }) {
   return (
     <footer className="footer">
       <span>AutoAbmeldung ist ein privater Dienst und keine Behörde.</span>
-      <nav className="footer__nav" aria-label="Rechtliches">
-        <a href={IMPRESSUM_PATH} {...linkProps}>
-          Impressum
-        </a>
-        <a href={PRIVACY_PATH} {...linkProps}>
-          Datenschutz
-        </a>
-        <span className="mono">v0.1</span>
+      <nav className="footer__nav" aria-label="Seiten">
+        <a href={RATGEBER_PATH} {...linkProps}>Ratgeber</a>
+        <a href={KOSTEN_PATH} {...linkProps}>Kosten</a>
+        <a href={FAQ_PATH} {...linkProps}>FAQ</a>
+        <a href={IMPRESSUM_PATH} {...linkProps}>Impressum</a>
+        <a href={PRIVACY_PATH} {...linkProps}>Datenschutz</a>
+        <a href="https://autofahrerswelt.de" target="_blank" rel="noopener">autofahrerswelt.de</a>
       </nav>
     </footer>
   );
