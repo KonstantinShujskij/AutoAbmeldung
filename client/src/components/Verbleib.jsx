@@ -1,6 +1,5 @@
 import { needsDisposal } from '../../../shared/validation.js';
 import { FieldCell } from './FieldCell.jsx';
-import { Check } from './Decor.jsx';
 
 // Три варианта портала i-Kfz («Fahrzeugverbleib»).
 const OPTIONS = [
@@ -21,7 +20,7 @@ const OPTIONS = [
   },
 ];
 
-/** Блок «Что будет с машиной» + резервирование номера или данные об утилизации. */
+/** Блок «Что будет с машиной» + данные об утилизации. Резервирование номера пока не предлагаем. */
 export function Verbleib({ form, set, touch, errorFor, bind }) {
   const today = new Date().toISOString().slice(0, 10);
   return (
@@ -47,26 +46,6 @@ export function Verbleib({ form, set, touch, errorFor, bind }) {
         ))}
       </div>
       {errorFor('verbleib') && <p className="zcell__error">{errorFor('verbleib')}</p>}
-
-      {form.verbleib === 'abmelden' && (
-        <label className="reserve">
-          <input
-            type="checkbox"
-            className="reserve__input"
-            data-field="reservieren"
-            checked={form.reservieren}
-            onChange={(e) => set('reservieren', e.target.checked)}
-          />
-          <span className="reserve__box" aria-hidden="true">
-            <Check className="reserve__check" />
-          </span>
-          <span className="reserve__text">
-            <strong>Kennzeichen reservieren</strong>
-            Die Behörde hält Ihr bisheriges Kennzeichen bis zu 12 Monate für eine spätere Wiederzulassung frei. Dafür
-            fällt bei der Behörde eine zusätzliche Gebühr an.
-          </span>
-        </label>
-      )}
 
       {needsDisposal(form.verbleib) && (
         <div className="zgrid verbleib__grid">

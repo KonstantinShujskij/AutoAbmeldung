@@ -87,7 +87,8 @@ function normalizeVerbleib(raw) {
   const disposal = needsDisposal(verbleib);
   return {
     verbleib,
-    reservieren: verbleib === 'abmelden' && raw.reservieren === true,
+    // Резервирование номера пока не предлагаем (решение 12.11.2026) — всегда «нет».
+    reservieren: false,
     verwertungDatum: disposal ? String(raw.verwertungDatum ?? '').trim() : '',
     verwertungStaat: disposal ? squash(raw.verwertungStaat) : '',
     demontageNr: verbleib === 'verwertet' ? squash(raw.demontageNr).toUpperCase() : '',

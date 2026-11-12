@@ -36,7 +36,7 @@ function basicAuth(credentials) {
     const [scheme, encoded] = (req.headers.authorization || '').split(' ');
     const given = scheme === 'Basic' && encoded ? Buffer.from(encoded, 'base64') : Buffer.alloc(0);
     if (given.length === expected.length && timingSafeEqual(given, expected)) return next();
-    res.set('WWW-Authenticate', 'Basic realm="AutoFaren Test", charset="UTF-8"');
+    res.set('WWW-Authenticate', 'Basic realm="AutoAbmeldung Test", charset="UTF-8"');
     res.status(401).type('text/plain').send('Testumgebung – Zugang nur mit Passwort.');
   };
 }
@@ -216,7 +216,7 @@ app.listen(PORT, () => {
     telegramEnabled() ? 'Telegram' : 'ohne Telegram',
     mailEnabled() ? 'E-Mail' : 'ohne E-Mail',
   ].filter(Boolean);
-  console.log(`AutoFaren API läuft auf http://localhost:${PORT}${flags.length ? ` (${flags.join(', ')})` : ''}`);
+  console.log(`AutoAbmeldung API läuft auf http://localhost:${PORT}${flags.length ? ` (${flags.join(', ')})` : ''}`);
   // Модель OCR грузится ~1–2 с — заранее, чтобы первый клиент не ждал.
   // Нажатия кнопок Telegram приходят на публичный адрес — регистрируем его при старте.
   if (telegramEnabled() && process.env.PUBLIC_URL) {

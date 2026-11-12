@@ -23,7 +23,16 @@
 }
 
 .brand:hover .brand__mark {
-  transform: rotate(-20deg);
+  transform: rotate(-6deg);
+}
+
+/* Печать на номере «прокручивается», как штамп */
+.brand__seal {
+  transform-origin: 22.6px 20px;
+  transition: transform 0.6s var(--ease);
+}
+.brand:hover .brand__seal {
+  transform: rotate(-90deg) scale(1.08);
 }
 
 .brand__name {

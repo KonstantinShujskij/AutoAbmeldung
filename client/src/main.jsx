@@ -22,8 +22,8 @@ import Privacy from './pages/Privacy.jsx';
 
 // Несколько страниц — роутер не нужен. Vite и Express отдают index.html на любой путь.
 const ROUTES = {
-  [PRIVACY_PATH]: { Page: Privacy, title: 'Datenschutzhinweise · AutoFaren' },
-  [IMPRESSUM_PATH]: { Page: Impressum, title: 'Impressum · AutoFaren' },
+  [PRIVACY_PATH]: { Page: Privacy, title: 'Datenschutzhinweise · AutoAbmeldung' },
+  [IMPRESSUM_PATH]: { Page: Impressum, title: 'Impressum · AutoAbmeldung' },
 };
 const route = ROUTES[window.location.pathname.replace(/\/+$/, '')];
 const Page = route?.Page ?? App;

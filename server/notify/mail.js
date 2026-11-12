@@ -33,7 +33,6 @@ function summary(record) {
     ['FIN', d.vin],
     ['Verbleib', VERBLEIB_DE[d.verbleib] ?? d.verbleib],
   ];
-  if (d.verbleib === 'abmelden') r.push(['Kennzeichen reservieren', d.reservieren ? 'Ja' : 'Nein']);
   return r;
 }
 
@@ -46,7 +45,7 @@ function layout({ title, intro, rows, button, notes }) {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f2eee3;padding:28px 12px;font-family:'IBM Plex Sans','Segoe UI',Arial,sans-serif;color:#142019;">
 <tr><td align="center">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#fbf9f3;border:1px solid rgba(20,32,25,.12);border-radius:10px;">
-<tr><td style="padding:26px 28px 6px;font-family:Georgia,serif;font-size:22px;"><span style="color:#1d6a47;">&#9679;</span> Auto<i style="color:#1d6a47;">Faren</i></td></tr>
+<tr><td style="padding:24px 28px 6px;font-family:Georgia,serif;font-size:22px;color:#142019;">${s ? `<img src="${esc(s)}/brand/logo-mark-128.png" width="36" height="36" alt="" style="vertical-align:middle;border:0;margin-right:10px;">` : ''}<span style="vertical-align:middle;font-weight:600;">Auto<i style="color:#1d6a47;font-weight:400;">Abmeldung</i></span></td></tr>
 <tr><td style="padding:14px 28px 4px;">
   <h1 style="margin:0 0 10px;font-family:Georgia,serif;font-weight:500;font-size:26px;line-height:1.2;">${esc(title)}</h1>
   <p style="margin:0 0 18px;font-size:15px;line-height:1.55;color:#3d4b43;">${esc(intro)}</p>
@@ -75,7 +74,7 @@ ${s ? `<p style="margin:16px 0 0;font-size:12px;color:#6c786f;"><a href="${esc(s
     '',
     ...notes,
     '',
-    'Ihr AutoFaren-Team',
+    'Ihr AutoAbmeldung-Team',
     s ? `${s} · Impressum: ${s}/impressum · Datenschutz: ${s}/datenschutz` : '',
   ].join('\n');
   return { html, text };

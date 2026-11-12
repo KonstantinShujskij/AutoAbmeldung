@@ -32,7 +32,7 @@ export default function Privacy() {
       toc={TOC}
       meta={`Stand: ${PRIVACY_STAND}`}
       docTitle="Datenschutzhinweise"
-      docSub="Informationen nach Art. 13 DSGVO zur Online-Abmeldung über AutoFaren"
+      docSub="Informationen nach Art. 13 DSGVO zur Online-Abmeldung über AutoAbmeldung"
       lede="Wir verarbeiten nur die Angaben, die für die Abmeldung Ihres Fahrzeugs nötig sind – und nur so lange, wie es dafür oder gesetzlich erforderlich ist. Hier steht, welche Daten das sind, wofür wir sie nutzen, an wen sie gehen und welche Rechte Sie haben."
     >
       <Section id="verantwortlicher">
@@ -74,8 +74,8 @@ export default function Privacy() {
             Teil II.
           </li>
           <li>
-            <strong>Verbleib des Fahrzeugs:</strong> ob das Fahrzeug nur abgemeldet oder verschrottet wurde, ggf. Wunsch
-            nach Kennzeichenreservierung, bei Verschrottung Datum und Staat der Verwertung sowie die Betriebsnummer des
+            <strong>Verbleib des Fahrzeugs:</strong> ob das Fahrzeug nur abgemeldet oder verschrottet wurde, bei
+            Verschrottung Datum und Staat der Verwertung sowie die Betriebsnummer des
             Demontagebetriebs.
           </li>
           <li>

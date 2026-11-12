@@ -39,7 +39,6 @@ export function formatApplication(record, { vinFromScan } = {}) {
     `FIN: ${code(d.vin)}${vinFromScan && VIN_SOURCE[vinFromScan] ? `\n<i>${VIN_SOURCE[vinFromScan]}</i>` : ''}`,
     `Что с машиной: ${esc(VERBLEIB_RU[d.verbleib] ?? d.verbleib)}`,
   ];
-  if (d.verbleib === 'abmelden') lines.push(`Резерв номера: ${d.reservieren ? '<b>да</b>' : 'нет'}`);
   if (d.verbleib === 'verwertet' || d.verbleib === 'ausland') {
     lines.push(`Утилизация: ${esc(dateDe(d.verwertungDatum))}, ${esc(d.verwertungStaat)}`);
     if (d.demontageNr) lines.push(`Demontagebetrieb №: ${code(d.demontageNr)}`);

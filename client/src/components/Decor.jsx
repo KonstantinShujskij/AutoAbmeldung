@@ -42,12 +42,26 @@ export function Rosette({ className }) {
 }
 
 /** Знак бренда: печать. */
+/** Знак: евро-номер с полосой ЕС и печатью-галочкой («снято с учёта»). Тот же рисунок — favicon.svg. */
 export function BrandMark({ className }) {
   return (
     <svg className={className} viewBox="0 0 40 40" aria-hidden="true">
-      <circle cx="20" cy="20" r="19" fill="var(--green)" />
-      <circle cx="20" cy="20" r="15" fill="none" stroke="var(--paper)" strokeWidth="1" strokeDasharray="1.6 1.6" />
-      <path d="M12.5 25.5 L20 11 L27.5 25.5 M15.6 20.5 H24.4" fill="none" stroke="var(--paper)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+      <rect x="0.5" y="0.5" width="39" height="39" rx="10" fill="#0f2a1e" />
+      <rect x="4.5" y="12" width="31" height="16" rx="2.8" fill="#fbf9f3" />
+      <path d="M7.3 12H10.8V28H7.3A2.8 2.8 0 0 1 4.5 25.2V14.8A2.8 2.8 0 0 1 7.3 12Z" fill="#0b3d91" />
+      <circle cx="7.65" cy="16.3" r="1.5" fill="none" stroke="#f3d12f" strokeWidth="0.8" strokeDasharray="0.45 0.6" />
+      <rect x="5.2" y="12.7" width="29.6" height="14.6" rx="2.2" fill="none" stroke="#142019" strokeOpacity="0.55" strokeWidth="0.7" />
+      <g fill="#142019" fillOpacity="0.82">
+        <rect x="12.6" y="17.6" width="1.5" height="4.8" rx="0.5" />
+        <rect x="15" y="17.6" width="1.5" height="4.8" rx="0.5" />
+        <rect x="29.3" y="17.6" width="1.5" height="4.8" rx="0.5" />
+        <rect x="31.7" y="17.6" width="1.5" height="4.8" rx="0.5" />
+      </g>
+      <g className="brand__seal">
+        <circle cx="22.6" cy="20" r="5" fill="#fbf9f3" stroke="#142019" strokeOpacity="0.25" strokeWidth="0.5" />
+        <circle cx="22.6" cy="20" r="4" fill="#2c8a5a" />
+        <path d="M20.7 20.1L22.1 21.5L24.7 18.7" fill="none" stroke="#fbf9f3" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+      </g>
     </svg>
   );
 }

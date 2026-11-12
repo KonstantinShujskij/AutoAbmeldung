@@ -23,7 +23,7 @@ export default function Impressum() {
     <LegalLayout
       kicker="Impressum"
       title="Wer hinter"
-      emphasis="AutoFaren steht."
+      emphasis="AutoAbmeldung steht."
       toc={TOC}
       meta="Angaben gemäß § 5 DDG"
       docTitle="Impressum"
@@ -31,7 +31,7 @@ export default function Impressum() {
     >
       <Section id="anbieter">
         <address className="doc__address">
-          <Todo>Name bzw. Firma mit Rechtsform, z. B. „Max Muster“ oder „AutoFaren UG (haftungsbeschränkt)“</Todo>
+          <Todo>Name bzw. Firma mit Rechtsform, z. B. „Max Muster“ oder „AutoAbmeldung UG (haftungsbeschränkt)“</Todo>
           <br />
           <Todo>Straße und Hausnummer</Todo>
           <br />
@@ -109,7 +109,7 @@ export default function Impressum() {
 
       <Section id="hinweis">
         <p>
-          AutoFaren ist ein privater Dienstleister und keine Behörde. Wir stellen Anträge auf Außerbetriebsetzung in
+          AutoAbmeldung ist ein privater Dienstleister und keine Behörde. Wir stellen Anträge auf Außerbetriebsetzung in
           Ihrem Auftrag über die i-Kfz-Portale der Zulassungsbehörden. Über den Antrag entscheidet allein die zuständige
           Zulassungsbehörde.
         </p>
