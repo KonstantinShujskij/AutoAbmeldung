@@ -188,7 +188,9 @@ export function recognizeZb2(buffer, { otherVin, onRotation } = {}) {
   return exclusive(async () => {
     const started = Date.now();
     const ocr = await engine();
-    const base = sharp(buffer, { limitInputPixels: MAX_INPUT_PIXELS }).rotate(); // EXIF-поворот
+    // Фото уже выпрямлено по EXIF (recognize.js). Здесь .rotate() не вызываем: второй
+    // .rotate() в sharp заменяет первый, а повороты листа делает detect().
+    const base = sharp(buffer, { limitInputPixels: MAX_INPUT_PIXELS });
     await base.metadata(); // битый файл — ошибка сразу
 
     const all = [];

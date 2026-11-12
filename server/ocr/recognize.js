@@ -82,10 +82,11 @@ function decideVin(local, g) {
 export async function recognizeDocument(buffer) {
   const started = Date.now();
   // Один раз: EXIF-поворот и разумный размер. Для GPT короткая сторона ~1600 px.
-  const image = sharp(buffer, { limitInputPixels: 60_000_000 }).rotate();
-  // Битый файл — ошибка здесь, до запуска движков. Важно: необработанный reject где-либо
-  // в процессе роняет весь сервер (OpenCV внутри OCR вешает свой обработчик и делает abort).
-  await image.metadata();
+  // Один раз выпрямляем по EXIF и фиксируем: второй .rotate() в sharp заменяет первый,
+  // и EXIF-поворот потерялся бы при повороте листа. Битый файл — ошибка здесь, до движков.
+  // Важно: необработанный reject где-либо роняет весь сервер (OpenCV делает abort).
+  buffer = await sharp(buffer, { limitInputPixels: 60_000_000 }).rotate().jpeg({ quality: 92 }).toBuffer();
+  const image = sharp(buffer);
   const gptImage = (rotation = 0) => image.clone()
     .rotate(rotation)
     .resize({ width: 1600, height: 1600, fit: 'outside', withoutEnlargement: true })
