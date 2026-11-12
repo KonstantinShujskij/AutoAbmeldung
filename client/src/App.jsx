@@ -103,9 +103,10 @@ export default function App() {
   const focusFirstError = (errs) => {
     const first = FIELDS.find((f) => errs[f]);
     const el = first && document.querySelector(`[data-field="${first}"]`);
-    if (!el) return;
+    if (!el) return false;
     el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     el.focus({ preventScroll: true });
+    return true;
   };
 
   async function handleSubmit(e) {
@@ -130,7 +131,12 @@ export default function App() {
       if (res.status === 422 && body.errors) {
         setServerErrors(body.errors);
         setTouched(ALL_TOUCHED);
-        focusFirstError(body.errors);
+        // Ошибка в поле, которого на странице нет, — значит, открыта старая версия формы.
+        setSubmitError(
+          focusFirstError(body.errors)
+            ? 'Bitte prüfen Sie die markierten Angaben.'
+            : 'Das Formular wurde inzwischen aktualisiert. Bitte laden Sie die Seite neu – Ihre Angaben bitte erneut eingeben.',
+        );
         return;
       }
       if (!res.ok) throw new Error(body.error || 'Senden fehlgeschlagen. Bitte erneut versuchen.');

@@ -81,7 +81,9 @@ const compact = (s) => String(s ?? '').replace(/[\s-]+/g, '');
 // Поля, которые не относятся к выбранному Verbleib, обнуляем — чтобы в заявку не попало
 // ничего лишнего (например, код ZB II при обычном снятии с учёта).
 function normalizeVerbleib(raw) {
-  const verbleib = VERBLEIB.includes(raw.verbleib) ? raw.verbleib : '';
+  // Нет поля вовсе (старая вкладка, открытая до появления Verbleib) — как в форме по умолчанию.
+  const given = raw.verbleib ?? 'abmelden';
+  const verbleib = VERBLEIB.includes(given) ? given : '';
   const disposal = needsDisposal(verbleib);
   return {
     verbleib,
