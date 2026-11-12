@@ -6,6 +6,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateApplication } from '../shared/validation.js';
 import { PRIVACY_VERSION } from '../shared/legal.js';
+import { recognizeDocument } from './ocr/recognize.js';
+import { warmUpOcr } from './ocr/zb2.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = path.join(ROOT, 'server', 'data', 'applications');
@@ -36,6 +38,25 @@ function basicAuth(credentials) {
   };
 }
 
+// Распознавание грузит процессор и тратит деньги на OpenAI — ограничиваем частоту с одного адреса.
+function rateLimit({ max, windowMs }) {
+  const hits = new Map();
+  return (req, res, next) => {
+    const ip = req.headers['cf-connecting-ip'] || req.ip;
+    const now = Date.now();
+    const recent = (hits.get(ip) ?? []).filter((t) => now - t < windowMs);
+    if (recent.length >= max) {
+      return res.status(429).json({ error: 'Zu viele Versuche. Bitte in ein paar Minuten erneut.' });
+    }
+    recent.push(now);
+    hits.set(ip, recent);
+    if (hits.size > 5000) hits.clear();
+    next();
+  };
+}
+
+const IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
+
 const app = express();
 app.disable('x-powered-by');
 
@@ -53,6 +74,26 @@ if (NOINDEX) {
 if (SITE_AUTH) app.use(basicAuth(SITE_AUTH));
 
 app.use(express.json({ limit: '32kb' }));
+
+// Фото ZB II → FIN и данные владельца. Фото обрабатывается в памяти и не сохраняется.
+app.post(
+  '/api/recognize',
+  rateLimit({ max: 15, windowMs: 10 * 60_000 }),
+  express.raw({ type: IMAGE_TYPES, limit: '15mb' }),
+  async (req, res, next) => {
+    if (!Buffer.isBuffer(req.body) || req.body.length === 0) {
+      return res.status(415).json({ error: 'Bitte ein Foto (JPEG, PNG oder WebP) senden.' });
+    }
+    try {
+      res.json(await recognizeDocument(req.body));
+    } catch (err) {
+      if (/Input buffer|unsupported image format|bad seek|corrupt/i.test(err.message)) {
+        return res.status(422).json({ error: 'Das Foto konnte nicht gelesen werden. Bitte ein anderes versuchen.' });
+      }
+      next(err);
+    }
+  },
+);
 
 app.post('/api/applications', async (req, res, next) => {
   try {
@@ -93,11 +134,27 @@ app.use((err, req, res, _next) => {
   if (err.type === 'entity.parse.failed') {
     return res.status(400).json({ error: 'Ungültige Anfrage.' });
   }
+  if (err.type === 'entity.too.large') {
+    return res.status(413).json({ error: 'Die Datei ist zu groß.' });
+  }
   console.error(err);
   res.status(500).json({ error: 'Interner Fehler. Bitte später erneut versuchen.' });
 });
 
 app.listen(PORT, () => {
-  const flags = [SITE_AUTH && 'Passwortschutz', NOINDEX && 'noindex'].filter(Boolean);
+  const flags = [
+    SITE_AUTH && 'Passwortschutz',
+    NOINDEX && 'noindex',
+    process.env.OPENAI_API_KEY ? `OCR+${process.env.OPENAI_MODEL || 'gpt-5.4-mini'}` : 'OCR lokal',
+  ].filter(Boolean);
   console.log(`AutoFaren API läuft auf http://localhost:${PORT}${flags.length ? ` (${flags.join(', ')})` : ''}`);
+  // Модель OCR грузится ~1–2 с — заранее, чтобы первый клиент не ждал.
+  warmUpOcr()
+    .then(() => {
+      // OpenCV (внутри OCR) вешает process.on('unhandledRejection', abort) — любая забытая
+      // ошибка где угодно убила бы весь сервер. Заменяем на запись в лог.
+      process.removeAllListeners('unhandledRejection');
+      process.on('unhandledRejection', (err) => console.error('[unhandledRejection]', err));
+    })
+    .catch((err) => console.error('[ocr] Modell konnte nicht geladen werden:', err.message));
 });

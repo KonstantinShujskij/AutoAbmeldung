@@ -1,6 +1,8 @@
 # Сборка фронтенда (нужны devDependencies: vite и плагин React).
 # Debian slim, а не alpine: позже сюда добавится Playwright/Chromium, ему нужен glibc.
 FROM node:22-bookworm-slim AS build
+# onnxruntime-node (OCR) не должен тянуть CUDA-бинарники: считаем на процессоре.
+ENV ONNXRUNTIME_NODE_INSTALL=skip
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
@@ -12,7 +14,8 @@ RUN npm run build
 # Рабочий образ: только сервер, общий код и собранный dist.
 FROM node:22-bookworm-slim
 ENV NODE_ENV=production \
-    API_PORT=3001
+    API_PORT=3001 \
+    ONNXRUNTIME_NODE_INSTALL=skip
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev && npm cache clean --force

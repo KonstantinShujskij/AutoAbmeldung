@@ -1645,3 +1645,105 @@
     margin-top: 130px;
   }
 }
+
+/* ─── Фото ZB II ─────────────────────────────────────────────────────────── */
+.scan {
+  position: relative;
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 22px 26px;
+  border: 1.5px dashed rgba(29, 106, 71, 0.45);
+  border-radius: var(--radius);
+  background:
+    repeating-linear-gradient(135deg, transparent 0 14px, rgba(29, 106, 71, 0.035) 14px 15px),
+    var(--green-wash);
+  animation: rise 0.7s var(--ease) both;
+  animation-delay: 60ms;
+}
+.scan--done { border-style: solid; border-color: rgba(29, 106, 71, 0.35); }
+.scan--error { border-color: rgba(182, 65, 42, 0.5); background: var(--seal-wash); }
+.scan__file { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+.scan__thumb {
+  position: relative;
+  overflow: hidden;
+  width: 112px;
+  aspect-ratio: 4 / 5;
+  border-radius: 6px;
+  background: var(--paper-hi);
+  box-shadow: 0 1px 0 var(--line), 0 10px 22px -14px rgba(15, 42, 30, 0.6);
+  transform: rotate(-2.5deg);
+}
+.scan__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.scan__glyph { width: 100%; height: 100%; padding: 14px; fill: none; stroke: var(--green); stroke-width: 2; stroke-linecap: round; opacity: 0.55; }
+.scan__beam {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 34%;
+  background: linear-gradient(180deg, transparent, rgba(243, 209, 47, 0.55) 85%, rgba(243, 209, 47, 0.95));
+  border-bottom: 2px solid var(--sticker);
+  animation: scan-beam 1.6s ease-in-out infinite alternate;
+}
+@keyframes scan-beam { from { transform: translateY(-100%); } to { transform: translateY(200%); } }
+
+.scan__kicker {
+  margin: 0 0 4px;
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.scan__kicker--warn { color: var(--seal); }
+.scan__title { margin: 0 0 6px; font-family: var(--f-display); font-size: 24px; font-weight: 500; line-height: 1.15; letter-spacing: -0.01em; }
+.scan__text { margin: 0 0 14px; max-width: 54ch; font-size: 14.5px; line-height: 1.5; color: var(--ink-2); }
+.scan--busy .scan__text { margin-bottom: 0; }
+
+.scan__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 20px 11px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--green-deep);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--paper-hi);
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s;
+}
+.scan__btn:hover { background: var(--green-ink); transform: translateY(-1px); }
+.scan__btn:focus-visible { outline: 2px solid var(--sticker); outline-offset: 3px; }
+.scan__btn--ghost { padding: 9px 16px; background: transparent; border: 1px solid var(--line-2); color: var(--ink); font-weight: 500; }
+.scan__btn--ghost:hover { background: var(--paper-hi); }
+.scan__cam { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
+
+.scan__list { display: grid; gap: 6px; margin: 4px 0 14px; padding: 0; list-style: none; font-size: 14px; color: var(--ink-2); }
+.scan__list li { display: grid; grid-template-columns: 70px 1fr; gap: 10px; align-items: baseline; }
+.scan__list li span {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.scan__list li::before { content: none; }
+.scan__list .is-verified span { color: var(--green); }
+.scan__list .is-verified span::after { content: ' ✓'; }
+.scan__list .is-not_found { color: var(--seal); }
+
+/* Поля, заполненные с фото */
+.zcell--scan { background: linear-gradient(90deg, rgba(243, 209, 47, 0.16), transparent 70%); }
+.zcell--scan-verified { background: linear-gradient(90deg, rgba(44, 138, 90, 0.12), transparent 70%); }
+.zcell--scan .zcell__hint { color: #8a6d00; }
+.zcell--scan-verified .zcell__hint { color: var(--green); }
+
+@media (max-width: 640px) {
+  .scan { grid-template-columns: 1fr; gap: 16px; padding: 18px; }
+  .scan__thumb { width: 84px; }
+  .scan__title { font-size: 21px; }
+}

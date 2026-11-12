@@ -41,6 +41,8 @@ export const EMPTY_FORM = { ...Object.fromEntries(FIELDS.map((f) => [f, ''])), p
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const NAME_RE = /^\p{L}[\p{L}\p{M}' .,-]*$/u;
+// Ortsnamen: «Fröndenberg/Ruhr», «Frankfurt (Oder)», «St. Ingbert», «Neustadt a. d. Aisch».
+const CITY_RE = /^\p{L}[\p{L}\p{M}' .,()/-]*$/u;
 const ZIP_RE = /^\d{5}$/;
 const VIN_ALLOWED_RE = /^[A-HJ-NPR-Z0-9]*$/; // ISO 3779: ohne I, O, Q
 const PLATE_DISTRICT_RE = /^[A-ZÄÖÜ]{1,3}$/;
@@ -86,9 +88,11 @@ export function validateField(name, v, all = {}) {
       return EMAIL_RE.test(v) ? null : 'Bitte eine gültige E-Mail-Adresse eingeben.';
     case 'lastName':
     case 'firstName':
-    case 'city':
       if (!v) return 'Pflichtfeld.';
       return NAME_RE.test(v) ? null : 'Nur Buchstaben, Leerzeichen und Bindestriche.';
+    case 'city':
+      if (!v) return 'Pflichtfeld.';
+      return CITY_RE.test(v) ? null : 'Nur Buchstaben, Leerzeichen und - / . ( ).';
     case 'street':
       if (!v) return 'Pflichtfeld.';
       return /\d/.test(v) ? null : 'Bitte mit Hausnummer.';

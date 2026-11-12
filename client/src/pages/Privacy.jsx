@@ -73,6 +73,11 @@ export default function Privacy() {
             Stempelplaketten auf beiden Kennzeichen.
           </li>
           <li>
+            <strong>Foto der Zulassungsbescheinigung Teil II</strong> – nur wenn Sie die Fotofunktion nutzen. Daraus
+            lesen wir FIN, Halterdaten und Kennzeichen aus. Auf dem Foto können weitere Angaben sichtbar sein, etwa
+            frühere Halter oder technische Fahrzeugdaten; diese verwenden wir nicht.
+          </li>
+          <li>
             <strong>Vorgangsdaten:</strong> Vorgangsnummer, Zeitpunkt und Status des Antrags, der Bescheid der
             Zulassungsbehörde, die Rechnung sowie Ihre Bestätigung, dass Sie diese Hinweise erhalten haben (mit
             Zeitpunkt und Fassung).
@@ -98,6 +103,13 @@ export default function Privacy() {
               Ihnen
             </dt>
             <dd>Art. 6 Abs. 1 lit. b DSGVO – Vertrag und vorvertragliche Maßnahmen</dd>
+          </div>
+          <div>
+            <dt>
+              Auslesen des Fotos der Zulassungsbescheinigung Teil II, damit Sie die Angaben nicht abtippen müssen
+              (freiwillig – alle Felder lassen sich auch von Hand ausfüllen)
+            </dt>
+            <dd>Art. 6 Abs. 1 lit. b DSGVO – vorvertragliche Maßnahme auf Ihre Anfrage</dd>
           </div>
           <div>
             <dt>Rechnungsstellung und Aufbewahrung von Buchungsbelegen</dt>
@@ -134,6 +146,13 @@ export default function Privacy() {
             gebunden: Hosting <Todo>Anbieter und Sitz</Todo>, E-Mail-Versand <Todo>Anbieter und Sitz</Todo>.
           </li>
           <li>
+            <strong>OpenAI</strong> (OpenAI Ireland Ltd., Dublin, Irland; Verarbeitung auch durch OpenAI, L.L.C., USA)
+            als Auftragsverarbeiter – nur wenn Sie die Fotofunktion nutzen: Das Foto wird zum Auslesen der Felder an
+            die OpenAI-API übermittelt. OpenAI verwendet über die API übermittelte Daten nicht zum Training seiner
+            Modelle und speichert sie höchstens 30 Tage zur Missbrauchserkennung.{' '}
+            <Todo>Auftragsverarbeitungsvertrag (DPA) mit OpenAI abschließen</Todo>
+          </li>
+          <li>
             <strong>Behörden</strong>, soweit wir gesetzlich dazu verpflichtet sind, etwa Finanzbehörden.
           </li>
         </ul>
@@ -142,9 +161,15 @@ export default function Privacy() {
 
       <Section id="drittland">
         <p>
-          Wir verarbeiten Ihre Daten in der Europäischen Union. Eine Übermittlung in Länder außerhalb der EU bzw.
-          des EWR findet nicht statt.{' '}
-          <Todo>gilt nur, wenn alle Dienstleister ausschließlich in der EU/im EWR verarbeiten – prüfen</Todo>
+          Wir verarbeiten Ihre Daten grundsätzlich in der Europäischen Union.{' '}
+          <Todo>gilt nur, wenn Hosting, E-Mail und Zahlung in der EU/im EWR verarbeiten – prüfen</Todo>
+        </p>
+        <p>
+          <strong>Ausnahme Fotofunktion:</strong> Wenn Sie ein Foto der Zulassungsbescheinigung hochladen, kann es
+          bei OpenAI auch in den USA verarbeitet werden. Grundlage ist der Angemessenheitsbeschluss der
+          EU-Kommission zum EU-US Data Privacy Framework (Art. 45 DSGVO), unter dem OpenAI zertifiziert ist, sowie
+          ergänzend die EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Wenn Sie das nicht möchten,
+          füllen Sie das Formular einfach von Hand aus.
         </p>
       </Section>
 
@@ -154,6 +179,10 @@ export default function Privacy() {
             <strong>Sicherheitscodes</strong> löschen wir, sobald die Abmeldung abgeschlossen ist oder endgültig
             nicht durchgeführt werden kann, spätestens nach <Todo>30 Tagen</Todo>. Nach der Abmeldung sind die Codes
             ohnehin verbraucht.
+          </li>
+          <li>
+            <strong>Fotos der Zulassungsbescheinigung</strong> speichern wir nicht: Sie werden nur im Arbeitsspeicher
+            ausgelesen und danach verworfen. Bei OpenAI höchstens 30 Tage (siehe Empfänger).
           </li>
           <li>
             <strong>Halter-, Fahrzeug- und Vorgangsdaten</strong> speichern wir bis zum Abschluss des Vorgangs und
