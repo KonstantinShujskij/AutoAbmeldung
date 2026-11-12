@@ -149,7 +149,7 @@ export default function Privacy() {
           </li>
           <li>
             <strong>Technische Dienstleister</strong> als Auftragsverarbeiter nach Art. 28 DSGVO, an unsere Weisungen
-            gebunden: Hosting <Todo>Anbieter und Sitz</Todo>, E-Mail-Versand <Todo>Anbieter und Sitz</Todo>.
+            gebunden: Hosting <Todo>Anbieter und Sitz</Todo>, E-Mail-Versand Brevo (Sendinblue SAS, Paris, Frankreich).
           </li>
           <li>
             <strong>OpenAI</strong> (OpenAI Ireland Ltd., Dublin, Irland; Verarbeitung auch durch OpenAI, L.L.C., USA)
