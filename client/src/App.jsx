@@ -202,9 +202,9 @@ export default function App() {
             <Rosette className="hero__rosette" />
             <p className="kicker">Online-Abmeldung</p>
             <h1>
-              Abmelden,
+              Ihr Auto
               <br />
-              <em>ohne Amt.</em>
+              <em>abmelden.</em>
             </h1>
             <p className="lede">
               Vier Abschnitte, rund drei Minuten. Legen Sie beide Zulassungsbescheinigungen bereit und werfen Sie einen
