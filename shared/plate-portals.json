@@ -1,0 +1,1638 @@
+{
+  "A": {
+    "url": "https://www.buergerservice-portal.de/bayern/augsburg/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Augsburg"
+  },
+  "ABG": {
+    "url": "https://www.buergerservice-portal.de/thueringen/lkraltenburgerland/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Altenburger Land"
+  },
+  "AC": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=aachen_staedteregion",
+    "authority": "Aachen, Städteregion"
+  },
+  "AE": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=vogtlandkreis_kreis",
+    "authority": "Vogtlandkreis"
+  },
+  "AH": {
+    "url": "https://i-kfz.krzn.de/static/05554000.html",
+    "authority": "Kreis Borken"
+  },
+  "AIC": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkraichachfriedberg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Aichach-Friedberg"
+  },
+  "ALF": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=hildesheim_kreis",
+    "authority": "Hildesheim"
+  },
+  "ALZ": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkraschaffenburg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Aschaffenburg"
+  },
+  "AM": {
+    "url": "https://www.buergerservice-portal.de/bayern/amberg/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Amberg"
+  },
+  "AN": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100042.OE.305001&leistungId=99036026017000&p=095610&i=z",
+    "authority": "Ansbach (Stadt)"
+  },
+  "ANG": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=uckermark_kreis",
+    "authority": "Uckermark"
+  },
+  "AP": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=weimarer-land_kreis",
+    "authority": "Weimarer Land"
+  },
+  "APD": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=weimarer-land_kreis",
+    "authority": "Weimarer Land"
+  },
+  "ARN": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=ilm_kreis",
+    "authority": "Ilm-Kreis"
+  },
+  "ART": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=kyffhaeuserkreis_kreis",
+    "authority": "Kyffhäuserkreis"
+  },
+  "AS": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrambergsulzbach/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Amberg-Sulzbach"
+  },
+  "AUR": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=aurich_kreis",
+    "authority": "Aurich"
+  },
+  "BAD": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6061253&leistungId=99036026017000&p=082110",
+    "authority": "Baden-Baden (Stadt)"
+  },
+  "BAR": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=barnim_kreis",
+    "authority": "Barnim"
+  },
+  "BE": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=warendorf_kreis",
+    "authority": "Warendorf"
+  },
+  "BED": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=mittelsachsen_kreis",
+    "authority": "Mittelsachsen"
+  },
+  "BEL": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=potsdam-mittelmark_kreis",
+    "authority": "Potsdam-Mittelmark"
+  },
+  "BER": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=barnim_kreis",
+    "authority": "Barnim"
+  },
+  "BGD": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrberchtesgadenerland/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Berchtesgadener Land"
+  },
+  "BGL": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrberchtesgadenerland/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Berchtesgadener Land"
+  },
+  "BID": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.383018402&leistungId=99036026017000&p=065340",
+    "authority": "Marburg-Biedenkopf"
+  },
+  "BIW": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=bautzen_kreis",
+    "authority": "Bautzen"
+  },
+  "BM": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=rhein-erft_kreis",
+    "authority": "Rhein-Erft-Kreis"
+  },
+  "BN": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=bonn_stadt",
+    "authority": "Bonn"
+  },
+  "BNA": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=leipzig_kreis",
+    "authority": "Leipzig"
+  },
+  "BO": {
+    "url": "https://i-kfz.krzn.de/static/05911000.html",
+    "authority": "Stadt Bochum"
+  },
+  "BOH": {
+    "url": "https://i-kfz.krzn.de/static/05554000.html",
+    "authority": "Kreis Borken"
+  },
+  "BOR": {
+    "url": "https://i-kfz.krzn.de/static/05554000.html",
+    "authority": "Kreis Borken"
+  },
+  "BOT": {
+    "url": "https://i-kfz.krzn.de/static/05512000.html",
+    "authority": "Stadt Bottrop"
+  },
+  "BRA": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=wesermarsch_kreis",
+    "authority": "Wesermarsch"
+  },
+  "BRB": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=brandenburg-havel_stadt",
+    "authority": "Brandenburg an der Havel"
+  },
+  "BRK": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrbadkissingen/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Bad Kissingen"
+  },
+  "BRL": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=goslar_kreis",
+    "authority": "Goslar"
+  },
+  "BRV": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=rotenburg_kreis",
+    "authority": "Rotenburg (Wümme)"
+  },
+  "BS": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=braunschweig_stadt",
+    "authority": "Braunschweig"
+  },
+  "BSB": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=osnabrueck_kreis",
+    "authority": "Osnabrück"
+  },
+  "BSK": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=oder-spree_kreis",
+    "authority": "Oder-Spree"
+  },
+  "BT": {
+    "url": "https://www.buergerservice-portal.de/bayern/bayreuth/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Bayreuth"
+  },
+  "BUL": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrambergsulzbach/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Amberg-Sulzbach"
+  },
+  "BZ": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=bautzen_kreis",
+    "authority": "Bautzen"
+  },
+  "BÖ": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=boerde_kreis",
+    "authority": "Börde"
+  },
+  "BÜD": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.9531852&leistungId=99036026017000&p=064400",
+    "authority": "Wetteraukreis"
+  },
+  "BÜR": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=paderborn_kreis",
+    "authority": "Paderborn"
+  },
+  "BÜZ": {
+    "url": "https://www.buergerservice-portal.de/mecklenburgvorpommern/lkrrostock/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Rostock"
+  },
+  "C": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=chemnitz_stadt",
+    "authority": "Chemnitz"
+  },
+  "CA": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=oberspreewald-lausitz_kreis",
+    "authority": "Oberspreewald-Lausitz"
+  },
+  "CAS": {
+    "url": "https://i-kfz.krzn.de/static/05562000.html",
+    "authority": "Kreis Recklinghausen"
+  },
+  "CB": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=cottbus_stadt",
+    "authority": "Cottbus"
+  },
+  "CE": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=celle_kreis",
+    "authority": "Celle"
+  },
+  "CLP": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=cloppenburg_kreis",
+    "authority": "Cloppenburg"
+  },
+  "CLZ": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=goslar_kreis",
+    "authority": "Goslar"
+  },
+  "COE": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=coesfeld_kreis",
+    "authority": "Coesfeld"
+  },
+  "CUX": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=cuxhaven_kreis",
+    "authority": "Cuxhaven"
+  },
+  "D": {
+    "url": "https://i-kfz.krzn.de/static/05111000.html",
+    "authority": "Landeshauptstadt Düsseldorf"
+  },
+  "DAN": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=luechow-dannenberg_kreis",
+    "authority": "Lüchow-Dannenberg"
+  },
+  "DBR": {
+    "url": "https://www.buergerservice-portal.de/mecklenburgvorpommern/lkrrostock/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Rostock"
+  },
+  "DD": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=dresden_stadt",
+    "authority": "Dresden"
+  },
+  "DEG": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrdeggendorf/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Deggendorf"
+  },
+  "DEL": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=delmenhorst_stadt",
+    "authority": "Delmenhorst"
+  },
+  "DH": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=diepholz_kreis",
+    "authority": "Diepholz"
+  },
+  "DI": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.435900261&leistungId=99036026017000&p=064320",
+    "authority": "Darmstadt-Dieburg"
+  },
+  "DIL": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=GNh4vwMPzUxpX09Adn7VAQ",
+    "authority": "Lahn-Dill-Kreis"
+  },
+  "DIN": {
+    "url": "https://i-kfz.krzn.de/static/05170000.html",
+    "authority": "Kreis Wesel"
+  },
+  "DL": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=mittelsachsen_kreis",
+    "authority": "Mittelsachsen"
+  },
+  "DN": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=dueren_kreis",
+    "authority": "Düren"
+  },
+  "DO": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=dortmund_stadt",
+    "authority": "Dortmund"
+  },
+  "DON": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrdonauries/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Donau-Ries"
+  },
+  "DU": {
+    "url": "https://i-kfz.krzn.de/static/05112000.html",
+    "authority": "Stadt Duisburg"
+  },
+  "DW": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=saechsische-schweiz-osterzgebirge_kreis",
+    "authority": "Sächsische Schweiz-Osterzgebirge"
+  },
+  "DZ": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=nordsachsen_kreis",
+    "authority": "Nordsachsen"
+  },
+  "EA": {
+    "url": "https://www.buergerservice-portal.de/thueringen/lkrwartburgkreis/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Wartburgkreis"
+  },
+  "EB": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=nordsachsen_kreis",
+    "authority": "Nordsachsen"
+  },
+  "EBE": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrebersberg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Ebersberg"
+  },
+  "ED": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrerding/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Erding"
+  },
+  "EE": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=elbe-elster_kreis",
+    "authority": "Elbe-Elster"
+  },
+  "EF": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=erfurt_stadt",
+    "authority": "Erfurt"
+  },
+  "EG": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrrottalinn/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Rottal-Inn"
+  },
+  "EH": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=oder-spree_kreis",
+    "authority": "Oder-Spree"
+  },
+  "EI": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkreichstaett/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Eichstätt"
+  },
+  "EIC": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=eichsfeld_kreis",
+    "authority": "Eichsfeld"
+  },
+  "EIL": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=c%3AAZkZHiPbdLC2u8g5bulWuw",
+    "authority": "Mansfeld-Südharz"
+  },
+  "EIN": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=northeim_kreis",
+    "authority": "Northeim"
+  },
+  "EL": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=emsland_kreis",
+    "authority": "Emsland"
+  },
+  "EMD": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=emden_stadt",
+    "authority": "Emden"
+  },
+  "EN": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=ennepe-ruhr_kreis",
+    "authority": "Ennepe-Ruhr-Kreis"
+  },
+  "ER": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100042.OE.305020&leistungId=99036026017000&p=095620",
+    "authority": "Erlangen (Stadt)"
+  },
+  "ERB": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.379774386&leistungId=99036026017000&p=064370",
+    "authority": "Odenwaldkreis"
+  },
+  "ERH": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrerlangenhoechstadt/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis ErlangenHöchstadt"
+  },
+  "ESB": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrambergsulzbach/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Amberg-Sulzbach"
+  },
+  "EU": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=euskirchen_kreis",
+    "authority": "Euskirchen"
+  },
+  "EW": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=barnim_kreis",
+    "authority": "Barnim"
+  },
+  "F": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.9652963&leistungId=99036026017000&p=064120",
+    "authority": "Frankfurt am Main (Stadt)"
+  },
+  "FB": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.9531852&leistungId=99036026017000&p=064400",
+    "authority": "Wetteraukreis"
+  },
+  "FD": {
+    "url": "https://www.buergerservice-portal.de/hessen/lkrfulda/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Fulda"
+  },
+  "FDB": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkraichachfriedberg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Aichach-Friedberg"
+  },
+  "FF": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=frankfurt-oder_stadt",
+    "authority": "Frankfurt (Oder)"
+  },
+  "FG": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=mittelsachsen_kreis",
+    "authority": "Mittelsachsen"
+  },
+  "FI": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=elbe-elster_kreis",
+    "authority": "Elbe-Elster"
+  },
+  "FL": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.9029660&leistungId=99036026017000&p=010010",
+    "authority": "Flensburg (Stadt)"
+  },
+  "FLÖ": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=mittelsachsen_kreis",
+    "authority": "Mittelsachsen"
+  },
+  "FO": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrforchheim/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Forchheim"
+  },
+  "FOR": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=spree-neisse_kreis",
+    "authority": "Spree-Neiße"
+  },
+  "FR": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6031367&leistungId=99036026017000&p=083110",
+    "authority": "Freiburg im Breisgau (Stadt)"
+  },
+  "FRG": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrfreyunggrafenau/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Freyung-Grafenau"
+  },
+  "FRI": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=friesland_kreis",
+    "authority": "Friesland"
+  },
+  "FRW": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=maerkisch-oderland_kreis",
+    "authority": "Märkisch-Oderland"
+  },
+  "FS": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrfreising/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Freising"
+  },
+  "FTL": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=saechsische-schweiz-osterzgebirge_kreis",
+    "authority": "Sächsische Schweiz-Osterzgebirge"
+  },
+  "FW": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=oder-spree_kreis",
+    "authority": "Oder-Spree"
+  },
+  "FZ": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=schwalm-eder_kreis",
+    "authority": "Schwalm-Eder-Kreis"
+  },
+  "G": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=gera_stadt",
+    "authority": "Gera"
+  },
+  "GA": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=altmarkkreis-salzwedel_kreis",
+    "authority": "Altmarkkreis Salzwedel"
+  },
+  "GAN": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=northeim_kreis",
+    "authority": "Northeim"
+  },
+  "GAP": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrgarmischpartenkirchen/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Garmisch-Partenkirchen"
+  },
+  "GC": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=zwickau_kreis",
+    "authority": "Zwickau"
+  },
+  "GE": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=gelsenkirchen_stadt",
+    "authority": "Gelsenkirchen"
+  },
+  "GEL": {
+    "url": "https://i-kfz.krzn.de/static/05154000.html",
+    "authority": "Kreis Kleve"
+  },
+  "GF": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=gifhorn_kreis",
+    "authority": "Gifhorn"
+  },
+  "GHA": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=leipzig_kreis",
+    "authority": "Leipzig"
+  },
+  "GI": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.8998880&leistungId=99036026017000&p=065310",
+    "authority": "Gießen"
+  },
+  "GL": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=rheinisch-bergischer_kreis",
+    "authority": "Rheinisch-Bergischer Kreis"
+  },
+  "GLA": {
+    "url": "https://i-kfz.krzn.de/static/05562000.html",
+    "authority": "Kreis Recklinghausen"
+  },
+  "GM": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=oberbergischer_kreis",
+    "authority": "Oberbergischer Kreis"
+  },
+  "GR": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=goerlitz_kreis",
+    "authority": "Görlitz"
+  },
+  "GRA": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrfreyunggrafenau/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Freyung-Grafenau"
+  },
+  "GRH": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=meissen_kreis",
+    "authority": "Meißen"
+  },
+  "GRI": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrrottalinn/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Rottal-Inn"
+  },
+  "GRM": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=leipzig_kreis",
+    "authority": "Leipzig"
+  },
+  "GRZ": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=greiz_kreis",
+    "authority": "Greiz"
+  },
+  "GS": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=goslar_kreis",
+    "authority": "Goslar"
+  },
+  "GT": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=guetersloh_kreis",
+    "authority": "Gütersloh"
+  },
+  "GTH": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=gotha_kreis",
+    "authority": "Gotha"
+  },
+  "GUB": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=spree-neisse_kreis",
+    "authority": "Spree-Neiße"
+  },
+  "GV": {
+    "url": "https://i-kfz.krzn.de/static/05162000.html",
+    "authority": "Rhein-Kreis Neuss"
+  },
+  "GZ": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrguenzburg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Günzburg"
+  },
+  "GÖ": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=goettingen_kreis",
+    "authority": "Göttingen"
+  },
+  "GÜ": {
+    "url": "https://www.buergerservice-portal.de/mecklenburgvorpommern/lkrrostock/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Rostock"
+  },
+  "HAB": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrbadkissingen/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Bad Kissingen"
+  },
+  "HAL": {
+    "url": "https://ikfz.ikfz-sachsen-anhalt.de/i4/ikfz4/?LICENSEIDENTIFIER=halle_stadt",
+    "authority": "Halle (Saale)"
+  },
+  "HAM": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=hamm_stadt",
+    "authority": "Hamm"
+  },
+  "HBN": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=hildburghausen_kreis",
+    "authority": "Hildburghausen"
+  },
+  "HBS": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100008.OE.218306624&leistungId=99036026017000&p=150850",
+    "authority": "Harz"
+  },
+  "HC": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=mittelsachsen_kreis",
+    "authority": "Mittelsachsen"
+  },
+  "HD": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6015203&leistungId=99036026017000&p=082210",
+    "authority": "Heidelberg (Stadt)"
+  },
+  "HDL": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=boerde_kreis",
+    "authority": "Börde"
+  },
+  "HE": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=helmstedt_kreis",
+    "authority": "Helmstedt"
+  },
+  "HEB": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrnuernbergerland/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Nürnberger Land"
+  },
+  "HEF": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.382669951&leistungId=99036026017000&p=066320",
+    "authority": "Hersfeld-Rotenburg"
+  },
+  "HER": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=herne_stadt",
+    "authority": "Herne"
+  },
+  "HET": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=c%3AAZkZHiPbdLC2u8g5bulWuw",
+    "authority": "Mansfeld-Südharz"
+  },
+  "HI": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=hildesheim_kreis",
+    "authority": "Hildesheim"
+  },
+  "HIG": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=eichsfeld_kreis",
+    "authority": "Eichsfeld"
+  },
+  "HIP": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrroth/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Roth"
+  },
+  "HK": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=heidekreis_kreis",
+    "authority": "Heidekreis"
+  },
+  "HL": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.242236200&leistungId=99036026017000&p=010030",
+    "authority": "Lübeck (Stadt)"
+  },
+  "HM": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=hameln-pyrmont_kreis",
+    "authority": "Hameln-Pyrmont"
+  },
+  "HN": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6040545&leistungId=99036026017000&p=081210",
+    "authority": "Heilbronn (Stadt)"
+  },
+  "HO": {
+    "url": "https://www.buergerservice-portal.de/bayern/hof/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Hof"
+  },
+  "HOG": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.396840388&leistungId=99036026017000&p=066330",
+    "authority": "Kassel"
+  },
+  "HOL": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=holzminden_kreis",
+    "authority": "Holzminden"
+  },
+  "HOT": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=zwickau_kreis",
+    "authority": "Zwickau"
+  },
+  "HP": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=bergstrasse_kreis",
+    "authority": "Bergstraße"
+  },
+  "HR": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=schwalm-eder_kreis",
+    "authority": "Schwalm-Eder-Kreis"
+  },
+  "HRO": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=rostock_stadt",
+    "authority": "Rostock"
+  },
+  "HV": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100008.OE.26159371&leistungId=99036026017000&p=150900",
+    "authority": "Stendal"
+  },
+  "HVL": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=havelland_kreis",
+    "authority": "Havelland"
+  },
+  "HX": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=hoexter_kreis",
+    "authority": "Höxter"
+  },
+  "HY": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=bautzen_kreis",
+    "authority": "Bautzen"
+  },
+  "HZ": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100008.OE.218306624&leistungId=99036026017000&p=150850",
+    "authority": "Harz"
+  },
+  "HÖS": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrerlangenhoechstadt/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis ErlangenHöchstadt"
+  },
+  "IK": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=ilm_kreis",
+    "authority": "Ilm-Kreis"
+  },
+  "IL": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=ilm_kreis",
+    "authority": "Ilm-Kreis"
+  },
+  "ILL": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrneuulm/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Neu-Ulm"
+  },
+  "IN": {
+    "url": "https://www.buergerservice-portal.de/bayern/ingolstadt/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Ingolstadt"
+  },
+  "IZ": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.9089740&leistungId=99036026017000&p=010610",
+    "authority": "Steinburg"
+  },
+  "J": {
+    "url": "https://www.buergerservice-portal.de/thueringen/jena/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Jena"
+  },
+  "JB": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=teltow-flaeming_kreis",
+    "authority": "Teltow-Fläming"
+  },
+  "JÜL": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=dueren_kreis",
+    "authority": "Düren"
+  },
+  "K": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=koeln_stadt",
+    "authority": "Köln"
+  },
+  "KA": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6028453&leistungId=99036026017000&p=082120",
+    "authority": "Karlsruhe (Stadt)"
+  },
+  "KC": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrkronach/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Kronach"
+  },
+  "KE": {
+    "url": "https://www.buergerservice-portal.de/bayern/kempten/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Kempten"
+  },
+  "KEH": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrkelheim/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Kelheim"
+  },
+  "KF": {
+    "url": "https://www.buergerservice-portal.de/bayern/kaufbeuren/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Kaufbeuren"
+  },
+  "KG": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrbadkissingen/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Bad Kissingen"
+  },
+  "KI": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.268080645&leistungId=99036026017000&p=010020",
+    "authority": "Kiel (Stadt)"
+  },
+  "KK": {
+    "url": "https://i-kfz.krzn.de/static/05166000.html",
+    "authority": "Kreis Viersen"
+  },
+  "KLE": {
+    "url": "https://i-kfz.krzn.de/static/05154000.html",
+    "authority": "Kreis Kleve"
+  },
+  "KLZ": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=altmarkkreis-salzwedel_kreis",
+    "authority": "Altmarkkreis Salzwedel"
+  },
+  "KM": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=bautzen_kreis",
+    "authority": "Bautzen"
+  },
+  "KR": {
+    "url": "https://i-kfz.krzn.de/static/05114000.html",
+    "authority": "Stadt Krefeld"
+  },
+  "KRU": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrguenzburg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Günzburg"
+  },
+  "KT": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrkitzingen/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Kitzingen"
+  },
+  "KU": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrkulmbach/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Kulmbach"
+  },
+  "KW": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=dahme-spreewald_kreis",
+    "authority": "Dahme-Spreewald"
+  },
+  "KY": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=ostprignitz-ruppin_kreis",
+    "authority": "Ostprignitz-Ruppin"
+  },
+  "KYF": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=kyffhaeuserkreis_kreis",
+    "authority": "Kyffhäuserkreis"
+  },
+  "KÖN": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrrhoengrabfeld/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis RhönGrabfeld"
+  },
+  "L": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=leipzig_stadt",
+    "authority": "Leipzig"
+  },
+  "LAU": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrnuernbergerland/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Nürnberger Land"
+  },
+  "LC": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=dahme-spreewald_kreis",
+    "authority": "Dahme-Spreewald"
+  },
+  "LDK": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=GNh4vwMPzUxpX09Adn7VAQ",
+    "authority": "Lahn-Dill-Kreis"
+  },
+  "LDS": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=dahme-spreewald_kreis",
+    "authority": "Dahme-Spreewald"
+  },
+  "LER": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=leer_kreis",
+    "authority": "Leer"
+  },
+  "LG": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=lueneburg_kreis",
+    "authority": "Lüneburg"
+  },
+  "LH": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=coesfeld_kreis",
+    "authority": "Coesfeld"
+  },
+  "LI": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrlindau/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Lindau"
+  },
+  "LIB": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=elbe-elster_kreis",
+    "authority": "Elbe-Elster"
+  },
+  "LIF": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrlichtenfels/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Lichtenfels"
+  },
+  "LM": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.360163112&leistungId=99036026017000&p=065330",
+    "authority": "Limburg-Weilburg"
+  },
+  "LN": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=dahme-spreewald_kreis",
+    "authority": "Dahme-Spreewald"
+  },
+  "LOS": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=oder-spree_kreis",
+    "authority": "Oder-Spree"
+  },
+  "LRO": {
+    "url": "https://www.buergerservice-portal.de/mecklenburgvorpommern/lkrrostock/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Rostock"
+  },
+  "LUK": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=teltow-flaeming_kreis",
+    "authority": "Teltow-Fläming"
+  },
+  "LÖB": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=goerlitz_kreis",
+    "authority": "Görlitz"
+  },
+  "LÜN": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=unna_kreis",
+    "authority": "Unna"
+  },
+  "M": {
+    "url": "https://www.buergerservice-portal.de/bayern/muenchen/bsp_ikfz_antragstellung/",
+    "authority": "Landeshauptstadt München"
+  },
+  "MAI": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrkelheim/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Kelheim"
+  },
+  "MAL": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrlandshut/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Landshut"
+  },
+  "MB": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrmiesbach/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Miesbach"
+  },
+  "MD": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100008.OE.31720548&leistungId=99036026017000&p=150030",
+    "authority": "Magdeburg (Stadt)"
+  },
+  "ME": {
+    "url": "https://i-kfz.krzn.de/static/05158000.html",
+    "authority": "Kreis Mettmann"
+  },
+  "MEG": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=schwalm-eder_kreis",
+    "authority": "Schwalm-Eder-Kreis"
+  },
+  "MEI": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=meissen_kreis",
+    "authority": "Meißen"
+  },
+  "MEL": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=osnabrueck_kreis",
+    "authority": "Osnabrück"
+  },
+  "MET": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrrhoengrabfeld/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis RhönGrabfeld"
+  },
+  "MG": {
+    "url": "https://i-kfz.krzn.de/static/05116000.html",
+    "authority": "Stadt Mönchengladbach"
+  },
+  "MGN": {
+    "url": "https://www.buergerservice-portal.de/thueringen/lkrschmalkaldenmeiningen/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Schmalkalden-Meiningen"
+  },
+  "MH": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=muelheim_stadt",
+    "authority": "Mülheim an der Ruhr"
+  },
+  "MIL": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrmiltenberg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Miltenberg"
+  },
+  "ML": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=c%3AAZkZHiPbdLC2u8g5bulWuw",
+    "authority": "Mansfeld-Südharz"
+  },
+  "MM": {
+    "url": "https://www.buergerservice-portal.de/bayern/memmingen/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Memmingen"
+  },
+  "MN": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrunterallgaeu/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Unterallgäu"
+  },
+  "MO": {
+    "url": "https://i-kfz.krzn.de/static/05170000.html",
+    "authority": "Kreis Wesel"
+  },
+  "MOL": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=maerkisch-oderland_kreis",
+    "authority": "Märkisch-Oderland"
+  },
+  "MON": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=aachen_staedteregion",
+    "authority": "Aachen, Städteregion"
+  },
+  "MR": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.383018402&leistungId=99036026017000&p=065340",
+    "authority": "Marburg-Biedenkopf"
+  },
+  "MS": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=muenster_stadt",
+    "authority": "Münster"
+  },
+  "MSH": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=c%3AAZkZHiPbdLC2u8g5bulWuw",
+    "authority": "Mansfeld-Südharz"
+  },
+  "MSP": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrmainspessart/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Main-Spessart"
+  },
+  "MTL": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=leipzig_kreis",
+    "authority": "Leipzig"
+  },
+  "MUC": {
+    "url": "https://www.buergerservice-portal.de/bayern/muenchen/bsp_ikfz_antragstellung/",
+    "authority": "Landeshauptstadt München"
+  },
+  "MW": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=mittelsachsen_kreis",
+    "authority": "Mittelsachsen"
+  },
+  "MZG": {
+    "url": "https://www.buergerservice-portal.de/saarland/lkrmerzigwadern/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Merzig-Wadern"
+  },
+  "NAB": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrambergsulzbach/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Amberg-Sulzbach"
+  },
+  "NAI": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrhof/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Hof"
+  },
+  "NAU": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=havelland_kreis",
+    "authority": "Havelland"
+  },
+  "NE": {
+    "url": "https://i-kfz.krzn.de/static/05162000.html",
+    "authority": "Rhein-Kreis Neuss"
+  },
+  "NEN": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrschwandorf/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Schwandorf"
+  },
+  "NES": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrrhoengrabfeld/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis RhönGrabfeld"
+  },
+  "NF": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.248240877&leistungId=99036026017000&p=010540",
+    "authority": "Nordfriesland"
+  },
+  "NH": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=sonneberg_kreis",
+    "authority": "Sonneberg"
+  },
+  "NI": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=nienburg_kreis",
+    "authority": "Nienburg/Weser"
+  },
+  "NMS": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.267033530&leistungId=99036026017000&p=010040",
+    "authority": "Neumünster (Stadt)"
+  },
+  "NOH": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=grafschaft-bentheim_kreis",
+    "authority": "Grafschaft Bentheim"
+  },
+  "NOL": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=goerlitz_kreis",
+    "authority": "Görlitz"
+  },
+  "NOM": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=northeim_kreis",
+    "authority": "Northeim"
+  },
+  "NOR": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=aurich_kreis",
+    "authority": "Aurich"
+  },
+  "NP": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=ostprignitz-ruppin_kreis",
+    "authority": "Ostprignitz-Ruppin"
+  },
+  "NU": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrneuulm/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Neu-Ulm"
+  },
+  "NY": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=goerlitz_kreis",
+    "authority": "Görlitz"
+  },
+  "NÖ": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrdonauries/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Donau-Ries"
+  },
+  "OB": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=oberhausen_stadt",
+    "authority": "Oberhausen"
+  },
+  "OBB": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrmiltenberg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Miltenberg"
+  },
+  "OBG": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100008.OE.26159371&leistungId=99036026017000&p=150900",
+    "authority": "Stendal"
+  },
+  "OC": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=boerde_kreis",
+    "authority": "Börde"
+  },
+  "OCH": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrwuerzburg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Würzburg"
+  },
+  "OD": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.9489375&leistungId=99036026017000&p=010620",
+    "authority": "Stormarn"
+  },
+  "OHV": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=oberhavel_kreis",
+    "authority": "Oberhavel"
+  },
+  "OHZ": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=osterholz_kreis",
+    "authority": "Osterholz"
+  },
+  "OK": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=boerde_kreis",
+    "authority": "Börde"
+  },
+  "OL": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=oldenburg_stadt",
+    "authority": "Oldenburg"
+  },
+  "OPR": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=ostprignitz-ruppin_kreis",
+    "authority": "Ostprignitz-Ruppin"
+  },
+  "OS": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=osnabrueck_stadt",
+    "authority": "Osnabrück"
+  },
+  "OSL": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=oberspreewald-lausitz_kreis",
+    "authority": "Oberspreewald-Lausitz"
+  },
+  "OVI": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrschwandorf/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Schwandorf"
+  },
+  "OVL": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=vogtlandkreis_kreis",
+    "authority": "Vogtlandkreis"
+  },
+  "OZ": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=nordsachsen_kreis",
+    "authority": "Nordsachsen"
+  },
+  "P": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=potsdam_stadt",
+    "authority": "Potsdam"
+  },
+  "PA": {
+    "url": "https://www.buergerservice-portal.de/bayern/passau/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Passau"
+  },
+  "PAN": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrrottalinn/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Rottal-Inn"
+  },
+  "PAR": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrkelheim/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Kelheim"
+  },
+  "PB": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=paderborn_kreis",
+    "authority": "Paderborn"
+  },
+  "PE": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=peine_kreis",
+    "authority": "Peine"
+  },
+  "PF": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6002517&leistungId=99036026017000&p=082310",
+    "authority": "Pforzheim (Stadt)"
+  },
+  "PI": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.9309353&leistungId=99036026017000&p=010560",
+    "authority": "Pinneberg"
+  },
+  "PIR": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=saechsische-schweiz-osterzgebirge_kreis",
+    "authority": "Sächsische Schweiz-Osterzgebirge"
+  },
+  "PL": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=vogtlandkreis_kreis",
+    "authority": "Vogtlandkreis"
+  },
+  "PLÖ": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.222862101&leistungId=99036026017000&p=010570",
+    "authority": "Plön"
+  },
+  "PM": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=potsdam-mittelmark_kreis",
+    "authority": "Potsdam-Mittelmark"
+  },
+  "PR": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=prignitz_kreis",
+    "authority": "Prignitz"
+  },
+  "PZ": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=uckermark_kreis",
+    "authority": "Uckermark"
+  },
+  "QLB": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100008.OE.218306624&leistungId=99036026017000&p=150850",
+    "authority": "Harz"
+  },
+  "R": {
+    "url": "https://www.buergerservice-portal.de/bayern/regensburg/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Regensburg"
+  },
+  "RC": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=vogtlandkreis_kreis",
+    "authority": "Vogtlandkreis"
+  },
+  "RE": {
+    "url": "https://i-kfz.krzn.de/static/05562000.html",
+    "authority": "Kreis Recklinghausen"
+  },
+  "REH": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrhof/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Hof"
+  },
+  "REI": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrberchtesgadenerland/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Berchtesgadener Land"
+  },
+  "RG": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=meissen_kreis",
+    "authority": "Meißen"
+  },
+  "RH": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrroth/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Roth"
+  },
+  "RI": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=schaumburg_kreis",
+    "authority": "Schaumburg"
+  },
+  "RID": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrkelheim/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Kelheim"
+  },
+  "RIE": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=meissen_kreis",
+    "authority": "Meißen"
+  },
+  "RL": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=mittelsachsen_kreis",
+    "authority": "Mittelsachsen"
+  },
+  "RN": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=havelland_kreis",
+    "authority": "Havelland"
+  },
+  "ROF": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.382669951&leistungId=99036026017000&p=066320",
+    "authority": "Hersfeld-Rotenburg"
+  },
+  "ROL": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrkelheim/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Kelheim"
+  },
+  "ROS": {
+    "url": "https://www.buergerservice-portal.de/mecklenburgvorpommern/lkrrostock/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Rostock"
+  },
+  "ROW": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=rotenburg_kreis",
+    "authority": "Rotenburg (Wümme)"
+  },
+  "RS": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=remscheid_stadt",
+    "authority": "Remscheid"
+  },
+  "RU": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=saalfeld-rudolstadt_kreis",
+    "authority": "Saalfeld-Rudolstadt"
+  },
+  "RÜD": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.8999620&leistungId=99036026017000&p=064390",
+    "authority": "Rheingau-Taunus-Kreis"
+  },
+  "S": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6043503&leistungId=99036026017000&p=081110",
+    "authority": "Stuttgart (Stadt)"
+  },
+  "SAD": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrschwandorf/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Schwandorf"
+  },
+  "SAN": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrhof/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Hof"
+  },
+  "SAW": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=altmarkkreis-salzwedel_kreis",
+    "authority": "Altmarkkreis Salzwedel"
+  },
+  "SC": {
+    "url": "https://www.buergerservice-portal.de/bayern/schwabach/bsp_ikfz_antragstellung/",
+    "authority": "Stadt Schwabach"
+  },
+  "SDH": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=kyffhaeuserkreis_kreis",
+    "authority": "Kyffhäuserkreis"
+  },
+  "SDL": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100008.OE.26159371&leistungId=99036026017000&p=150900",
+    "authority": "Stendal"
+  },
+  "SDT": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=uckermark_kreis",
+    "authority": "Uckermark"
+  },
+  "SEB": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=saechsische-schweiz-osterzgebirge_kreis",
+    "authority": "Sächsische Schweiz-Osterzgebirge"
+  },
+  "SEE": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=maerkisch-oderland_kreis",
+    "authority": "Märkisch-Oderland"
+  },
+  "SFB": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=oberspreewald-lausitz_kreis",
+    "authority": "Oberspreewald-Lausitz"
+  },
+  "SG": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=solingen_stadt",
+    "authority": "Solingen"
+  },
+  "SGH": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=c%3AAZkZHiPbdLC2u8g5bulWuw",
+    "authority": "Mansfeld-Südharz"
+  },
+  "SHG": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=schaumburg_kreis",
+    "authority": "Schaumburg"
+  },
+  "SHL": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=suhl_stadt",
+    "authority": "Suhl"
+  },
+  "SL": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.270034367&leistungId=99036026017000&p=010590",
+    "authority": "Schleswig-Flensburg"
+  },
+  "SLE": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=dueren_kreis",
+    "authority": "Düren"
+  },
+  "SLF": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=saalfeld-rudolstadt_kreis",
+    "authority": "Saalfeld-Rudolstadt"
+  },
+  "SLN": {
+    "url": "https://www.buergerservice-portal.de/thueringen/lkraltenburgerland/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Altenburger Land"
+  },
+  "SLS": {
+    "url": "https://www.buergerservice-portal.de/saarland/lkrsaarlouis/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Saarlouis"
+  },
+  "SLZ": {
+    "url": "https://www.buergerservice-portal.de/thueringen/lkrwartburgkreis/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Wartburgkreis"
+  },
+  "SM": {
+    "url": "https://www.buergerservice-portal.de/thueringen/lkrschmalkaldenmeiningen/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Schmalkalden-Meiningen"
+  },
+  "SMÜ": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkraugsburg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Augsburg"
+  },
+  "SOG": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrweilheimschongau/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Weilheim-Schongau"
+  },
+  "SON": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=sonneberg_kreis",
+    "authority": "Sonneberg"
+  },
+  "SPB": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=spree-neisse_kreis",
+    "authority": "Spree-Neiße"
+  },
+  "SPN": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=spree-neisse_kreis",
+    "authority": "Spree-Neiße"
+  },
+  "SRB": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=maerkisch-oderland_kreis",
+    "authority": "Märkisch-Oderland"
+  },
+  "STA": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrstarnberg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Starnberg"
+  },
+  "STD": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=stade_kreis",
+    "authority": "Stade"
+  },
+  "STE": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrlichtenfels/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Lichtenfels"
+  },
+  "SU": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=rhein-sieg_kreis",
+    "authority": "Rhein-Sieg-Kreis"
+  },
+  "SUL": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrambergsulzbach/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Amberg-Sulzbach"
+  },
+  "SWA": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.8999620&leistungId=99036026017000&p=064390",
+    "authority": "Rheingau-Taunus-Kreis"
+  },
+  "SY": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=diepholz_kreis",
+    "authority": "Diepholz"
+  },
+  "SZ": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=salzgitter_stadt",
+    "authority": "Salzgitter"
+  },
+  "TDO": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=nordsachsen_kreis",
+    "authority": "Nordsachsen"
+  },
+  "TET": {
+    "url": "https://www.buergerservice-portal.de/mecklenburgvorpommern/lkrrostock/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Rostock"
+  },
+  "TF": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=teltow-flaeming_kreis",
+    "authority": "Teltow-Fläming"
+  },
+  "TG": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=nordsachsen_kreis",
+    "authority": "Nordsachsen"
+  },
+  "TIR": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrtirschenreuth/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Tirschenreuth"
+  },
+  "TO": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=nordsachsen_kreis",
+    "authority": "Nordsachsen"
+  },
+  "TP": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=uckermark_kreis",
+    "authority": "Uckermark"
+  },
+  "TS": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrtraunstein/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Traunstein"
+  },
+  "TÖL": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrbadtoelzwolfratshausen/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Bad Tölz-Wolfratshausen"
+  },
+  "UE": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=uelzen_kreis",
+    "authority": "Uelzen"
+  },
+  "UL": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6011593&leistungId=99036026017000&p=084250",
+    "authority": "Ulm (Stadt)"
+  },
+  "UM": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=uckermark_kreis",
+    "authority": "Uckermark"
+  },
+  "UN": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=unna_kreis",
+    "authority": "Unna"
+  },
+  "V": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=vogtlandkreis_kreis",
+    "authority": "Vogtlandkreis"
+  },
+  "VB": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.9162285&leistungId=99036026017000&p=065350",
+    "authority": "Vogelsbergkreis"
+  },
+  "VEC": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=vechta_kreis",
+    "authority": "Vechta"
+  },
+  "VER": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=verden_kreis",
+    "authority": "Verden"
+  },
+  "VG": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=vorpommern-greifswald_kreis",
+    "authority": "Vorpommern-Greifswald"
+  },
+  "VIB": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrlandshut/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Landshut"
+  },
+  "VIE": {
+    "url": "https://i-kfz.krzn.de/static/05166000.html",
+    "authority": "Kreis Viersen"
+  },
+  "W": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=wuppertal_stadt",
+    "authority": "Wuppertal"
+  },
+  "WAF": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=warendorf_kreis",
+    "authority": "Warendorf"
+  },
+  "WAK": {
+    "url": "https://www.buergerservice-portal.de/thueringen/lkrwartburgkreis/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Wartburgkreis"
+  },
+  "WAN": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=herne_stadt",
+    "authority": "Herne"
+  },
+  "WAR": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=hoexter_kreis",
+    "authority": "Höxter"
+  },
+  "WAT": {
+    "url": "https://i-kfz.krzn.de/static/05911000.html",
+    "authority": "Stadt Bochum"
+  },
+  "WBS": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=eichsfeld_kreis",
+    "authority": "Eichsfeld"
+  },
+  "WDA": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=zwickau_kreis",
+    "authority": "Zwickau"
+  },
+  "WE": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=weimar_stadt",
+    "authority": "Weimar"
+  },
+  "WEL": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.360163112&leistungId=99036026017000&p=065330",
+    "authority": "Limburg-Weilburg"
+  },
+  "WER": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkraugsburg/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Augsburg"
+  },
+  "WES": {
+    "url": "https://i-kfz.krzn.de/static/05170000.html",
+    "authority": "Kreis Wesel"
+  },
+  "WF": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=wolfenbuettel_kreis",
+    "authority": "Wolfenbüttel"
+  },
+  "WHV": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=wilhelmshaven_stadt",
+    "authority": "Wilhelmshaven"
+  },
+  "WI": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=wiesbaden_stadt",
+    "authority": "Wiesbaden"
+  },
+  "WIT": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=ennepe-ruhr_kreis",
+    "authority": "Ennepe-Ruhr-Kreis"
+  },
+  "WK": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=ostprignitz-ruppin_kreis",
+    "authority": "Ostprignitz-Ruppin"
+  },
+  "WL": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=harburg_kreis",
+    "authority": "Harburg"
+  },
+  "WM": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrweilheimschongau/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Weilheim-Schongau"
+  },
+  "WMS": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=boerde_kreis",
+    "authority": "Börde"
+  },
+  "WOH": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.396840388&leistungId=99036026017000&p=066330",
+    "authority": "Kassel"
+  },
+  "WOR": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrbadtoelzwolfratshausen/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Bad Tölz-Wolfratshausen"
+  },
+  "WOS": {
+    "url": "https://www.buergerservice-portal.de/bayern/lkrfreyunggrafenau/bsp_ikfz_antragstellung/",
+    "authority": "Landkreis Freyung-Grafenau"
+  },
+  "WR": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100008.OE.218306624&leistungId=99036026017000&p=150850",
+    "authority": "Harz"
+  },
+  "WST": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=ammerland_kreis",
+    "authority": "Ammerland"
+  },
+  "WSW": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=goerlitz_kreis",
+    "authority": "Görlitz"
+  },
+  "WTL": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=osnabrueck_kreis",
+    "authority": "Osnabrück"
+  },
+  "WTM": {
+    "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=wittmund_kreis",
+    "authority": "Wittmund"
+  },
+  "WUR": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=leipzig_kreis",
+    "authority": "Leipzig"
+  },
+  "WZ": {
+    "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=GNh4vwMPzUxpX09Adn7VAQ",
+    "authority": "Lahn-Dill-Kreis"
+  },
+  "WZL": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=boerde_kreis",
+    "authority": "Börde"
+  },
+  "Z": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=zwickau_kreis",
+    "authority": "Zwickau"
+  },
+  "ZI": {
+    "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=goerlitz_kreis",
+    "authority": "Görlitz"
+  },
+  "ZIG": {
+    "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=schwalm-eder_kreis",
+    "authority": "Schwalm-Eder-Kreis"
+  },
+  "ZR": {
+    "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=greiz_kreis",
+    "authority": "Greiz"
+  },
+  "ZS": {
+    "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=teltow-flaeming_kreis",
+    "authority": "Teltow-Fläming"
+  }
+}

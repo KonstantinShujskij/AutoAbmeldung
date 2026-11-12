@@ -3,9 +3,21 @@
 // копировались одним нажатием. Фото ZB II — следующим сообщением, ответом на заявку.
 
 import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { VERBLEIB_RU, dateDe, dateTimeDe, plateOf } from './format.js';
 
 const API = 'https://api.telegram.org';
+
+// Код на номере → ссылка на портал снятия с учёта (построено из KBA + наших порталов).
+let PLATE_PORTALS = {};
+try {
+  const p = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../shared/plate-portals.json');
+  PLATE_PORTALS = JSON.parse(readFileSync(p, 'utf8'));
+} catch (err) {
+  console.error('[telegram] plate-portals.json nicht geladen:', err.message);
+}
 
 export const telegramEnabled = () => Boolean(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID);
 
@@ -39,6 +51,10 @@ export function formatApplication(record, { vinFromScan } = {}) {
     `FIN: ${code(d.vin)}${vinFromScan && VIN_SOURCE[vinFromScan] ? `\n<i>${VIN_SOURCE[vinFromScan]}</i>` : ''}`,
     `Что с машиной: ${esc(VERBLEIB_RU[d.verbleib] ?? d.verbleib)}`,
   ];
+  // Портал для снятия с учёта по коду региона (LÜN, DO, M …).
+  const portal = PLATE_PORTALS[String(d.plateDistrict || '').toUpperCase()];
+  if (portal) lines.push(`🏛 Портал (${esc(portal.authority)}):\n${esc(portal.url)}`);
+  else lines.push(`🏛 Портал: не в списке — найти вручную по коду ${code(d.plateDistrict)}`);
   if (d.verbleib === 'verwertet' || d.verbleib === 'ausland') {
     lines.push(`Утилизация: ${esc(dateDe(d.verwertungDatum))}, ${esc(d.verwertungStaat)}`);
     if (d.demontageNr) lines.push(`Demontagebetrieb №: ${code(d.demontageNr)}`);
