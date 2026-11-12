@@ -1736,12 +1736,6 @@
 .scan__list .is-verified span::after { content: ' ✓'; }
 .scan__list .is-not_found { color: var(--seal); }
 
-/* Поля, заполненные с фото */
-.zcell--scan { background: linear-gradient(90deg, rgba(243, 209, 47, 0.16), transparent 70%); }
-.zcell--scan-verified { background: linear-gradient(90deg, rgba(44, 138, 90, 0.12), transparent 70%); }
-.zcell--scan .zcell__hint { color: #8a6d00; }
-.zcell--scan-verified .zcell__hint { color: var(--green); }
-
 @media (max-width: 640px) {
   .scan { grid-template-columns: 1fr; gap: 16px; padding: 18px; }
   .scan__thumb { width: 84px; }
