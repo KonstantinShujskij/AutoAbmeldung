@@ -1,0 +1,267 @@
+{
+  "_comment": "i-Kfz-Portale der EfA-Plattform „i-Kfz 4\" (Komm.ONE/BW), Host behoerden-serviceportal.de mit oeId+p. Ermittelt 2026-11-12 aus dem offiziellen Bundeskatalog verwaltung.bund.de (öffentliche PVOG-API der Leistung 99036026017000). ACHTUNG: unvollständig — der Bundeskatalog führt für viele Behörden stattdessen deren Terminbuchung statt des i-Kfz-Portals, daher fehlen EfA-Behörden hier.",
+  "checkedAt": "2026-11-12",
+  "count": 52,
+  "portals": [
+    {
+      "land": "Baden-Württemberg",
+      "name": "Baden-Baden (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6061253&leistungId=99036026017000&p=082110"
+    },
+    {
+      "land": "Baden-Württemberg",
+      "name": "Freiburg im Breisgau (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6031367&leistungId=99036026017000&p=083110"
+    },
+    {
+      "land": "Baden-Württemberg",
+      "name": "Heidelberg (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6015203&leistungId=99036026017000&p=082210"
+    },
+    {
+      "land": "Baden-Württemberg",
+      "name": "Heilbronn (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6040545&leistungId=99036026017000&p=081210"
+    },
+    {
+      "land": "Baden-Württemberg",
+      "name": "Karlsruhe (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6028453&leistungId=99036026017000&p=082120"
+    },
+    {
+      "land": "Baden-Württemberg",
+      "name": "Pforzheim (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6002517&leistungId=99036026017000&p=082310"
+    },
+    {
+      "land": "Baden-Württemberg",
+      "name": "Starzach",
+      "url": "https://behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6017019&leistungId=99036026017000&p=084160"
+    },
+    {
+      "land": "Baden-Württemberg",
+      "name": "Steinheim am Albuch",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6024705&leistungId=99036026017000&p=081350"
+    },
+    {
+      "land": "Baden-Württemberg",
+      "name": "Stuttgart (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6043503&leistungId=99036026017000&p=081110"
+    },
+    {
+      "land": "Baden-Württemberg",
+      "name": "Ulm (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6011593&leistungId=99036026017000&p=084250"
+    },
+    {
+      "land": "Baden-Württemberg",
+      "name": "Ulm (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100022.OE.6010006&leistungId=99036026017000&p=084210"
+    },
+    {
+      "land": "Bayern",
+      "name": "Ansbach (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100042.OE.305001&leistungId=99036026017000&p=095610&i=z"
+    },
+    {
+      "land": "Bayern",
+      "name": "Erlangen (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100042.OE.305020&leistungId=99036026017000&p=095620"
+    },
+    {
+      "land": "Bayern",
+      "name": "Weiden i. d. OPf. (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100042.OE.40562&leistungId=99036026017000&p=093630"
+    },
+    {
+      "land": "Hessen",
+      "name": "Darmstadt (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=K75ZjMVXXIbCWS1FEJUM-g"
+    },
+    {
+      "land": "Hessen",
+      "name": "Darmstadt-Dieburg",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.435900261&leistungId=99036026017000&p=064320"
+    },
+    {
+      "land": "Hessen",
+      "name": "Frankfurt am Main (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.9652963&leistungId=99036026017000&p=064120"
+    },
+    {
+      "land": "Hessen",
+      "name": "Gießen",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.8998880&leistungId=99036026017000&p=065310"
+    },
+    {
+      "land": "Hessen",
+      "name": "Hanau, Brüder-Grimm-Stadt (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.9883375&leistungId=99036026017000&p=064150"
+    },
+    {
+      "land": "Hessen",
+      "name": "Hersfeld-Rotenburg",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.382669951&leistungId=99036026017000&p=066320"
+    },
+    {
+      "land": "Hessen",
+      "name": "Hochheim am Main, Stadt",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.8975361&leistungId=99036026017000&p=064360"
+    },
+    {
+      "land": "Hessen",
+      "name": "Hochheim am Main, Stadt",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=c%3AAZWtX60Ne5KvKNkbsWLt-A"
+    },
+    {
+      "land": "Hessen",
+      "name": "Kassel",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.396840388&leistungId=99036026017000&p=066330"
+    },
+    {
+      "land": "Hessen",
+      "name": "Kassel (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.394988419&leistungId=99036026017000&p=066110"
+    },
+    {
+      "land": "Hessen",
+      "name": "Lahn-Dill-Kreis",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=GNh4vwMPzUxpX09Adn7VAQ"
+    },
+    {
+      "land": "Hessen",
+      "name": "Limburg-Weilburg",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.360163112&leistungId=99036026017000&p=065330"
+    },
+    {
+      "land": "Hessen",
+      "name": "Marburg-Biedenkopf",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.383018402&leistungId=99036026017000&p=065340"
+    },
+    {
+      "land": "Hessen",
+      "name": "Marburg-Biedenkopf",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.wk&oeId=L100001.OE.383018402&leistungId=99036049069000&p=065340"
+    },
+    {
+      "land": "Hessen",
+      "name": "Nidda, Johannes-Pistorius-Stadt",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.9531852&leistungId=99036008070000&p=064400"
+    },
+    {
+      "land": "Hessen",
+      "name": "Odenwaldkreis",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.379774386&leistungId=99036026017000&p=064370"
+    },
+    {
+      "land": "Hessen",
+      "name": "Offenbach am Main (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.366053418&leistungId=99036026017000&p=064130"
+    },
+    {
+      "land": "Hessen",
+      "name": "Rheingau-Taunus-Kreis",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.8999620&leistungId=99036026017000&p=064390"
+    },
+    {
+      "land": "Hessen",
+      "name": "Rüsselsheim am Main, Stadt",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.9088981&leistungId=99036026017000&p=064330"
+    },
+    {
+      "land": "Hessen",
+      "name": "Seligenstadt, Einhardstadt",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.355711126&leistungId=99036026017000&p=064380"
+    },
+    {
+      "land": "Hessen",
+      "name": "Steinbach (Taunus), Stadt",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.9709352&leistungId=99036026017000&p=064340"
+    },
+    {
+      "land": "Hessen",
+      "name": "Vogelsbergkreis",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.9162285&leistungId=99036026017000&p=065350"
+    },
+    {
+      "land": "Hessen",
+      "name": "Wetteraukreis",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.9531852&leistungId=99036026017000&p=064400"
+    },
+    {
+      "land": "Hessen",
+      "name": "Wiesbaden (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100001.OE.406804210&leistungId=99036026017000&p=064140"
+    },
+    {
+      "land": "Sachsen-Anhalt",
+      "name": "Harz",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100008.OE.218306624&leistungId=99036026017000&p=150850"
+    },
+    {
+      "land": "Sachsen-Anhalt",
+      "name": "Magdeburg (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100008.OE.31720548&leistungId=99036026017000&p=150030"
+    },
+    {
+      "land": "Sachsen-Anhalt",
+      "name": "Mansfeld-Südharz",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?processInstanceId=c%3AAZkZHiPbdLC2u8g5bulWuw"
+    },
+    {
+      "land": "Sachsen-Anhalt",
+      "name": "Stendal",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100008.OE.26159371&leistungId=99036026017000&p=150900"
+    },
+    {
+      "land": "Schleswig-Holstein",
+      "name": "Flensburg (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.9029660&leistungId=99036026017000&p=010010"
+    },
+    {
+      "land": "Schleswig-Holstein",
+      "name": "Kiel (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.268080645&leistungId=99036026017000&p=010020"
+    },
+    {
+      "land": "Schleswig-Holstein",
+      "name": "Lübeck (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.242236200&leistungId=99036026017000&p=010030"
+    },
+    {
+      "land": "Schleswig-Holstein",
+      "name": "Neumünster (Stadt)",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.267033530&leistungId=99036026017000&p=010040"
+    },
+    {
+      "land": "Schleswig-Holstein",
+      "name": "Nordfriesland",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.248240877&leistungId=99036026017000&p=010540"
+    },
+    {
+      "land": "Schleswig-Holstein",
+      "name": "Pinneberg",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.9309353&leistungId=99036026017000&p=010560"
+    },
+    {
+      "land": "Schleswig-Holstein",
+      "name": "Plön",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.222862101&leistungId=99036026017000&p=010570"
+    },
+    {
+      "land": "Schleswig-Holstein",
+      "name": "Schleswig-Flensburg",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.270034367&leistungId=99036026017000&p=010590"
+    },
+    {
+      "land": "Schleswig-Holstein",
+      "name": "Steinburg",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.9089740&leistungId=99036026017000&p=010610"
+    },
+    {
+      "land": "Schleswig-Holstein",
+      "name": "Stormarn",
+      "url": "https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag?prozessKey=m40191.ab&oeId=L100012.OE.9489375&leistungId=99036026017000&p=010620"
+    }
+  ]
+}

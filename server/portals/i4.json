@@ -1,0 +1,903 @@
+{
+  "_comment": "i-Kfz-Portale mit der Software eKOL-i-Kfz (Telecomputer GmbH, Pfad /i4/ikfz4/): gleiche Oberfläche, Behörde per LICENSEIDENTIFIER. Ermittelt 2026-11-12 durch Abgleich aller Kreise/kreisfreien Städte (Wikipedia) mit den Portalen; gültig → Startseite \"Internetbasierte Fahrzeugzulassung\", ungültig → \"Fehler in Anwendung\". Andere Plattformen: EfA i-Kfz 4 (behoerden-serviceportal.de, BW u. a.) und AKDB ikfz-service (buergerservice-portal.de, Bayern u. a.).",
+  "checkedAt": "2026-11-12",
+  "count": 128,
+  "portals": [
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "aachen_staedteregion",
+      "name": "Aachen, Städteregion",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=aachen_staedteregion"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "altmarkkreis-salzwedel_kreis",
+      "name": "Altmarkkreis Salzwedel",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=altmarkkreis-salzwedel_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "bergstrasse_kreis",
+      "name": "Bergstraße",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=bergstrasse_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "bonn_stadt",
+      "name": "Bonn",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=bonn_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "boerde_kreis",
+      "name": "Börde",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=boerde_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "bremen_stadt",
+      "name": "Bremen",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=bremen_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "bremerhaven_stadt",
+      "name": "Bremerhaven",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=bremerhaven_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "coesfeld_kreis",
+      "name": "Coesfeld",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=coesfeld_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "dortmund_stadt",
+      "name": "Dortmund",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=dortmund_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "dueren_kreis",
+      "name": "Düren",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=dueren_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "ennepe-ruhr_kreis",
+      "name": "Ennepe-Ruhr-Kreis",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=ennepe-ruhr_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "euskirchen_kreis",
+      "name": "Euskirchen",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=euskirchen_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "gelsenkirchen_stadt",
+      "name": "Gelsenkirchen",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=gelsenkirchen_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "gera_stadt",
+      "name": "Gera",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=gera_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "guetersloh_kreis",
+      "name": "Gütersloh",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=guetersloh_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "hamm_stadt",
+      "name": "Hamm",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=hamm_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "harburg_kreis",
+      "name": "Harburg",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=harburg_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "herne_stadt",
+      "name": "Herne",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=herne_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "hildburghausen_kreis",
+      "name": "Hildburghausen",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=hildburghausen_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "hoexter_kreis",
+      "name": "Höxter",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=hoexter_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "ilm_kreis",
+      "name": "Ilm-Kreis",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=ilm_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "koeln_stadt",
+      "name": "Köln",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=koeln_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "kyffhaeuserkreis_kreis",
+      "name": "Kyffhäuserkreis",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=kyffhaeuserkreis_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "mecklenburgische-seenplatte_kreis",
+      "name": "Mecklenburgische Seenplatte",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=mecklenburgische-seenplatte_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "muelheim_stadt",
+      "name": "Mülheim an der Ruhr",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=muelheim_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "muenster_stadt",
+      "name": "Münster",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=muenster_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "nordwestmecklenburg_kreis",
+      "name": "Nordwestmecklenburg",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=nordwestmecklenburg_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "oberbergischer_kreis",
+      "name": "Oberbergischer Kreis",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=oberbergischer_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "oberhausen_stadt",
+      "name": "Oberhausen",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=oberhausen_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "paderborn_kreis",
+      "name": "Paderborn",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=paderborn_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "remscheid_stadt",
+      "name": "Remscheid",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=remscheid_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "rhein-erft_kreis",
+      "name": "Rhein-Erft-Kreis",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=rhein-erft_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "rhein-sieg_kreis",
+      "name": "Rhein-Sieg-Kreis",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=rhein-sieg_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "rheinisch-bergischer_kreis",
+      "name": "Rheinisch-Bergischer Kreis",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=rheinisch-bergischer_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "rostock_stadt",
+      "name": "Rostock",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=rostock_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "schwalm-eder_kreis",
+      "name": "Schwalm-Eder-Kreis",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=schwalm-eder_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "solingen_stadt",
+      "name": "Solingen",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=solingen_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "suhl_stadt",
+      "name": "Suhl",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=suhl_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "unna_kreis",
+      "name": "Unna",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=unna_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "vorpommern-greifswald_kreis",
+      "name": "Vorpommern-Greifswald",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=vorpommern-greifswald_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "vorpommern-ruegen_kreis",
+      "name": "Vorpommern-Rügen",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=vorpommern-ruegen_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "warendorf_kreis",
+      "name": "Warendorf",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=warendorf_kreis"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "wiesbaden_stadt",
+      "name": "Wiesbaden",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=wiesbaden_stadt"
+    },
+    {
+      "host": "i-kfz.regioit.de",
+      "operator": "regio iT (NRW u. a.)",
+      "id": "wuppertal_stadt",
+      "name": "Wuppertal",
+      "url": "https://i-kfz.regioit.de/i4/ikfz4/?LICENSEIDENTIFIER=wuppertal_stadt"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen-anhalt.de",
+      "operator": "Sachsen-Anhalt",
+      "id": "halle_stadt",
+      "name": "Halle (Saale)",
+      "url": "https://ikfz.ikfz-sachsen-anhalt.de/i4/ikfz4/?LICENSEIDENTIFIER=halle_stadt"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "bautzen_kreis",
+      "name": "Bautzen",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=bautzen_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "chemnitz_stadt",
+      "name": "Chemnitz",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=chemnitz_stadt"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "dresden_stadt",
+      "name": "Dresden",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=dresden_stadt"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "goerlitz_kreis",
+      "name": "Görlitz",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=goerlitz_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "leipzig_kreis",
+      "name": "Leipzig",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=leipzig_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "leipzig_stadt",
+      "name": "Leipzig",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=leipzig_stadt"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "meissen_kreis",
+      "name": "Meißen",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=meissen_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "mittelsachsen_kreis",
+      "name": "Mittelsachsen",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=mittelsachsen_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "nordsachsen_kreis",
+      "name": "Nordsachsen",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=nordsachsen_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "saechsische-schweiz-osterzgebirge_kreis",
+      "name": "Sächsische Schweiz-Osterzgebirge",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=saechsische-schweiz-osterzgebirge_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "vogtlandkreis_kreis",
+      "name": "Vogtlandkreis",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=vogtlandkreis_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-sachsen.de",
+      "operator": "Sachsen",
+      "id": "zwickau_kreis",
+      "name": "Zwickau",
+      "url": "https://ikfz.ikfz-sachsen.de/i4/ikfz4/?LICENSEIDENTIFIER=zwickau_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-thueringen.de",
+      "operator": "Thüringen",
+      "id": "eichsfeld_kreis",
+      "name": "Eichsfeld",
+      "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=eichsfeld_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-thueringen.de",
+      "operator": "Thüringen",
+      "id": "erfurt_stadt",
+      "name": "Erfurt",
+      "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=erfurt_stadt"
+    },
+    {
+      "host": "ikfz.ikfz-thueringen.de",
+      "operator": "Thüringen",
+      "id": "gotha_kreis",
+      "name": "Gotha",
+      "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=gotha_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-thueringen.de",
+      "operator": "Thüringen",
+      "id": "greiz_kreis",
+      "name": "Greiz",
+      "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=greiz_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-thueringen.de",
+      "operator": "Thüringen",
+      "id": "saalfeld-rudolstadt_kreis",
+      "name": "Saalfeld-Rudolstadt",
+      "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=saalfeld-rudolstadt_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-thueringen.de",
+      "operator": "Thüringen",
+      "id": "sonneberg_kreis",
+      "name": "Sonneberg",
+      "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=sonneberg_kreis"
+    },
+    {
+      "host": "ikfz.ikfz-thueringen.de",
+      "operator": "Thüringen",
+      "id": "weimar_stadt",
+      "name": "Weimar",
+      "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=weimar_stadt"
+    },
+    {
+      "host": "ikfz.ikfz-thueringen.de",
+      "operator": "Thüringen",
+      "id": "weimarer-land_kreis",
+      "name": "Weimarer Land",
+      "url": "https://ikfz.ikfz-thueringen.de/i4/ikfz4/?LICENSEIDENTIFIER=weimarer-land_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "ammerland_kreis",
+      "name": "Ammerland",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=ammerland_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "aurich_kreis",
+      "name": "Aurich",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=aurich_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "braunschweig_stadt",
+      "name": "Braunschweig",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=braunschweig_stadt"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "celle_kreis",
+      "name": "Celle",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=celle_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "cloppenburg_kreis",
+      "name": "Cloppenburg",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=cloppenburg_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "cuxhaven_kreis",
+      "name": "Cuxhaven",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=cuxhaven_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "delmenhorst_stadt",
+      "name": "Delmenhorst",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=delmenhorst_stadt"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "diepholz_kreis",
+      "name": "Diepholz",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=diepholz_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "emden_stadt",
+      "name": "Emden",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=emden_stadt"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "emsland_kreis",
+      "name": "Emsland",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=emsland_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "friesland_kreis",
+      "name": "Friesland",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=friesland_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "gifhorn_kreis",
+      "name": "Gifhorn",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=gifhorn_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "goslar_kreis",
+      "name": "Goslar",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=goslar_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "goettingen_kreis",
+      "name": "Göttingen",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=goettingen_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "goettingen_stadt",
+      "name": "Göttingen",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=goettingen_stadt"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "grafschaft-bentheim_kreis",
+      "name": "Grafschaft Bentheim",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=grafschaft-bentheim_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "hameln-pyrmont_kreis",
+      "name": "Hameln-Pyrmont",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=hameln-pyrmont_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "hannover_stadt",
+      "name": "Hannover",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=hannover_stadt"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "hannover_region",
+      "name": "Hannover, Region",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=hannover_region"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "heidekreis_kreis",
+      "name": "Heidekreis",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=heidekreis_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "helmstedt_kreis",
+      "name": "Helmstedt",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=helmstedt_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "hildesheim_kreis",
+      "name": "Hildesheim",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=hildesheim_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "holzminden_kreis",
+      "name": "Holzminden",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=holzminden_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "leer_kreis",
+      "name": "Leer",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=leer_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "luechow-dannenberg_kreis",
+      "name": "Lüchow-Dannenberg",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=luechow-dannenberg_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "lueneburg_kreis",
+      "name": "Lüneburg",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=lueneburg_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "nienburg_kreis",
+      "name": "Nienburg/Weser",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=nienburg_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "northeim_kreis",
+      "name": "Northeim",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=northeim_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "oldenburg_kreis",
+      "name": "Oldenburg",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=oldenburg_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "oldenburg_stadt",
+      "name": "Oldenburg",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=oldenburg_stadt"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "osnabrueck_kreis",
+      "name": "Osnabrück",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=osnabrueck_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "osnabrueck_stadt",
+      "name": "Osnabrück",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=osnabrueck_stadt"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "osterholz_kreis",
+      "name": "Osterholz",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=osterholz_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "peine_kreis",
+      "name": "Peine",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=peine_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "rotenburg_kreis",
+      "name": "Rotenburg (Wümme)",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=rotenburg_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "salzgitter_stadt",
+      "name": "Salzgitter",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=salzgitter_stadt"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "schaumburg_kreis",
+      "name": "Schaumburg",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=schaumburg_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "stade_kreis",
+      "name": "Stade",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=stade_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "uelzen_kreis",
+      "name": "Uelzen",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=uelzen_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "vechta_kreis",
+      "name": "Vechta",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=vechta_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "verden_kreis",
+      "name": "Verden",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=verden_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "wesermarsch_kreis",
+      "name": "Wesermarsch",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=wesermarsch_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "wilhelmshaven_stadt",
+      "name": "Wilhelmshaven",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=wilhelmshaven_stadt"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "wittmund_kreis",
+      "name": "Wittmund",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=wittmund_kreis"
+    },
+    {
+      "host": "ikfz4.govconnect.de",
+      "operator": "Niedersachsen (govconnect)",
+      "id": "wolfenbuettel_kreis",
+      "name": "Wolfenbüttel",
+      "url": "https://ikfz4.govconnect.de/i4/ikfz4/?LICENSEIDENTIFIER=wolfenbuettel_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "barnim_kreis",
+      "name": "Barnim",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=barnim_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "brandenburg-havel_stadt",
+      "name": "Brandenburg an der Havel",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=brandenburg-havel_stadt"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "cottbus_stadt",
+      "name": "Cottbus",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=cottbus_stadt"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "dahme-spreewald_kreis",
+      "name": "Dahme-Spreewald",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=dahme-spreewald_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "elbe-elster_kreis",
+      "name": "Elbe-Elster",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=elbe-elster_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "frankfurt-oder_stadt",
+      "name": "Frankfurt (Oder)",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=frankfurt-oder_stadt"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "havelland_kreis",
+      "name": "Havelland",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=havelland_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "maerkisch-oderland_kreis",
+      "name": "Märkisch-Oderland",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=maerkisch-oderland_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "oberhavel_kreis",
+      "name": "Oberhavel",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=oberhavel_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "oberspreewald-lausitz_kreis",
+      "name": "Oberspreewald-Lausitz",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=oberspreewald-lausitz_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "oder-spree_kreis",
+      "name": "Oder-Spree",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=oder-spree_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "ostprignitz-ruppin_kreis",
+      "name": "Ostprignitz-Ruppin",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=ostprignitz-ruppin_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "potsdam_stadt",
+      "name": "Potsdam",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=potsdam_stadt"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "potsdam-mittelmark_kreis",
+      "name": "Potsdam-Mittelmark",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=potsdam-mittelmark_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "prignitz_kreis",
+      "name": "Prignitz",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=prignitz_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "spree-neisse_kreis",
+      "name": "Spree-Neiße",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=spree-neisse_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "teltow-flaeming_kreis",
+      "name": "Teltow-Fläming",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=teltow-flaeming_kreis"
+    },
+    {
+      "host": "www.ikfz-brandenburg.de",
+      "operator": "Brandenburg",
+      "id": "uckermark_kreis",
+      "name": "Uckermark",
+      "url": "https://www.ikfz-brandenburg.de/i4/ikfz4/?LICENSEIDENTIFIER=uckermark_kreis"
+    }
+  ]
+}

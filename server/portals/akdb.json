@@ -1,0 +1,493 @@
+{
+  "_comment": "i-Kfz-Portale der AKDB (Web-Komponente ikfz-service): buergerservice-portal.de/<land>/<slug>/bsp_ikfz_antragstellung/ (Landkreise: lkr<name>, Städte: <name>) und für NRW i-kfz.krzn.de/static/<AGS8>.html. Ermittelt 2026-11-12 über öffentliche Seiten: gültig → Titel „Online-Zulassungsbehörde | <Name>“, ungültig → „Fehlerseite“/404. Einige bayerische Behörden binden die Komponente auf der eigenen Website ein und fehlen hier.",
+  "checkedAt": "2026-11-12",
+  "count": 81,
+  "portals": [
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landeshauptstadt München",
+      "url": "https://www.buergerservice-portal.de/bayern/muenchen/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Aichach-Friedberg",
+      "url": "https://www.buergerservice-portal.de/bayern/lkraichachfriedberg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Amberg-Sulzbach",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrambergsulzbach/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Aschaffenburg",
+      "url": "https://www.buergerservice-portal.de/bayern/lkraschaffenburg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Augsburg",
+      "url": "https://www.buergerservice-portal.de/bayern/lkraugsburg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Bad Kissingen",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrbadkissingen/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Bad Tölz-Wolfratshausen",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrbadtoelzwolfratshausen/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Bamberg",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrbamberg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Berchtesgadener Land",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrberchtesgadenerland/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Deggendorf",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrdeggendorf/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Donau-Ries",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrdonauries/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Ebersberg",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrebersberg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Eichstätt",
+      "url": "https://www.buergerservice-portal.de/bayern/lkreichstaett/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Erding",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrerding/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis ErlangenHöchstadt",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrerlangenhoechstadt/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Forchheim",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrforchheim/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Freising",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrfreising/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Freyung-Grafenau",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrfreyunggrafenau/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Fürth",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrfuerth/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Garmisch-Partenkirchen",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrgarmischpartenkirchen/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Günzburg",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrguenzburg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Hof",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrhof/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Kelheim",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrkelheim/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Kitzingen",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrkitzingen/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Kronach",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrkronach/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Kulmbach",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrkulmbach/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Landshut",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrlandshut/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Lichtenfels",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrlichtenfels/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Lindau",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrlindau/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis LKR Neuburg-Schrobenhausen",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrneuburgschrobenhausen/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Main-Spessart",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrmainspessart/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Miesbach",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrmiesbach/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Miltenberg",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrmiltenberg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Neu-Ulm",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrneuulm/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Nürnberger Land",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrnuernbergerland/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Passau",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrpassau/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Regensburg",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrregensburg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis RhönGrabfeld",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrrhoengrabfeld/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Roth",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrroth/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Rottal-Inn",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrrottalinn/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Schwandorf",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrschwandorf/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Starnberg",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrstarnberg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Tirschenreuth",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrtirschenreuth/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Traunstein",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrtraunstein/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Unterallgäu",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrunterallgaeu/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Weilheim-Schongau",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrweilheimschongau/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Landkreis Würzburg",
+      "url": "https://www.buergerservice-portal.de/bayern/lkrwuerzburg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Amberg",
+      "url": "https://www.buergerservice-portal.de/bayern/amberg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Augsburg",
+      "url": "https://www.buergerservice-portal.de/bayern/augsburg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Bayreuth",
+      "url": "https://www.buergerservice-portal.de/bayern/bayreuth/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Hof",
+      "url": "https://www.buergerservice-portal.de/bayern/hof/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Ingolstadt",
+      "url": "https://www.buergerservice-portal.de/bayern/ingolstadt/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Kaufbeuren",
+      "url": "https://www.buergerservice-portal.de/bayern/kaufbeuren/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Kempten",
+      "url": "https://www.buergerservice-portal.de/bayern/kempten/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Memmingen",
+      "url": "https://www.buergerservice-portal.de/bayern/memmingen/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Passau",
+      "url": "https://www.buergerservice-portal.de/bayern/passau/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Regensburg",
+      "url": "https://www.buergerservice-portal.de/bayern/regensburg/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Schwabach",
+      "url": "https://www.buergerservice-portal.de/bayern/schwabach/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Bayern",
+      "name": "Stadt Straubing",
+      "url": "https://www.buergerservice-portal.de/bayern/straubing/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Hessen",
+      "name": "Landkreis Fulda",
+      "url": "https://www.buergerservice-portal.de/hessen/lkrfulda/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Mecklenburg-Vorpommern",
+      "name": "Landkreis Rostock",
+      "url": "https://www.buergerservice-portal.de/mecklenburgvorpommern/lkrrostock/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Kreis Borken",
+      "url": "https://i-kfz.krzn.de/static/05554000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Kreis Kleve",
+      "url": "https://i-kfz.krzn.de/static/05154000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Kreis Mettmann",
+      "url": "https://i-kfz.krzn.de/static/05158000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Kreis Recklinghausen",
+      "url": "https://i-kfz.krzn.de/static/05562000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Kreis Viersen",
+      "url": "https://i-kfz.krzn.de/static/05166000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Kreis Wesel",
+      "url": "https://i-kfz.krzn.de/static/05170000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Landeshauptstadt Düsseldorf",
+      "url": "https://i-kfz.krzn.de/static/05111000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Rhein-Kreis Neuss",
+      "url": "https://i-kfz.krzn.de/static/05162000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Stadt Bochum",
+      "url": "https://i-kfz.krzn.de/static/05911000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Stadt Bottrop",
+      "url": "https://i-kfz.krzn.de/static/05512000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Stadt Duisburg",
+      "url": "https://i-kfz.krzn.de/static/05112000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Stadt Krefeld",
+      "url": "https://i-kfz.krzn.de/static/05114000.html"
+    },
+    {
+      "host": "i-kfz.krzn.de",
+      "land": "Nordrhein-Westfalen",
+      "name": "Stadt Mönchengladbach",
+      "url": "https://i-kfz.krzn.de/static/05116000.html"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Saarland",
+      "name": "Landkreis Merzig-Wadern",
+      "url": "https://www.buergerservice-portal.de/saarland/lkrmerzigwadern/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Saarland",
+      "name": "Landkreis Saarlouis",
+      "url": "https://www.buergerservice-portal.de/saarland/lkrsaarlouis/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Saarland",
+      "name": "Saarpfalzkreis",
+      "url": "https://www.buergerservice-portal.de/saarland/lkrsaarpfalzkreis/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Thüringen",
+      "name": "Landkreis Altenburger Land",
+      "url": "https://www.buergerservice-portal.de/thueringen/lkraltenburgerland/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Thüringen",
+      "name": "Landkreis Schmalkalden-Meiningen",
+      "url": "https://www.buergerservice-portal.de/thueringen/lkrschmalkaldenmeiningen/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Thüringen",
+      "name": "Landkreis Wartburgkreis",
+      "url": "https://www.buergerservice-portal.de/thueringen/lkrwartburgkreis/bsp_ikfz_antragstellung/"
+    },
+    {
+      "host": "www.buergerservice-portal.de",
+      "land": "Thüringen",
+      "name": "Stadt Jena",
+      "url": "https://www.buergerservice-portal.de/thueringen/jena/bsp_ikfz_antragstellung/"
+    }
+  ]
+}
