@@ -10,6 +10,10 @@ const API = 'https://api.telegram.org';
 export const telegramEnabled = () => Boolean(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID);
 
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+const CAPTION_LIMIT = 1024;
+// Длина текста так, как её считает Telegram: без HTML-тегов, сущности — по одному символу.
+const visibleLength = (html) => [...html.replace(/<[^>]+>/g, '').replace(/&(amp|lt|gt|quot);/g, '_')].length;
 const code = (s) => `<code>${esc(s)}</code>`;
 
 const VIN_SOURCE = {
@@ -64,13 +68,29 @@ async function call(method, body) {
  */
 export async function sendToTelegram(record, { jpeg, vinFromScan } = {}) {
   const chatId = process.env.TELEGRAM_CHAT_ID;
+  const text = formatApplication(record, { vinFromScan });
+
+  // Есть фото и текст влезает в подпись (лимит Telegram — 1024 видимых символа):
+  // одно сообщение — фото, под ним заявка и кнопка.
+  if (jpeg && visibleLength(text) <= CAPTION_LIMIT) {
+    const form = new FormData();
+    form.set('chat_id', chatId);
+    form.set('caption', text);
+    form.set('parse_mode', 'HTML');
+    form.set('reply_markup', JSON.stringify(invoiceKeyboard(record.id)));
+    form.set('photo', new Blob([jpeg], { type: 'image/jpeg' }), `${record.id}.jpg`);
+    await call('sendPhoto', form);
+    return;
+  }
+
   const message = await call('sendMessage', JSON.stringify({
     chat_id: chatId,
-    text: formatApplication(record, { vinFromScan }),
+    text,
     parse_mode: 'HTML',
     link_preview_options: { is_disabled: true },
     reply_markup: invoiceKeyboard(record.id),
   }));
+  // Текст слишком длинный для подписи — фото отдельным ответом на заявку.
   if (jpeg) {
     const form = new FormData();
     form.set('chat_id', chatId);
