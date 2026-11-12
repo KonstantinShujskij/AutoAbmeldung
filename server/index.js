@@ -110,8 +110,14 @@ app.post(
   },
 );
 
-app.post('/api/applications', async (req, res, next) => {
+app.post('/api/applications', rateLimit({ max: 12, windowMs: 10 * 60_000 }), async (req, res, next) => {
   try {
+    // Приманка для ботов: скрытое поле hp_website. Заполнено — бот. Отвечаем мнимым успехом,
+    // чтобы он не повторял, но заявку не сохраняем и не уведомляем.
+    if (req.body?.hp_website) {
+      const at = new Date().toISOString();
+      return res.status(201).json({ id: makeId(), status: 'eingegangen', createdAt: at });
+    }
     const { values, errors } = validateApplication(req.body ?? {});
     if (Object.keys(errors).length > 0) {
       return res.status(422).json({ errors });

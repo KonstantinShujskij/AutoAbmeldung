@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   CODE_RULES,
   EMPTY_FORM,
@@ -29,8 +29,29 @@ const SECTION_META = {
 
 const ALL_TOUCHED = Object.fromEntries(FIELDS.map((f) => [f, true]));
 
+// Автосохранение черновика в браузере. Коды безопасности НЕ сохраняем (чувствительные,
+// короткие — вводятся заново); галочку Datenschutz тоже не восстанавливаем (Planet49).
+const DRAFT_KEY = 'autoabmeldung.draft.v1';
+const DRAFT_FIELDS = FIELDS.filter((f) => !['codeZb1', 'codeZb2', 'codeFront', 'codeBack', 'privacyAccepted'].includes(f));
+function loadDraft() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(DRAFT_KEY) || '{}');
+    const draft = { ...EMPTY_FORM };
+    for (const f of DRAFT_FIELDS) if (typeof saved[f] === 'string' && saved[f]) draft[f] = saved[f];
+    return draft;
+  } catch {
+    return EMPTY_FORM;
+  }
+}
+const clearDraft = () => {
+  try {
+    localStorage.removeItem(DRAFT_KEY);
+  } catch { /* ignore */ }
+};
+
 export default function App() {
-  const [form, setForm] = useState(EMPTY_FORM);
+  const [form, setForm] = useState(loadDraft);
+  const hpRef = useRef(null);
   const [touched, setTouched] = useState({});
   const [serverErrors, setServerErrors] = useState({});
   const [sending, setSending] = useState(false);
@@ -43,6 +64,16 @@ export default function App() {
 
   const { errors } = useMemo(() => validateApplication(form), [form]);
   const openCount = Object.keys(errors).length;
+
+  // Сохраняем черновик при каждом изменении (пока заявка не отправлена).
+  useEffect(() => {
+    if (result) return;
+    try {
+      const toSave = {};
+      for (const f of DRAFT_FIELDS) toSave[f] = form[f];
+      localStorage.setItem(DRAFT_KEY, JSON.stringify(toSave));
+    } catch { /* ignore */ }
+  }, [form, result]);
 
   const set = (name, value) => {
     setForm((f) => ({ ...f, [name]: value }));
@@ -125,7 +156,7 @@ export default function App() {
       const res = await fetch('/api/applications', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, scanId }),
+        body: JSON.stringify({ ...form, scanId, hp_website: hpRef.current?.value || '' }),
       });
       const body = await res.json().catch(() => ({}));
       if (res.status === 422 && body.errors) {
@@ -140,6 +171,7 @@ export default function App() {
         return;
       }
       if (!res.ok) throw new Error(body.error || 'Senden fehlgeschlagen. Bitte erneut versuchen.');
+      clearDraft();
       setResult({ ...body, values: normalize(form) });
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (err) {
@@ -152,6 +184,7 @@ export default function App() {
   }
 
   const reset = () => {
+    clearDraft();
     setForm(EMPTY_FORM);
     setTouched({});
     setServerErrors({});
@@ -232,6 +265,17 @@ export default function App() {
             <Confirmation result={result} onReset={reset} />
           ) : (
             <form className="sheets" onSubmit={handleSubmit} noValidate>
+              {/* Приманка для ботов: настоящие пользователи это поле не видят и не заполняют. */}
+              <input
+                ref={hpRef}
+                type="text"
+                name="hp_website"
+                className="hp-field"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+              />
+
               <DocScan onResult={applyScan} />
 
               {/* 01 · Kontakt */}

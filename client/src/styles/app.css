@@ -1851,3 +1851,21 @@
 .reserve__text strong { display: block; margin-bottom: 2px; font-size: 15px; color: var(--ink); }
 
 .verbleib__grid { margin-top: 14px; }
+
+/* Приманка для ботов — скрыта от людей, но не display:none (боты так меньше детектят) */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* Текст в левой колонке — информационный, выделять его не нужно.
+   В форме (.content) выделение оставляем, чтобы можно было копировать значения полей. */
+.aside,
+.mbar {
+  -webkit-user-select: none;
+  user-select: none;
+}
