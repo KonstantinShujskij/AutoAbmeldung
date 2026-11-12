@@ -34,6 +34,8 @@ export default function App() {
   const [sending, setSending] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [result, setResult] = useState(null);
+  // Поля, подставленные с фото ZB II: имя → 'verified' | 'check'. Правка поля снимает отметку.
+  const [fromScan, setFromScan] = useState({});
 
   const { errors } = useMemo(() => validateApplication(form), [form]);
   const openCount = Object.keys(errors).length;
@@ -41,23 +43,39 @@ export default function App() {
   const set = (name, value) => {
     setForm((f) => ({ ...f, [name]: value }));
     setServerErrors((e) => (e[name] ? { ...e, [name]: undefined } : e));
+    setFromScan((m) => (m[name] ? { ...m, [name]: undefined } : m));
   };
 
   // Результат фото: заполняем только пустые поля (что клиент уже ввёл — не трогаем),
   // FIN — если поле пустое или с фото пришла подтверждённая.
   function applyScan({ vin, fields = {} }) {
     const updates = {};
+    const marks = {};
     for (const [name, value] of Object.entries(fields)) {
-      if (!form[name] && value) updates[name] = value;
+      if (!form[name] && value) {
+        updates[name] = value;
+        marks[name] = 'check';
+      }
     }
-    if (vin?.value && (!form.vin || vin.status === 'verified')) updates.vin = vin.value;
+    if (vin?.value && (!form.vin || vin.status === 'verified')) {
+      updates.vin = vin.value;
+      marks.vin = vin.status;
+    }
     const names = Object.keys(updates);
     if (names.length) {
       setForm((f) => ({ ...f, ...updates }));
+      setFromScan((m) => ({ ...m, ...marks }));
       setTouched((t) => ({ ...t, ...Object.fromEntries(names.map((n) => [n, true])) }));
     }
     return names;
   }
+  // Подпись под полем, заполненным с фото (без цветной подсветки — только текст).
+  const scanHint = (name) =>
+    fromScan[name] === 'verified'
+      ? 'Aus dem Foto · per Prüfziffer bestätigt'
+      : fromScan[name]
+        ? 'Aus dem Foto übernommen – bitte prüfen'
+        : undefined;
   const touch = (name) => setTouched((t) => (t[name] ? t : { ...t, [name]: true }));
   const errorFor = (name) => serverErrors[name] || (touched[name] ? errors[name] : null);
 
@@ -126,6 +144,7 @@ export default function App() {
     setForm(EMPTY_FORM);
     setTouched({});
     setServerErrors({});
+    setFromScan({});
     setResult(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -246,16 +265,16 @@ export default function App() {
                 </header>
                 <div className="sheet__body">
                   <div className="zgrid">
-                    <FieldCell id="f-lastName" code="C.3.1" label="Name oder Firmenname" error={errorFor('lastName')} className="span-3">
+                    <FieldCell id="f-lastName" code="C.3.1" label="Name oder Firmenname" error={errorFor('lastName')} hint={scanHint('lastName')} className="span-3">
                       {(a) => <input {...a} {...bind('lastName')} autoComplete="family-name" placeholder="Mustermann" className="zinput" />}
                     </FieldCell>
-                    <FieldCell id="f-firstName" code="C.3.2" label="Vorname(n)" error={errorFor('firstName')} className="span-3">
+                    <FieldCell id="f-firstName" code="C.3.2" label="Vorname(n)" error={errorFor('firstName')} hint={scanHint('firstName')} className="span-3">
                       {(a) => <input {...a} {...bind('firstName')} autoComplete="given-name" placeholder="Erika" className="zinput" />}
                     </FieldCell>
-                    <FieldCell id="f-street" code="C.3.3" label="Straße und Hausnummer" error={errorFor('street')}>
+                    <FieldCell id="f-street" code="C.3.3" label="Straße und Hausnummer" error={errorFor('street')} hint={scanHint('street')}>
                       {(a) => <input {...a} {...bind('street')} autoComplete="address-line1" placeholder="Musterstraße 12" className="zinput" />}
                     </FieldCell>
-                    <FieldCell id="f-zip" code="C.3.3" label="PLZ" error={errorFor('zip')} className="span-2">
+                    <FieldCell id="f-zip" code="C.3.3" label="PLZ" error={errorFor('zip')} hint={scanHint('zip')} className="span-2">
                       {(a) => (
                         <input
                           {...a}
@@ -268,7 +287,7 @@ export default function App() {
                         />
                       )}
                     </FieldCell>
-                    <FieldCell id="f-city" code="C.3.3" label="Ort" error={errorFor('city')} className="span-4">
+                    <FieldCell id="f-city" code="C.3.3" label="Ort" error={errorFor('city')} hint={scanHint('city')} className="span-4">
                       {(a) => <input {...a} {...bind('city')} autoComplete="address-level2" placeholder="Lünen" className="zinput" />}
                     </FieldCell>
                   </div>
@@ -292,6 +311,7 @@ export default function App() {
                       code="E"
                       label="Fahrzeug-Identifizierungsnummer (FIN)"
                       error={errorFor('vin')}
+                      hint={scanHint('vin')}
                     >
                       {(a) => (
                         <>
@@ -314,7 +334,7 @@ export default function App() {
                       id="f-plate"
                       code="A"
                       label="Amtliches Kennzeichen"
-                      hint="So wie auf dem Schild. Ein ganzes Kennzeichen lässt sich auch einfügen."
+                      hint={scanHint('plateDistrict') ?? 'So wie auf dem Schild. Ein ganzes Kennzeichen lässt sich auch einfügen.'}
                       error={plateErrorName ? errorFor(plateErrorName) : null}
                       className="zcell--plate"
                     >
