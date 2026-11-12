@@ -3,6 +3,9 @@ dist/
 # Заявки клиентов — персональные данные, в репозиторий не попадают
 server/data/
 .env
+.env.*
+!.env.example
+!.env.deploy.example
 *.log
 
 # Локальная копия старой версии (в git она живёт в ветке legacy и теге v1-legacy)

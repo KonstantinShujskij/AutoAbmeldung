@@ -1,5 +1,5 @@
 import express from 'express';
-import { randomBytes } from 'node:crypto';
+import { randomBytes, timingSafeEqual } from 'node:crypto';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
@@ -12,6 +12,10 @@ const DATA_DIR = path.join(ROOT, 'server', 'data', 'applications');
 const DIST_DIR = path.join(ROOT, 'dist');
 // Отдельная переменная: общий PORT часто выставляют для dev-сервера фронтенда.
 const PORT = Number(process.env.API_PORT) || 3001;
+// Тестовый стенд: SITE_AUTH="логин:пароль" закрывает весь сайт Basic-авторизацией,
+// NOINDEX=1 просит поисковики не индексировать. На боевом домене обе не задаются.
+const SITE_AUTH = process.env.SITE_AUTH || '';
+const NOINDEX = process.env.NOINDEX === '1';
 
 // Номер заявки без похожих символов (0/O, 1/I/L), чтобы его можно было продиктовать.
 const ID_ALPHABET = '23456789ABCDEFGHJKMNPQRSTUVWXYZ';
@@ -21,7 +25,33 @@ function makeId() {
   return `AF-${new Date().getFullYear()}-${tail}`;
 }
 
+function basicAuth(credentials) {
+  const expected = Buffer.from(credentials, 'utf8');
+  return (req, res, next) => {
+    const [scheme, encoded] = (req.headers.authorization || '').split(' ');
+    const given = scheme === 'Basic' && encoded ? Buffer.from(encoded, 'base64') : Buffer.alloc(0);
+    if (given.length === expected.length && timingSafeEqual(given, expected)) return next();
+    res.set('WWW-Authenticate', 'Basic realm="AutoFaren Test", charset="UTF-8"');
+    res.status(401).type('text/plain').send('Testumgebung – Zugang nur mit Passwort.');
+  };
+}
+
 const app = express();
+app.disable('x-powered-by');
+
+// Для проверки живости (Docker healthcheck, деплой) — без пароля и без данных.
+app.get('/api/health', (req, res) => res.json({ ok: true }));
+
+if (NOINDEX) {
+  app.use((req, res, next) => {
+    res.set('X-Robots-Tag', 'noindex, nofollow');
+    next();
+  });
+  app.get('/robots.txt', (req, res) => res.type('text/plain').send('User-agent: *\nDisallow: /\n'));
+}
+
+if (SITE_AUTH) app.use(basicAuth(SITE_AUTH));
+
 app.use(express.json({ limit: '32kb' }));
 
 app.post('/api/applications', async (req, res, next) => {
@@ -68,5 +98,6 @@ app.use((err, req, res, _next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`AutoFaren API läuft auf http://localhost:${PORT}`);
+  const flags = [SITE_AUTH && 'Passwortschutz', NOINDEX && 'noindex'].filter(Boolean);
+  console.log(`AutoFaren API läuft auf http://localhost:${PORT}${flags.length ? ` (${flags.join(', ')})` : ''}`);
 });

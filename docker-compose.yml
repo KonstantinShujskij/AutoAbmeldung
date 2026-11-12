@@ -1,0 +1,21 @@
+# Запуск на сервере: docker compose up -d --build
+# Настройки — в .env рядом с этим файлом (образец: .env.example, в git не попадает).
+name: autofaren
+
+services:
+  web:
+    build: .
+    image: autofaren-web
+    # Только на localhost: снаружи сайт доступен через reverse proxy / Cloudflare Tunnel.
+    ports:
+      - "127.0.0.1:${HOST_PORT:-4323}:3001"
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - applications:/app/server/data
+    restart: unless-stopped
+
+volumes:
+  # Заявки клиентов (персональные данные) — переживают пересборку контейнера.
+  applications:
