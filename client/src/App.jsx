@@ -38,6 +38,8 @@ export default function App() {
   const [result, setResult] = useState(null);
   // Поля, подставленные с фото ZB II: имя → 'verified' | 'check'. Правка поля снимает отметку.
   const [fromScan, setFromScan] = useState({});
+  // Id фото на сервере — уйдёт вместе с заявкой, чтобы приложить фото к уведомлению.
+  const [scanId, setScanId] = useState(null);
 
   const { errors } = useMemo(() => validateApplication(form), [form]);
   const openCount = Object.keys(errors).length;
@@ -50,7 +52,8 @@ export default function App() {
 
   // Результат фото: заполняем только пустые поля (что клиент уже ввёл — не трогаем),
   // FIN — если поле пустое или с фото пришла подтверждённая.
-  function applyScan({ vin, fields = {} }) {
+  function applyScan({ vin, fields = {}, scanId: id }) {
+    if (id) setScanId(id);
     const updates = {};
     const marks = {};
     for (const [name, value] of Object.entries(fields)) {
@@ -121,7 +124,7 @@ export default function App() {
       const res = await fetch('/api/applications', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, scanId }),
       });
       const body = await res.json().catch(() => ({}));
       if (res.status === 422 && body.errors) {
@@ -147,6 +150,7 @@ export default function App() {
     setTouched({});
     setServerErrors({});
     setFromScan({});
+    setScanId(null);
     setResult(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

@@ -142,5 +142,6 @@ export async function recognizeDocument(buffer) {
     `[ocr] ${Date.now() - started}ms (paddle ${ms(localRes)}, gpt ${ms(gptRes)}${rotatedTask ? `, gedreht ${local?.rotation}°` : ''})`
     + ` vin=${vin.status}/${vin.by ?? '-'} doc=${documentType} fields=${Object.keys(fields).length}`,
   );
-  return { documentType, vin: { value: vin.value, status: vin.status }, fields };
+  // jpeg — выпрямленное фото: сервер подержит его в памяти до отправки заявки (Telegram).
+  return { documentType, vin: { value: vin.value, status: vin.status }, fields, jpeg: buffer };
 }
