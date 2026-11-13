@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { VERBLEIB_RU, dateDe, dateTimeDe, plateOf } from './format.js';
+import { STATUS_LABEL, statusKeyboard } from './statuses.js';
 
 const API = 'https://api.telegram.org';
 
@@ -85,14 +86,16 @@ export async function sendToTelegram(record, { jpeg, vinFromScan } = {}) {
   const chatId = process.env.TELEGRAM_CHAT_ID;
   const text = formatApplication(record, { vinFromScan });
 
+  const keyboard = statusKeyboard(record.id, record.status ?? 'eingegangen');
+
   // Есть фото и текст влезает в подпись (лимит Telegram — 1024 видимых символа):
-  // одно сообщение — фото, под ним заявка и кнопка.
+  // одно сообщение — фото, под ним заявка и кнопки статуса.
   if (jpeg && visibleLength(text) <= CAPTION_LIMIT) {
     const form = new FormData();
     form.set('chat_id', chatId);
     form.set('caption', text);
     form.set('parse_mode', 'HTML');
-    form.set('reply_markup', JSON.stringify(invoiceKeyboard(record.id)));
+    form.set('reply_markup', JSON.stringify(keyboard));
     form.set('photo', new Blob([jpeg], { type: 'image/jpeg' }), `${record.id}.jpg`);
     await call('sendPhoto', form);
     return;
@@ -103,7 +106,7 @@ export async function sendToTelegram(record, { jpeg, vinFromScan } = {}) {
     text,
     parse_mode: 'HTML',
     link_preview_options: { is_disabled: true },
-    reply_markup: invoiceKeyboard(record.id),
+    reply_markup: keyboard,
   }));
   // Текст слишком длинный для подписи — фото отдельным ответом на заявку.
   if (jpeg) {
@@ -116,19 +119,11 @@ export async function sendToTelegram(record, { jpeg, vinFromScan } = {}) {
   }
 }
 
-// ─── Кнопка «отправить счёт» ────────────────────────────────────────────────
-// Оператор внёс данные на портал → жмёт кнопку → клиенту уходит письмо с оплатой,
-// а кнопка превращается в отметку «✅ счёт отправлен», чтобы не нажать дважды.
+// ─── Кнопки статуса заявки ──────────────────────────────────────────────────
+// Оператор ведёт заявку по статусам прямо из группы: отправить счёт → оплачено →
+// в работе → готово. Нажатие меняет статус в БД и перерисовывает клавиатуру.
 
-const INVOICE_RE = /^inv:(AF-\d{4}-[A-Z0-9]{6})$/;
-
-function invoiceKeyboard(id) {
-  return { inline_keyboard: [[{ text: '💶 Данные внесены — отправить счёт клиенту', callback_data: `inv:${id}` }]] };
-}
-
-function doneKeyboard(text) {
-  return { inline_keyboard: [[{ text, callback_data: 'noop' }]] };
-}
+const STATUS_RE = /^st:(AF-\d{4}-[A-Z0-9]{6}):([a-z_]+)$/;
 
 /** Секрет для заголовка X-Telegram-Bot-Api-Secret-Token — производный от токена бота. */
 export function webhookSecret() {
@@ -145,10 +140,11 @@ export async function setupWebhook(publicUrl) {
 }
 
 /**
- * Обработка входящего update. onInvoice(id, operatorName) должна вернуть
- * { status: 'sent' | 'already' | 'error', message?: string, at?: string, by?: string }.
+ * Обработка входящего update.
+ * onTransition(id, targetStatus, operatorName) должна вернуть
+ *   { ok: true, status } при успехе, или { ok: false, message, alert? } при отказе.
  */
-export async function handleUpdate(update, { onInvoice }) {
+export async function handleUpdate(update, { onTransition }) {
   const q = update?.callback_query;
   if (!q) return;
   const answer = (text, alert = false) =>
@@ -156,19 +152,19 @@ export async function handleUpdate(update, { onInvoice }) {
 
   // Только из нашей рабочей группы.
   if (String(q.message?.chat?.id) !== String(process.env.TELEGRAM_CHAT_ID)) return answer('Нет доступа.');
-  if (q.data === 'noop') return answer('Уже сделано.');
-  const m = INVOICE_RE.exec(q.data ?? '');
+  if (q.data === 'noop') return answer();
+  const m = STATUS_RE.exec(q.data ?? '');
   if (!m) return answer('Неизвестная кнопка.');
+  const [, id, target] = m;
 
   const operator = [q.from?.first_name, q.from?.last_name].filter(Boolean).join(' ') || q.from?.username || 'оператор';
-  const result = await onInvoice(m[1], operator).catch((err) => ({ status: 'error', message: err.message }));
+  const result = await onTransition(id, target, operator).catch((err) => ({ ok: false, message: err.message }));
 
-  if (result.status === 'error') return answer(`⚠️ Письмо не отправлено: ${result.message}`, true);
-  const when = new Date(result.at).toLocaleString('ru-RU', { timeZone: 'Europe/Berlin', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+  if (!result.ok) return answer(`⚠️ ${result.message}`, true);
   await call('editMessageReplyMarkup', JSON.stringify({
     chat_id: q.message.chat.id,
     message_id: q.message.message_id,
-    reply_markup: doneKeyboard(`✅ Счёт отправлен · ${when} · ${result.by}`),
+    reply_markup: statusKeyboard(id, result.status),
   })).catch(() => {});
-  return answer(result.status === 'already' ? 'Счёт уже был отправлен раньше.' : '✅ Письмо с оплатой отправлено клиенту.');
+  return answer(`Статус: ${STATUS_LABEL[result.status] ?? result.status}`);
 }

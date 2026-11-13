@@ -1,6 +1,7 @@
 import express from 'express';
 import { randomBytes, timingSafeEqual } from 'node:crypto';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { createApplication, getApplication, updateApplication } from './store.js';
+import { canTransition } from './notify/statuses.js';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -13,7 +14,6 @@ import { handleUpdate, sendToTelegram, setupWebhook, telegramEnabled, webhookSec
 import { mailEnabled, sendConfirmation, sendPaymentRequest } from './notify/mail.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA_DIR = path.join(ROOT, 'server', 'data', 'applications');
 const DIST_DIR = path.join(ROOT, 'dist');
 // Отдельная переменная: общий PORT часто выставляют для dev-сервера фронтенда.
 const PORT = Number(process.env.API_PORT) || 3001;
@@ -72,7 +72,7 @@ app.post('/api/telegram/webhook', express.json({ limit: '64kb' }), (req, res) =>
     return res.sendStatus(401);
   }
   res.sendStatus(200); // отвечаем сразу, работу делаем после
-  handleUpdate(req.body, { onInvoice: requestPayment }).catch((err) => console.error('[telegram]', err.message));
+  handleUpdate(req.body, { onTransition: handleTransition }).catch((err) => console.error('[telegram]', err.message));
 });
 
 if (NOINDEX) {
@@ -125,16 +125,14 @@ app.post('/api/applications', rateLimit({ max: 12, windowMs: 10 * 60_000 }), asy
 
     const createdAt = new Date().toISOString();
     const { privacyAccepted, ...data } = values;
-    const record = {
+    const record = createApplication({
       id: makeId(),
       status: 'eingegangen',
       createdAt,
       data,
       // Подтверждение Datenschutzhinweise: когда и какую версию текста клиент видел.
       privacy: { acknowledged: privacyAccepted, at: createdAt, version: PRIVACY_VERSION },
-    };
-    await mkdir(DATA_DIR, { recursive: true });
-    await writeFile(path.join(DATA_DIR, `${record.id}.json`), JSON.stringify(record, null, 2), 'utf8');
+    });
 
     res.status(201).json({ id: record.id, status: record.status, createdAt: record.createdAt });
     // Уведомления — после ответа клиенту: их сбой не должен ломать отправку заявки.
@@ -144,41 +142,30 @@ app.post('/api/applications', rateLimit({ max: 12, windowMs: 10 * 60_000 }), asy
   }
 });
 
-const ID_RE = /^AF-\d{4}-[A-Z0-9]{6}$/;
-const recordPath = (id) => path.join(DATA_DIR, `${id}.json`);
-
-async function loadRecord(id) {
-  if (!ID_RE.test(id)) return null;
+// Кнопки статуса в Telegram: оператор ведёт заявку по жизненному циклу.
+// Переход в «счёт отправлен» дополнительно шлёт клиенту письмо с оплатой.
+const transitionInFlight = new Set();
+async function handleTransition(id, target, operator) {
+  const rec = getApplication(id);
+  if (!rec) return { ok: false, message: `заявка ${id} не найдена` };
+  if (rec.status === target) return { ok: true, status: target }; // двойной клик — просто перерисовать
+  if (!canTransition(rec.status, target)) return { ok: false, message: 'этот переход сейчас недоступен' };
+  if (transitionInFlight.has(id)) return { ok: false, message: 'идёт обработка, подождите' };
+  transitionInFlight.add(id);
   try {
-    return JSON.parse(await readFile(recordPath(id), 'utf8'));
-  } catch {
-    return null;
-  }
-}
-
-const saveRecord = (record) => writeFile(recordPath(record.id), JSON.stringify(record, null, 2), 'utf8');
-
-// Кнопка «отправить счёт» в Telegram: письмо с оплатой клиенту + отметка в заявке.
-const paymentInFlight = new Set();
-async function requestPayment(id, operator) {
-  const record = await loadRecord(id);
-  if (!record) return { status: 'error', message: `заявка ${id} не найдена` };
-  if (record.payment?.requestedAt) {
-    return { status: 'already', at: record.payment.requestedAt, by: record.payment.requestedBy };
-  }
-  if (!mailEnabled()) return { status: 'error', message: 'почта (SMTP) ещё не настроена' };
-  if (paymentInFlight.has(id)) return { status: 'error', message: 'уже отправляется, подождите' };
-  paymentInFlight.add(id);
-  try {
-    await sendPaymentRequest(record);
-    const at = new Date().toISOString();
-    record.status = 'zahlung_angefordert';
-    record.payment = { ...(record.payment ?? {}), requestedAt: at, requestedBy: operator };
-    await saveRecord(record);
-    console.log(`[payment] ${id} Zahlungsaufforderung gesendet (${operator})`);
-    return { status: 'sent', at, by: operator };
+    if (target === 'zahlung_angefordert') {
+      if (!mailEnabled()) return { ok: false, message: 'почта (SMTP) ещё не настроена' };
+      await sendPaymentRequest(rec);
+      const payment = { ...(rec.payment ?? {}), requestedAt: new Date().toISOString(), requestedBy: operator };
+      updateApplication(id, { status: target, payment, by: operator });
+      console.log(`[payment] ${id} Zahlungsaufforderung gesendet (${operator})`);
+    } else {
+      updateApplication(id, { status: target, by: operator });
+      console.log(`[status] ${id} → ${target} (${operator})`);
+    }
+    return { ok: true, status: target };
   } finally {
-    paymentInFlight.delete(id);
+    transitionInFlight.delete(id);
   }
 }
 
