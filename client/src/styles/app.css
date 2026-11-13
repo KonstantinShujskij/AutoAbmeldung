@@ -1414,6 +1414,23 @@
   text-decoration-color: currentColor;
 }
 
+/* Button, der wie ein Footer-Link aussieht (öffnet den Cookie-Banner erneut). */
+.footer__link {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  color: var(--ink-2);
+  text-decoration: underline;
+  text-decoration-color: var(--line-2);
+  text-underline-offset: 3px;
+}
+.footer__link:hover {
+  color: var(--green);
+  text-decoration-color: currentColor;
+}
+
 .devfill {
   position: fixed;
   bottom: 16px;
@@ -1868,4 +1885,80 @@
 .mbar {
   -webkit-user-select: none;
   user-select: none;
+}
+
+/* ─── Cookie-/Einwilligungs-Banner ───────────────────────────────────────────
+   Unten fixiert, über dem Inhalt. Nicht modal: blockiert die Seite nicht. */
+.cookie {
+  position: fixed;
+  z-index: 60;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 14px clamp(12px, 4vw, 28px) calc(14px + env(safe-area-inset-bottom));
+  pointer-events: none;
+  animation: rise 0.4s var(--ease) both;
+}
+.cookie__card {
+  pointer-events: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  width: min(880px, 100%);
+  padding: 16px 18px;
+  background: var(--paper-hi);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sheet);
+}
+.cookie__body { flex: 1 1 320px; }
+.cookie__title {
+  margin: 0 0 4px;
+  font: 600 16px/1.2 var(--f-display);
+  color: var(--ink);
+}
+.cookie__text {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.cookie__text a {
+  color: var(--green-ink);
+  text-underline-offset: 2px;
+}
+.cookie__text a:hover { color: var(--green); }
+.cookie__actions {
+  display: flex;
+  gap: 10px;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+.cookie__btn {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.cookie__btn--ghost {
+  background: transparent;
+  border-color: var(--line-2);
+  color: var(--ink-2);
+}
+.cookie__btn--ghost:hover { border-color: var(--ink-3); color: var(--ink); }
+.cookie__btn--primary {
+  background: var(--green);
+  color: #fff;
+}
+.cookie__btn--primary:hover { background: var(--green-2); }
+
+@media (max-width: 560px) {
+  .cookie__actions { width: 100%; margin-left: 0; }
+  .cookie__btn { flex: 1 1 0; }
 }

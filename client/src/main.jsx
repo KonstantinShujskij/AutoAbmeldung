@@ -22,6 +22,7 @@ import Privacy from './pages/Privacy.jsx';
 import Ratgeber from './pages/Ratgeber.jsx';
 import Kosten from './pages/Kosten.jsx';
 import Faq from './pages/Faq.jsx';
+import CookieBanner from './components/CookieBanner.jsx';
 
 // Несколько страниц — роутер не нужен. Vite и Express отдают index.html на любой путь.
 const ROUTES = {
@@ -38,5 +39,6 @@ if (route) document.title = route.title;
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Page />
+    <CookieBanner />
   </StrictMode>,
 );

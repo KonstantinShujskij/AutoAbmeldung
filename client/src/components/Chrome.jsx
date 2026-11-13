@@ -1,5 +1,6 @@
 import { IMPRESSUM_PATH, PRIVACY_PATH, RATGEBER_PATH, KOSTEN_PATH, FAQ_PATH } from '../../../shared/legal.js';
 import { BrandMark } from './Decor.jsx';
+import { resetConsent } from '../consent.js';
 
 export function Brand({ className = '' }) {
   return (
@@ -24,6 +25,7 @@ export function Footer({ newTab = false }) {
         <a href={FAQ_PATH} {...linkProps}>FAQ</a>
         <a href={IMPRESSUM_PATH} {...linkProps}>Impressum</a>
         <a href={PRIVACY_PATH} {...linkProps}>Datenschutz</a>
+        <button type="button" className="footer__link" onClick={resetConsent}>Cookie-Einstellungen</button>
         <a href="https://autofahrerswelt.de" target="_blank" rel="noopener">autofahrerswelt.de</a>
       </nav>
     </footer>
