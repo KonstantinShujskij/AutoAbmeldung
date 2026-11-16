@@ -1,10 +1,10 @@
 import { IMPRESSUM_PATH, PRIVACY_STAND, PRIVACY_VERSION } from '../../../shared/legal.js';
-import { LegalLayout, Todo, makeSection } from '../components/LegalLayout.jsx';
+import { LegalLayout, makeSection } from '../components/LegalLayout.jsx';
 
 /*
  * Datenschutzhinweise nach Art. 13 DSGVO.
- * Жёлтые <Todo> — данные, которые знает только владелец сервиса (реквизиты, подрядчики, сроки).
- * Перед запуском: заполнить и дать проверить юристу. При изменении текста — поднять PRIVACY_VERSION.
+ * Данные владельца и подрядчиков заполнены. Перед индексацией дать текст на проверку юристу.
+ * При изменении текста — поднять PRIVACY_VERSION (сервер хранит, какую версию подтвердил клиент).
  */
 
 const TOC = [
@@ -33,24 +33,24 @@ export default function Privacy() {
       meta={`Stand: ${PRIVACY_STAND}`}
       docTitle="Datenschutzhinweise"
       docSub="Informationen nach Art. 13 DSGVO zur Online-Abmeldung über AutoAbmeldung"
+      draft={false}
       lede="Wir verarbeiten nur die Angaben, die für die Abmeldung Ihres Fahrzeugs nötig sind – und nur so lange, wie es dafür oder gesetzlich erforderlich ist. Hier steht, welche Daten das sind, wofür wir sie nutzen, an wen sie gehen und welche Rechte Sie haben."
     >
       <Section id="verantwortlicher">
         <p>Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
         <address className="doc__address">
-          <Todo>Name bzw. Firma</Todo>
+          Denys Ishkov
           <br />
-          <Todo>Straße und Hausnummer</Todo>
+          X9 – Präzise Lösungen für komplexe Systeme
           <br />
-          <Todo>PLZ und Ort</Todo>
+          Bismarckstraße 45
           <br />
-          E-Mail: <Todo>datenschutz@…</Todo>
+          52066 Aachen
           <br />
-          Telefon: <Todo>Telefonnummer</Todo>
+          E-Mail: denys.ishkov@gmail.com
+          <br />
+          Telefon: +49 (0) 160 3729656
         </address>
-        <p>
-          Datenschutzbeauftragter: <Todo>Kontaktdaten, falls benannt – sonst diesen Absatz streichen</Todo>
-        </p>
         <p>
           Weitere Angaben zum Anbieter finden Sie im <a href={IMPRESSUM_PATH}>Impressum</a>.
         </p>
@@ -122,6 +122,10 @@ export default function Privacy() {
             <dd>Art. 6 Abs. 1 lit. c DSGVO i. V. m. § 147 AO, § 257 HGB</dd>
           </div>
           <div>
+            <dt>Anonyme Reichweitenmessung für einen stabilen, nutzbaren Dienst</dt>
+            <dd>Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse an datensparsamer Statistik</dd>
+          </div>
+          <div>
             <dt>Nachweis, dass Sie diese Hinweise erhalten haben</dt>
             <dd>Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse an der Nachweisbarkeit</dd>
           </div>
@@ -144,25 +148,29 @@ export default function Privacy() {
             verlangt.
           </li>
           <li>
-            <strong>Zahlungsdienstleister:</strong> <Todo>Name und Sitz</Todo> – für die Zahlung unseres
-            Servicepreises. Die Gebühr der Behörde zahlen wir über deren Bezahlverfahren.
+            <strong>Zahlungsdienstleister:</strong> Für die Zahlung unseres Servicepreises setzen wir einen
+            Zahlungsdienstleister ein; Name und Sitz nennen wir hier, sobald die Online-Zahlung freigeschaltet ist.
+            Karten- und Kontodaten verarbeitet allein der Zahlungsdienstleister. Die Gebühr der Behörde zahlen wir
+            über deren Bezahlverfahren.
           </li>
           <li>
             <strong>Technische Dienstleister</strong> als Auftragsverarbeiter nach Art. 28 DSGVO, an unsere Weisungen
-            gebunden: Hosting <Todo>Anbieter und Sitz</Todo>, E-Mail-Versand Brevo (Sendinblue SAS, Paris, Frankreich).
+            gebunden: Hosting Contabo GmbH, München, Deutschland; E-Mail-Versand Brevo (Sendinblue SAS, Paris,
+            Frankreich). Die anonyme Reichweitenmessung (Umami) läuft auf unserem eigenen Server; dabei werden keine
+            Daten an Dritte weitergegeben.
           </li>
           <li>
             <strong>OpenAI</strong> (OpenAI Ireland Ltd., Dublin, Irland; Verarbeitung auch durch OpenAI, L.L.C., USA)
             als Auftragsverarbeiter – nur wenn Sie die Fotofunktion nutzen: Das Foto wird zum Auslesen der Felder an
             die OpenAI-API übermittelt. OpenAI verwendet über die API übermittelte Daten nicht zum Training seiner
-            Modelle und speichert sie höchstens 30 Tage zur Missbrauchserkennung.{' '}
-            <Todo>Auftragsverarbeitungsvertrag (DPA) mit OpenAI abschließen</Todo>
+            Modelle und speichert sie höchstens 30 Tage zur Missbrauchserkennung.
           </li>
           <li>
             <strong>Telegram</strong> (Telegram FZ-LLC, Dubai, VAE) – für die interne Benachrichtigung unseres
             Bearbeitungsteams: Ihre Auftragsdaten und ggf. das Foto der Zulassungsbescheinigung werden an eine
-            geschlossene Gruppe unseres Teams übermittelt.{' '}
-            <Todo>rechtlich prüfen: Drittland ohne Angemessenheitsbeschluss – Alternative im EU-Raum erwägen</Todo>
+            geschlossene Gruppe unseres Teams übermittelt. Telegram hat seinen Sitz in einem Drittland ohne
+            Angemessenheitsbeschluss (VAE); die Übermittlung erfolgt, weil sie für die Durchführung Ihres Auftrags
+            erforderlich ist (Art. 49 Abs. 1 lit. b DSGVO).
           </li>
           <li>
             <strong>Behörden</strong>, soweit wir gesetzlich dazu verpflichtet sind, etwa Finanzbehörden.
@@ -173,8 +181,7 @@ export default function Privacy() {
 
       <Section id="drittland">
         <p>
-          Wir verarbeiten Ihre Daten grundsätzlich in der Europäischen Union.{' '}
-          <Todo>gilt nur, wenn Hosting, E-Mail und Zahlung in der EU/im EWR verarbeiten – prüfen</Todo>
+          Hosting (Deutschland) und E-Mail-Versand (Frankreich) verarbeiten Ihre Daten in der Europäischen Union.
         </p>
         <p>
           <strong>Ausnahme Fotofunktion:</strong> Wenn Sie ein Foto der Zulassungsbescheinigung hochladen, kann es
@@ -183,13 +190,17 @@ export default function Privacy() {
           ergänzend die EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Wenn Sie das nicht möchten,
           füllen Sie das Formular einfach von Hand aus.
         </p>
+        <p>
+          <strong>Ausnahme interne Benachrichtigung:</strong> Die Übermittlung an unser Team über Telegram (VAE)
+          stützt sich auf Art. 49 Abs. 1 lit. b DSGVO (Erforderlichkeit für die Durchführung Ihres Auftrags).
+        </p>
       </Section>
 
       <Section id="speicherdauer">
         <ul className="doc__list">
           <li>
             <strong>Sicherheitscodes</strong> löschen wir, sobald die Abmeldung abgeschlossen ist oder endgültig
-            nicht durchgeführt werden kann, spätestens nach <Todo>30 Tagen</Todo>. Nach der Abmeldung sind die Codes
+            nicht durchgeführt werden kann, spätestens nach 30 Tagen. Nach der Abmeldung sind die Codes
             ohnehin verbraucht.
           </li>
           <li>
@@ -207,7 +218,7 @@ export default function Privacy() {
             (§ 147 AO, § 257 HGB) – derzeit acht Jahre.
           </li>
           <li>
-            <strong>Zugriffsdaten</strong> werden nach <Todo>7 Tagen</Todo> gelöscht, sofern sie nicht zur Aufklärung
+            <strong>Zugriffsdaten</strong> werden nach 7 Tagen gelöscht, sofern sie nicht zur Aufklärung
             eines Sicherheitsvorfalls benötigt werden.
           </li>
         </ul>
@@ -215,9 +226,28 @@ export default function Privacy() {
 
       <Section id="cookies">
         <p>
-          Diese Website setzt keine Cookies und keine Analyse-, Tracking- oder Werbewerkzeuge ein. Schriftarten und
-          alle übrigen Inhalte laden wir von unserem eigenen Server – es entsteht keine Verbindung zu Drittanbietern
-          wie Google. Ihre Eingaben im Formular werden erst übertragen, wenn Sie es absenden.
+          <strong>Technisch notwendige Speicherung.</strong> Zwei Dinge speichern wir lokal in Ihrem Browser (Local
+          Storage), nicht auf unseren Servern: Ihre Formular-Eingaben, damit sie beim versehentlichen Schließen nicht
+          verloren gehen (die Sicherheitscodes speichern wir dabei nicht), und Ihre Cookie-Entscheidung. Das ist für
+          den von Ihnen gewünschten Dienst erforderlich und bedarf keiner Einwilligung (§ 25 Abs. 2 TDDDG).
+        </p>
+        <p>
+          <strong>Reichweitenmessung.</strong> Wir messen anonym und cookielos, wie unsere Seiten genutzt werden – mit
+          der selbst gehosteten Software Umami auf unserem eigenen Server. Dabei werden keine Cookies gesetzt, keine
+          geräteübergreifenden Profile gebildet und keine Daten an Dritte weitergegeben; IP-Adressen dienen nur der
+          Ableitung anonymer Kennzahlen und werden nicht gespeichert. Rechtsgrundlage ist unser berechtigtes Interesse
+          an einer datensparsamen Statistik (Art. 6 Abs. 1 lit. f DSGVO).
+        </p>
+        <p>
+          <strong>Marketing.</strong> Werbe- oder Remarketing-Dienste (etwa Google Ads) setzen wir nur ein, wenn Sie
+          im Cookie-Banner ausdrücklich zustimmen (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Ohne Ihre
+          Einwilligung werden sie nicht geladen. Ihre Einwilligung können Sie jederzeit über „Cookie-Einstellungen“ im
+          Seitenfuß ändern oder widerrufen.
+        </p>
+        <p>
+          Schriftarten und alle übrigen Inhalte laden wir von unserem eigenen Server – es entsteht keine Verbindung zu
+          Anbietern wie Google Fonts. Ihre Eingaben im Formular werden erst an uns übertragen, wenn Sie das Formular
+          absenden.
         </p>
       </Section>
 
@@ -242,11 +272,12 @@ export default function Privacy() {
           <li>Datenübertragbarkeit (Art. 20 DSGVO),</li>
           <li>
             Beschwerde bei einer Datenschutz-Aufsichtsbehörde (Art. 77 DSGVO), etwa in dem Bundesland, in dem Sie
-            wohnen, oder bei der für uns zuständigen Behörde: <Todo>Aufsichtsbehörde am Sitz, z. B. LDI NRW</Todo>.
+            wohnen, oder bei der für uns zuständigen Behörde: Landesbeauftragte für Datenschutz und
+            Informationsfreiheit Nordrhein-Westfalen (LDI NRW).
           </li>
         </ul>
         <p>
-          Eine formlose Nachricht an <Todo>E-Mail-Adresse</Todo> genügt.
+          Eine formlose Nachricht an denys.ishkov@gmail.com genügt.
         </p>
 
         <div className="doc__objection" role="note">

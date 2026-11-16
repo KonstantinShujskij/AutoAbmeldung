@@ -1,18 +1,20 @@
 import { PRIVACY_PATH } from '../../../shared/legal.js';
-import { LegalLayout, Todo, makeSection } from '../components/LegalLayout.jsx';
+import { LegalLayout, makeSection } from '../components/LegalLayout.jsx';
 
 /*
  * Impressum nach § 5 DDG (Digitale-Dienste-Gesetz, заменил § 5 TMG с 14.05.2024).
- * Жёлтые <Todo> — реквизиты владельца. Пункты с пометкой «falls …» удалить, если не относятся.
- * Ссылка на EU-OS-Plattform больше не нужна: платформа закрыта 20.07.2025 (VO (EU) 2024/3228).
+ * Данные владельца: Denys Ishkov (Einzelunternehmer, X9), совпадают с robots-x9.de/impressum.
+ * Ссылка на EU-OS-Plattform не нужна: платформа закрыта 20.07.2025 (VO (EU) 2024/3228).
  */
 
 const TOC = [
   ['anbieter', 'Anbieter'],
   ['kontakt', 'Kontakt'],
-  ['register', 'Register und Steuern'],
+  ['steuern', 'Steuern und Aufsicht'],
   ['inhalt', 'Verantwortlich für den Inhalt'],
   ['streitbeilegung', 'Verbraucherstreitbeilegung'],
+  ['haftung', 'Haftung für Inhalte und Links'],
+  ['urheberrecht', 'Urheberrecht'],
   ['hinweis', 'Hinweis zum Angebot'],
 ];
 
@@ -28,61 +30,48 @@ export default function Impressum() {
       meta="Angaben gemäß § 5 DDG"
       docTitle="Impressum"
       docSub="Anbieterkennzeichnung nach § 5 Digitale-Dienste-Gesetz (DDG)"
+      draft={false}
     >
       <Section id="anbieter">
         <address className="doc__address">
-          <Todo>Name bzw. Firma mit Rechtsform, z. B. „Max Muster“ oder „AutoAbmeldung UG (haftungsbeschränkt)“</Todo>
+          Denys Ishkov
           <br />
-          <Todo>Straße und Hausnummer</Todo>
+          X9 – Präzise Lösungen für komplexe Systeme
           <br />
-          <Todo>PLZ und Ort</Todo>
+          Bismarckstraße 45
+          <br />
+          52066 Aachen
           <br />
           Deutschland
         </address>
-        <p>
-          Vertreten durch: <Todo>Geschäftsführer/in – nur bei GmbH, UG o. Ä., sonst streichen</Todo>
-        </p>
-        <p className="doc__hint">
-          Ein Postfach genügt nicht – nötig ist eine Anschrift, unter der Post zugestellt werden kann.
-        </p>
       </Section>
 
       <Section id="kontakt">
         <dl className="doc__facts">
           <div>
-            <dt>E-Mail</dt>
-            <dd>
-              <Todo>kontakt@…</Todo>
-            </dd>
+            <dt>Telefon</dt>
+            <dd>+49 (0) 160 3729656</dd>
           </div>
           <div>
-            <dt>Telefon</dt>
-            <dd>
-              <Todo>Telefonnummer</Todo>
-            </dd>
+            <dt>E-Mail</dt>
+            <dd>denys.ishkov@gmail.com</dd>
           </div>
         </dl>
       </Section>
 
-      <Section id="register">
+      <Section id="steuern">
         <dl className="doc__facts">
-          <div>
-            <dt>Handelsregister</dt>
-            <dd>
-              <Todo>Registergericht und HRB-Nummer – falls eingetragen, sonst streichen</Todo>
-            </dd>
-          </div>
           <div>
             <dt>Umsatzsteuer-ID</dt>
             <dd>
-              <Todo>USt-IdNr. nach § 27a UStG – falls vorhanden, sonst streichen</Todo>
+              Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:
+              <br />
+              DE465528015
             </dd>
           </div>
           <div>
             <dt>Aufsichtsbehörde</dt>
-            <dd>
-              <Todo>nur falls die Tätigkeit eine behördliche Erlaubnis braucht – sonst streichen</Todo>
-            </dd>
+            <dd>Stadt Aachen</dd>
           </div>
         </dl>
       </Section>
@@ -90,20 +79,51 @@ export default function Impressum() {
       <Section id="inhalt">
         <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</p>
         <address className="doc__address">
-          <Todo>Name</Todo>
+          Denys Ishkov
           <br />
-          <Todo>Anschrift wie oben</Todo>
+          Bismarckstraße 45
+          <br />
+          52066 Aachen
         </address>
-        <p className="doc__hint">
-          Nur nötig bei journalistisch-redaktionellen Inhalten, etwa einem Blog oder Ratgeber. Für ein reines
-          Antragsformular kann dieser Abschnitt entfallen.
-        </p>
       </Section>
 
       <Section id="streitbeilegung">
         <p>
           Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer
           Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+      </Section>
+
+      <Section id="haftung">
+        <p>
+          <strong>Haftung für Inhalte.</strong> Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten
+          nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder
+          gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige
+          Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den
+          allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist erst ab dem Zeitpunkt der
+          Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entsprechender Rechtsverletzungen
+          entfernen wir diese Inhalte umgehend.
+        </p>
+        <p>
+          <strong>Haftung für Links.</strong> Unser Angebot enthält Links zu externen Websites Dritter, auf deren
+          Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr
+          übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
+          verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße
+          überprüft; rechtswidrige Inhalte waren nicht erkennbar. Bei Bekanntwerden von Rechtsverletzungen entfernen
+          wir solche Links umgehend.
+        </p>
+      </Section>
+
+      <Section id="urheberrecht">
+        <p>
+          Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+          Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+          Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+          Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit
+          die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet
+          und als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden,
+          bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen entfernen wir solche
+          Inhalte umgehend.
         </p>
       </Section>
 
