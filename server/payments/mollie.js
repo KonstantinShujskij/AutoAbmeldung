@@ -11,7 +11,7 @@ const token = () => process.env.MOLLIE_TOKEN || '';
 const isOAT = () => token().startsWith('access_');
 // Beim OAT ist der Modus nicht im Token — hier explizit (Default: Testmodus, bis MOLLIE_TESTMODE=false).
 const testmode = () => process.env.MOLLIE_TESTMODE !== 'false';
-const price = () => process.env.SERVICE_PRICE || '30.00';
+const price = () => process.env.SERVICE_PRICE || '29.99';
 const site = () => (process.env.PUBLIC_URL || '').replace(/\/+$/, '');
 
 export const mollieEnabled = () => Boolean(token() && site());

@@ -26,7 +26,7 @@ export function Confirmation({ result, onReset }) {
       {result.checkoutUrl && (
         <div className="receipt__pay">
           <a className="btn-pay" href={result.checkoutUrl}>
-            Jetzt bezahlen{result.amount ? ` · ${result.amount} €` : ''}
+            Jetzt bezahlen{result.amount ? ` · ${result.amount.replace('.', ',')} €` : ''}
           </a>
           <p className="receipt__pay-note">
             Sichere Zahlung über Mollie. Den Zahlungslink finden Sie auch in Ihrer E-Mail.

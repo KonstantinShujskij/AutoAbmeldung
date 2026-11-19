@@ -82,7 +82,7 @@ ${s ? `<p style="margin:16px 0 0;font-size:12px;color:#6c786f;"><a href="${esc(s
 
 export function confirmationMail(record) {
   const pay = record.payment?.checkoutUrl;
-  const amount = record.payment?.amount ? `${record.payment.amount} €` : null;
+  const amount = record.payment?.amount ? `${record.payment.amount.replace('.', ',')} €` : null;
   const { html, text } = layout({
     title: 'Ihr Auftrag ist eingegangen',
     intro: pay

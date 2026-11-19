@@ -1,5 +1,5 @@
 import { RATGEBER_PATH, FAQ_PATH } from '../../../shared/legal.js';
-import { LegalLayout, makeSection, Todo } from '../components/LegalLayout.jsx';
+import { LegalLayout, makeSection } from '../components/LegalLayout.jsx';
 
 const TOC = [
   ['preis', 'Was kostet es'],
@@ -19,21 +19,21 @@ export default function Kosten() {
       meta={<><span className="dot" /> Transparent, ein Festpreis</>}
       docTitle="Was kostet die Online-Abmeldung?"
       docSub="Ein Festpreis – inklusive der amtlichen Gebühr."
-      lede={<>Die Online-Abmeldung kostet bei uns <strong><Todo>30&nbsp;€</Todo></strong> als Festpreis. Darin ist die amtliche Gebühr der Zulassungsbehörde bereits enthalten – es kommen keine weiteren Kosten hinzu.</>}
+      lede={<>Die Online-Abmeldung kostet bei uns <strong>29,99&nbsp;€</strong> als Festpreis. Darin ist die amtliche Gebühr der Zulassungsbehörde bereits enthalten – es kommen keine weiteren Kosten hinzu.</>}
     >
       <Section id="preis">
         <dl className="basis">
           <div>
             <dt>Unser Service (Prüfung, Antrag im i-Kfz-Portal, Bescheid als PDF)</dt>
-            <dd><Todo>enthalten</Todo></dd>
+            <dd>enthalten</dd>
           </div>
           <div>
             <dt>Amtliche Gebühr der Zulassungsbehörde</dt>
-            <dd><Todo>enthalten</Todo></dd>
+            <dd>enthalten</dd>
           </div>
           <div>
             <dt>Gesamt</dt>
-            <dd><strong><Todo>30&nbsp;€</Todo></strong></dd>
+            <dd><strong>29,99&nbsp;€</strong></dd>
           </div>
         </dl>
       </Section>
