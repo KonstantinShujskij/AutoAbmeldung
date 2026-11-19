@@ -70,9 +70,9 @@ export function Confirmation({ result, onReset }) {
         <ol>
           {result.checkoutUrl ? (
             <>
-              <li>Sie bezahlen Ihre Abmeldung – oben oder über den Link in der E-Mail.</li>
+              <li>Sie können jetzt oben direkt bezahlen – oder Sie warten auf unsere Zahlungsaufforderung per E-Mail.</li>
               <li>Wir prüfen Ihre Angaben und ermitteln die zuständige Zulassungsbehörde.</li>
-              <li>Nach der Abmeldung erhalten Sie den amtlichen Bescheid per E-Mail.</li>
+              <li>Nach Zahlungseingang melden wir das Fahrzeug ab und senden Ihnen den amtlichen Bescheid per E-Mail.</li>
             </>
           ) : (
             <>

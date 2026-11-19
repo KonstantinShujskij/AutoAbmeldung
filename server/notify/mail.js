@@ -80,18 +80,15 @@ ${s ? `<p style="margin:16px 0 0;font-size:12px;color:#6c786f;"><a href="${esc(s
   return { html, text };
 }
 
+// Первое письмо — сразу после формы: подтверждаем приём данных, БЕЗ ссылки на оплату.
+// Ссылку на оплату шлём отдельным письмом, когда оператор нажимает «Отправить счёт» (paymentMail).
 export function confirmationMail(record) {
-  const pay = record.payment?.checkoutUrl;
-  const amount = record.payment?.amount ? `${record.payment.amount.replace('.', ',')} €` : null;
   const { html, text } = layout({
     title: 'Ihr Auftrag ist eingegangen',
-    intro: pay
-      ? 'Vielen Dank! Bitte schließen Sie Ihre Abmeldung mit der Zahlung ab. Sobald die Zahlung eingegangen ist, ' +
-        'bereiten wir die Abmeldung bei der Zulassungsbehörde vor und senden Ihnen den amtlichen Bescheid.'
-      : 'Vielen Dank! Wir prüfen Ihre Angaben und bereiten die Abmeldung bei der Zulassungsbehörde vor. ' +
-        'Als Nächstes erhalten Sie von uns eine E-Mail mit der Zahlungsaufforderung.',
-    button: pay ? { label: amount ? `Jetzt bezahlen (${amount})` : 'Jetzt bezahlen', href: pay } : null,
-    rows: [...(amount ? [['Betrag', amount]] : []), ...summary(record)],
+    intro:
+      'Vielen Dank! Wir haben Ihre Angaben aufgenommen und bereiten die Abmeldung bei der Zulassungsbehörde ' +
+      'vor. Als Nächstes erhalten Sie von uns eine E-Mail mit der Zahlungsaufforderung.',
+    rows: summary(record),
     notes: [
       'Die Sicherheitscodes senden wir aus Sicherheitsgründen nicht per E-Mail mit.',
       `Stimmt etwas nicht? Antworten Sie einfach auf diese E-Mail und nennen Sie die Vorgangsnummer ${record.id}.`,
@@ -104,17 +101,20 @@ export function confirmationMail(record) {
  * Письмо с просьбой оплатить. Сумма и ссылка — из .env (PRICE_TEXT, PAYMENT_URL с {id});
  * пока оплата не подключена, ссылки нет — письмо просит дождаться ссылки/ответить.
  */
+// Письмо по кнопке «Отправить счёт» в Telegram: СО ссылкой на оплату.
+// Ссылка (Mollie) создаётся при отправке формы и лежит на заявке (record.payment.checkoutUrl).
 export function paymentMail(record) {
-  const price = process.env.PRICE_TEXT;
-  const url = process.env.PAYMENT_URL ? process.env.PAYMENT_URL.replaceAll('{id}', encodeURIComponent(record.id)) : null;
-  const rows = [...(price ? [['Betrag', price]] : []), ...summary(record)];
+  const url = record.payment?.checkoutUrl
+    || (process.env.PAYMENT_URL ? process.env.PAYMENT_URL.replaceAll('{id}', encodeURIComponent(record.id)) : null);
+  const amount = record.payment?.amount ? `${record.payment.amount.replace('.', ',')} €` : process.env.PRICE_TEXT || null;
+  const rows = [...(amount ? [['Betrag', amount]] : []), ...summary(record)];
   const { html, text } = layout({
     title: 'Bitte bezahlen Sie Ihre Abmeldung',
     intro:
       'Wir haben Ihren Antrag bei der Zulassungsbehörde vorbereitet. Sobald die Zahlung eingegangen ist, ' +
       'schließen wir die Abmeldung ab und senden Ihnen den amtlichen Bescheid als PDF.',
     rows,
-    button: url ? { label: 'Jetzt bezahlen', href: url } : null,
+    button: url ? { label: amount ? `Jetzt bezahlen (${amount})` : 'Jetzt bezahlen', href: url } : null,
     notes: [
       ...(url ? [] : ['Den Link zur Zahlung senden wir Ihnen in Kürze.']),
       `Bei Fragen antworten Sie einfach auf diese E-Mail und nennen Sie die Vorgangsnummer ${record.id}.`,
