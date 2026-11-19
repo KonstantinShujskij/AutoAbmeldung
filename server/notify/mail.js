@@ -81,12 +81,17 @@ ${s ? `<p style="margin:16px 0 0;font-size:12px;color:#6c786f;"><a href="${esc(s
 }
 
 export function confirmationMail(record) {
+  const pay = record.payment?.checkoutUrl;
+  const amount = record.payment?.amount ? `${record.payment.amount} €` : null;
   const { html, text } = layout({
     title: 'Ihr Auftrag ist eingegangen',
-    intro:
-      'Vielen Dank! Wir prüfen Ihre Angaben und bereiten die Abmeldung bei der Zulassungsbehörde vor. ' +
-      'Als Nächstes erhalten Sie von uns eine E-Mail mit der Zahlungsaufforderung.',
-    rows: summary(record),
+    intro: pay
+      ? 'Vielen Dank! Bitte schließen Sie Ihre Abmeldung mit der Zahlung ab. Sobald die Zahlung eingegangen ist, ' +
+        'bereiten wir die Abmeldung bei der Zulassungsbehörde vor und senden Ihnen den amtlichen Bescheid.'
+      : 'Vielen Dank! Wir prüfen Ihre Angaben und bereiten die Abmeldung bei der Zulassungsbehörde vor. ' +
+        'Als Nächstes erhalten Sie von uns eine E-Mail mit der Zahlungsaufforderung.',
+    button: pay ? { label: amount ? `Jetzt bezahlen (${amount})` : 'Jetzt bezahlen', href: pay } : null,
+    rows: [...(amount ? [['Betrag', amount]] : []), ...summary(record)],
     notes: [
       'Die Sicherheitscodes senden wir aus Sicherheitsgründen nicht per E-Mail mit.',
       `Stimmt etwas nicht? Antworten Sie einfach auf diese E-Mail und nennen Sie die Vorgangsnummer ${record.id}.`,

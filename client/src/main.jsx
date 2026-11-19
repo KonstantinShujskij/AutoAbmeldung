@@ -22,6 +22,7 @@ import Privacy from './pages/Privacy.jsx';
 import Ratgeber from './pages/Ratgeber.jsx';
 import Kosten from './pages/Kosten.jsx';
 import Faq from './pages/Faq.jsx';
+import Danke from './pages/Danke.jsx';
 import CookieBanner from './components/CookieBanner.jsx';
 
 // Несколько страниц — роутер не нужен. Vite и Express отдают index.html на любой путь.
@@ -31,6 +32,7 @@ const ROUTES = {
   [RATGEBER_PATH]: { Page: Ratgeber, title: 'Auto online abmelden – Anleitung · AutoAbmeldung' },
   [KOSTEN_PATH]: { Page: Kosten, title: 'Was kostet die Online-Abmeldung? · AutoAbmeldung' },
   [FAQ_PATH]: { Page: Faq, title: 'Häufige Fragen zur Auto-Abmeldung · AutoAbmeldung' },
+  '/danke': { Page: Danke, title: 'Vielen Dank · AutoAbmeldung' },
 };
 const route = ROUTES[window.location.pathname.replace(/\/+$/, '')];
 const Page = route?.Page ?? App;

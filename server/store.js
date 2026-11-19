@@ -45,12 +45,13 @@ const insertStmt = db.prepare(
    VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
 );
 
-/** @param {{id,status,createdAt,data,privacy}} rec */
+/** @param {{id,status,createdAt,data,privacy,payment?}} rec */
 export function createApplication(rec) {
   const history = JSON.stringify([{ status: rec.status, at: rec.createdAt }]);
   insertStmt.run(
     rec.id, rec.createdAt, rec.createdAt, rec.status,
-    JSON.stringify(rec.data), rec.privacy ? JSON.stringify(rec.privacy) : null, null, history,
+    JSON.stringify(rec.data), rec.privacy ? JSON.stringify(rec.privacy) : null,
+    rec.payment ? JSON.stringify(rec.payment) : null, history,
   );
   return getApplication(rec.id);
 }

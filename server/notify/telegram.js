@@ -63,6 +63,11 @@ export function formatApplication(record, { vinFromScan } = {}) {
   lines.push('', `<b>Коды безопасности</b>`, `ZB I: ${code(d.codeZb1)}`);
   if (d.codeZb2) lines.push(`ZB II: ${code(d.codeZb2)}`);
   lines.push(`Номер спереди: ${code(d.codeFront)} · сзади: ${code(d.codeBack)}`);
+  // Ссылка на оплату (Mollie) — клиент платит сам; ссылку можно и переслать клиенту.
+  if (record.payment?.checkoutUrl) {
+    const amount = `${record.payment.amount ?? ''} ${record.payment.currency ?? 'EUR'}`.trim();
+    lines.push('', `💳 <b>Оплата</b> (${esc(amount)})`, esc(record.payment.checkoutUrl));
+  }
   return lines.join('\n');
 }
 
@@ -117,6 +122,16 @@ export async function sendToTelegram(record, { jpeg, vinFromScan } = {}) {
     form.set('photo', new Blob([jpeg], { type: 'image/jpeg' }), `${record.id}.jpg`);
     await call('sendPhoto', form);
   }
+}
+
+/** Короткое уведомление в группу: заявка оплачена (из вебхука Mollie). */
+export async function sendPaidNotice(record) {
+  const amount = record.payment ? `${record.payment.amount ?? ''} ${record.payment.currency ?? ''}`.trim() : '';
+  await call('sendMessage', JSON.stringify({
+    chat_id: process.env.TELEGRAM_CHAT_ID,
+    text: `✅ <b>Оплачено</b> · ${code(record.id)}${amount ? ` · ${esc(amount)}` : ''}\n${esc(record.data.email)}`,
+    parse_mode: 'HTML',
+  }));
 }
 
 // ─── Кнопки статуса заявки ──────────────────────────────────────────────────

@@ -1962,3 +1962,72 @@
   .cookie__actions { width: 100%; margin-left: 0; }
   .cookie__btn { flex: 1 1 0; }
 }
+
+/* ───────── Оплата: кнопка в подтверждении + страница /danke ───────── */
+.receipt__pay {
+  margin: 22px 0 4px;
+  padding: 20px;
+  border: 1px solid var(--green);
+  border-radius: var(--radius);
+  background: var(--green-wash);
+}
+.btn-pay {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 28px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.18s var(--ease), transform 0.18s var(--ease);
+}
+.btn-pay:hover { background: var(--green-2); transform: translateY(-1px); }
+.btn-pay:active { transform: translateY(1px); }
+.receipt__pay-note {
+  margin: 12px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--green-ink);
+}
+
+.thanks {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: clamp(32px, 8vw, 80px) clamp(18px, 4vw, 40px) 60px;
+}
+.thanks__card {
+  position: relative;
+  overflow: hidden;
+  width: min(620px, 100%);
+  padding: clamp(30px, 5vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-hi);
+  box-shadow: var(--shadow-sheet);
+  animation: rise 0.6s var(--ease) both;
+}
+.thanks__rosette {
+  position: absolute;
+  top: -28px;
+  right: -28px;
+  width: 150px;
+  height: 150px;
+  opacity: 0.5;
+  color: var(--green);
+  pointer-events: none;
+}
+.thanks__title {
+  margin: 6px 0 16px;
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: clamp(32px, 6vw, 46px);
+  line-height: 1.05;
+}
+.thanks__title em { color: var(--green); font-style: italic; }
+.thanks__lede { margin: 0 0 14px; font-size: 16px; line-height: 1.6; color: var(--ink-2); }
+.thanks__note { margin: 0 0 24px; font-size: 14px; line-height: 1.55; color: var(--ink-3); }

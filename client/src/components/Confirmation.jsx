@@ -23,6 +23,17 @@ export function Confirmation({ result, onReset }) {
         Eine Kopie geht an <strong>{v.email}</strong>.
       </p>
 
+      {result.checkoutUrl && (
+        <div className="receipt__pay">
+          <a className="btn-pay" href={result.checkoutUrl}>
+            Jetzt bezahlen{result.amount ? ` · ${result.amount} €` : ''}
+          </a>
+          <p className="receipt__pay-note">
+            Sichere Zahlung über Mollie. Den Zahlungslink finden Sie auch in Ihrer E-Mail.
+          </p>
+        </div>
+      )}
+
       <dl className="receipt__list">
         <div>
           <dt>Halter</dt>
@@ -57,9 +68,19 @@ export function Confirmation({ result, onReset }) {
       <div className="receipt__next">
         <h3>So geht es weiter</h3>
         <ol>
-          <li>Wir prüfen Ihre Angaben auf Plausibilität.</li>
-          <li>Wir ermitteln die zuständige Zulassungsbehörde.</li>
-          <li>Sie erhalten per E-Mail den Link zur Zahlung.</li>
+          {result.checkoutUrl ? (
+            <>
+              <li>Sie bezahlen Ihre Abmeldung – oben oder über den Link in der E-Mail.</li>
+              <li>Wir prüfen Ihre Angaben und ermitteln die zuständige Zulassungsbehörde.</li>
+              <li>Nach der Abmeldung erhalten Sie den amtlichen Bescheid per E-Mail.</li>
+            </>
+          ) : (
+            <>
+              <li>Wir prüfen Ihre Angaben auf Plausibilität.</li>
+              <li>Wir ermitteln die zuständige Zulassungsbehörde.</li>
+              <li>Sie erhalten per E-Mail den Link zur Zahlung.</li>
+            </>
+          )}
         </ol>
       </div>
 

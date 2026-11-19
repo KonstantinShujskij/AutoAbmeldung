@@ -10,8 +10,9 @@ import { PRIVACY_VERSION } from '../shared/legal.js';
 import { recognizeDocument } from './ocr/recognize.js';
 import { warmUpOcr } from './ocr/zb2.js';
 import { keepScan, takeScan } from './scans.js';
-import { handleUpdate, sendToTelegram, setupWebhook, telegramEnabled, webhookSecret } from './notify/telegram.js';
+import { handleUpdate, sendToTelegram, sendPaidNotice, setupWebhook, telegramEnabled, webhookSecret } from './notify/telegram.js';
 import { mailEnabled, sendConfirmation, sendPaymentRequest } from './notify/mail.js';
+import { mollieEnabled, createPayment, fetchPayment } from './payments/mollie.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST_DIR = path.join(ROOT, 'dist');
@@ -75,6 +76,14 @@ app.post('/api/telegram/webhook', express.json({ limit: '64kb' }), (req, res) =>
   handleUpdate(req.body, { onTransition: handleTransition }).catch((err) => console.error('[telegram]', err.message));
 });
 
+// Mollie сообщает об изменении статуса платежа (в теле только id — сам статус берём из API).
+app.post('/api/mollie/webhook', express.urlencoded({ extended: false, limit: '16kb' }), (req, res) => {
+  res.sendStatus(200); // отвечаем сразу, работу делаем после
+  if (mollieEnabled() && req.body?.id) {
+    handleMolliePaid(req.body.id).catch((err) => console.error('[mollie] webhook:', err.message));
+  }
+});
+
 if (NOINDEX) {
   app.use((req, res, next) => {
     res.set('X-Robots-Tag', 'noindex, nofollow');
@@ -125,16 +134,36 @@ app.post('/api/applications', rateLimit({ max: 12, windowMs: 10 * 60_000 }), asy
 
     const createdAt = new Date().toISOString();
     const { privacyAccepted, ...data } = values;
+    const id = makeId();
+
+    // Платёж Mollie создаём до сохранения, чтобы отдать клиенту ссылку на оплату сразу.
+    // Сбой оплаты не ломает приём заявки — заявка сохранится без ссылки, счёт можно выслать позже.
+    let payment = null;
+    if (mollieEnabled()) {
+      try {
+        payment = await createPayment({ id });
+      } catch (err) {
+        console.error('[mollie] Zahlung konnte nicht erstellt werden:', err.message);
+      }
+    }
+
     const record = createApplication({
-      id: makeId(),
+      id,
       status: 'eingegangen',
       createdAt,
       data,
       // Подтверждение Datenschutzhinweise: когда и какую версию текста клиент видел.
       privacy: { acknowledged: privacyAccepted, at: createdAt, version: PRIVACY_VERSION },
+      payment,
     });
 
-    res.status(201).json({ id: record.id, status: record.status, createdAt: record.createdAt });
+    res.status(201).json({
+      id: record.id,
+      status: record.status,
+      createdAt: record.createdAt,
+      checkoutUrl: payment?.checkoutUrl ?? null,
+      amount: payment?.amount ?? null,
+    });
     // Уведомления — после ответа клиенту: их сбой не должен ломать отправку заявки.
     notifyNewApplication(record, req.body?.scanId);
   } catch (err) {
@@ -166,6 +195,24 @@ async function handleTransition(id, target, operator) {
     return { ok: true, status: target };
   } finally {
     transitionInFlight.delete(id);
+  }
+}
+
+// Платёж Mollie сменил статус. На 'paid' переводим заявку в «оплачено» и шлём уведомление в группу.
+const PAID_LOCKED = new Set(['bezahlt', 'in_bearbeitung', 'abgeschlossen']);
+async function handleMolliePaid(paymentId) {
+  const p = await fetchPayment(paymentId);
+  if (!p.orderId) return;
+  const rec = getApplication(p.orderId);
+  if (!rec) return;
+  const payment = { ...(rec.payment ?? {}), id: p.id, status: p.status, amount: p.amount, currency: p.currency };
+  if (p.status === 'paid' && !PAID_LOCKED.has(rec.status)) {
+    payment.paidAt = new Date().toISOString();
+    const updated = updateApplication(p.orderId, { status: 'bezahlt', payment, by: 'Mollie' });
+    console.log(`[mollie] ${p.orderId} bezahlt (${p.amount} ${p.currency})`);
+    if (telegramEnabled()) sendPaidNotice(updated).catch((err) => console.error('[mollie] Telegram:', err.message));
+  } else {
+    updateApplication(p.orderId, { payment });
   }
 }
 
