@@ -46,8 +46,8 @@ export function resetConsent() {
 // ─── Tags laden ──────────────────────────────────────────────────────────────
 // Erst gesetzt, wenn die Statistik-Instanz (Umami) steht: dann hier eintragen
 // und neu deployen. Leer = es wird nichts geladen (kein toter Request).
-const UMAMI_SRC = ''; // z. B. 'https://stats.autofahrerswelt.de/script.js'
-const UMAMI_WEBSITE_ID = ''; // UUID aus dem Umami-Dashboard
+const UMAMI_SRC = 'https://stats.autofahrerswelt.de/script.js';
+const UMAMI_WEBSITE_ID = '01ab6040-a11f-4e59-b91d-7347b688f525';
 
 let umamiLoaded = false;
 function loadUmami() {
