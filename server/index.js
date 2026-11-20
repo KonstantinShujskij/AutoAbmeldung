@@ -1,4 +1,5 @@
 import express from 'express';
+import compression from 'compression';
 import { randomBytes, timingSafeEqual } from 'node:crypto';
 import { createApplication, getApplication, updateApplication } from './store.js';
 import { canTransition } from './notify/statuses.js';
@@ -63,6 +64,9 @@ const IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
 
 const app = express();
 app.disable('x-powered-by');
+// Gzip для ответов (JS/CSS/JSON отдаются статикой несжатыми) — заметно для бандла
+// и для справочника городов (~400 КБ → ~130 КБ).
+app.use(compression());
 
 // Для проверки живости (Docker healthcheck, деплой) — без пароля и без данных.
 app.get('/api/health', (req, res) => res.json({ ok: true }));

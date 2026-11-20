@@ -15,6 +15,7 @@ import { Verbleib } from './components/Verbleib.jsx';
 import { Confirmation } from './components/Confirmation.jsx';
 import { Arrow, Check, Rosette } from './components/Decor.jsx';
 import { FieldCell, VinRuler } from './components/FieldCell.jsx';
+import { AddrCombo } from './components/AddrCombo.jsx';
 import { DocScan } from './components/DocScan.jsx';
 import { PlateInput, PlateView } from './components/Plate.jsx';
 import { MiniBar, Progress } from './components/Progress.jsx';
@@ -122,6 +123,16 @@ export default function App() {
     onChange: (e) => set(name, e.target.value),
     onBlur: () => touch(name),
   });
+
+  // Выбор подсказки из справочника PLZ↔Ort. Если у города несколько индексов,
+  // zip приходит пустым — заполняем только Ort и переводим фокус на поле PLZ.
+  const pickAddress = ({ zip, city }) => {
+    if (zip != null) set('zip', zip);
+    if (city != null) set('city', city);
+    touch('zip');
+    touch('city');
+    if (zip == null) requestAnimationFrame(() => document.querySelector('[data-field="zip"]')?.focus());
+  };
 
   const sections = SECTIONS.map((s) => ({
     id: s.id,
@@ -332,19 +343,35 @@ export default function App() {
                     </FieldCell>
                     <FieldCell id="f-zip" code="C.3.3" label="PLZ" error={errorFor('zip')} hint={scanHint('zip')} hintTone={fromScan['zip']} className="span-2">
                       {(a) => (
-                        <input
-                          {...a}
-                          {...bind('zip')}
-                          onChange={(e) => set('zip', e.target.value.replace(/\D/g, '').slice(0, 5))}
+                        <AddrCombo
+                          kind="plz"
+                          a={a}
+                          field="zip"
+                          value={form.zip}
+                          sanitize={(raw) => raw.replace(/\D/g, '').slice(0, 5)}
+                          onInput={(v) => set('zip', v)}
+                          onPick={pickAddress}
+                          onBlur={() => touch('zip')}
                           inputMode="numeric"
-                          autoComplete="postal-code"
                           placeholder="44534"
                           className="zinput zinput--mono"
                         />
                       )}
                     </FieldCell>
                     <FieldCell id="f-city" code="C.3.3" label="Ort" error={errorFor('city')} hint={scanHint('city')} hintTone={fromScan['city']} className="span-4">
-                      {(a) => <input {...a} {...bind('city')} autoComplete="address-level2" placeholder="Lünen" className="zinput" />}
+                      {(a) => (
+                        <AddrCombo
+                          kind="ort"
+                          a={a}
+                          field="city"
+                          value={form.city}
+                          onInput={(v) => set('city', v)}
+                          onPick={pickAddress}
+                          onBlur={() => touch('city')}
+                          placeholder="Lünen"
+                          className="zinput"
+                        />
+                      )}
                     </FieldCell>
                   </div>
                 </div>

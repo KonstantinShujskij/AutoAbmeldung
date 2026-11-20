@@ -477,6 +477,49 @@
   color: var(--seal);
 }
 
+/* Автоподсказки адреса (справочник PLZ↔Ort). Список — в портале, position:fixed. */
+.combo {
+  display: block;
+}
+
+.combo__list {
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  background: var(--paper-hi);
+  border: 1px solid var(--line-2);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(20, 32, 25, 0.18);
+  max-height: 268px;
+  overflow-y: auto;
+  z-index: 60;
+}
+
+.combo__item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.combo__item.is-active {
+  background: var(--green-wash);
+}
+
+.combo__main {
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.combo__sub {
+  font: 500 12px/1 var(--f-mono);
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
 /* FIN-линейка */
 
 .vinruler {
